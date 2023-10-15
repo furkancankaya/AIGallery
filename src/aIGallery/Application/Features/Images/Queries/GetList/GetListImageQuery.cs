@@ -6,6 +6,7 @@ using Core.Application.Requests;
 using Core.Application.Responses;
 using Core.Persistence.Paging;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 
 namespace Application.Features.Images.Queries.GetList;
 
@@ -32,6 +33,7 @@ public class GetListImageQuery : IRequest<GetListResponse<GetListImageListItemDt
         public async Task<GetListResponse<GetListImageListItemDto>> Handle(GetListImageQuery request, CancellationToken cancellationToken)
         {
             IPaginate<Image> images = await _imageRepository.GetListAsync(
+                include: x=>x.Include(x=>x.User).Include(x=>x.Like).Include(x=>x.ArtStyle).Include(x=>x.Category).Include(x=>x.SaledImage),
                 index: request.PageRequest.PageIndex,
                 size: request.PageRequest.PageSize, 
                 cancellationToken: cancellationToken

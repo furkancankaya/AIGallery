@@ -746,6 +746,294 @@ namespace Persistence.Migrations
                             Id = 109,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "SaledImages.Delete"
+                        },
+                        new
+                        {
+                            Id = 110,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "ArtStyles.Admin"
+                        },
+                        new
+                        {
+                            Id = 111,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "ArtStyles.Read"
+                        },
+                        new
+                        {
+                            Id = 112,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "ArtStyles.Write"
+                        },
+                        new
+                        {
+                            Id = 113,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "ArtStyles.Add"
+                        },
+                        new
+                        {
+                            Id = 114,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "ArtStyles.Update"
+                        },
+                        new
+                        {
+                            Id = 115,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "ArtStyles.Delete"
+                        },
+                        new
+                        {
+                            Id = 116,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "BannedPrompts.Admin"
+                        },
+                        new
+                        {
+                            Id = 117,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "BannedPrompts.Read"
+                        },
+                        new
+                        {
+                            Id = 118,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "BannedPrompts.Write"
+                        },
+                        new
+                        {
+                            Id = 119,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "BannedPrompts.Add"
+                        },
+                        new
+                        {
+                            Id = 120,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "BannedPrompts.Update"
+                        },
+                        new
+                        {
+                            Id = 121,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "BannedPrompts.Delete"
+                        },
+                        new
+                        {
+                            Id = 122,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Categories.Admin"
+                        },
+                        new
+                        {
+                            Id = 123,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Categories.Read"
+                        },
+                        new
+                        {
+                            Id = 124,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Categories.Write"
+                        },
+                        new
+                        {
+                            Id = 125,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Categories.Add"
+                        },
+                        new
+                        {
+                            Id = 126,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Categories.Update"
+                        },
+                        new
+                        {
+                            Id = 127,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Categories.Delete"
+                        },
+                        new
+                        {
+                            Id = 128,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Categories.Admin"
+                        },
+                        new
+                        {
+                            Id = 129,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Categories.Read"
+                        },
+                        new
+                        {
+                            Id = 130,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Categories.Write"
+                        },
+                        new
+                        {
+                            Id = 131,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Categories.Add"
+                        },
+                        new
+                        {
+                            Id = 132,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Categories.Update"
+                        },
+                        new
+                        {
+                            Id = 133,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Categories.Delete"
+                        },
+                        new
+                        {
+                            Id = 134,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Images.Admin"
+                        },
+                        new
+                        {
+                            Id = 135,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Images.Read"
+                        },
+                        new
+                        {
+                            Id = 136,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Images.Write"
+                        },
+                        new
+                        {
+                            Id = 137,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Images.Add"
+                        },
+                        new
+                        {
+                            Id = 138,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Images.Update"
+                        },
+                        new
+                        {
+                            Id = 139,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Images.Delete"
+                        },
+                        new
+                        {
+                            Id = 140,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Images.Admin"
+                        },
+                        new
+                        {
+                            Id = 141,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Images.Read"
+                        },
+                        new
+                        {
+                            Id = 142,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Images.Write"
+                        },
+                        new
+                        {
+                            Id = 143,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Images.Add"
+                        },
+                        new
+                        {
+                            Id = 144,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Images.Update"
+                        },
+                        new
+                        {
+                            Id = 145,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Images.Delete"
+                        },
+                        new
+                        {
+                            Id = 146,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Likes.Admin"
+                        },
+                        new
+                        {
+                            Id = 147,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Likes.Read"
+                        },
+                        new
+                        {
+                            Id = 148,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Likes.Write"
+                        },
+                        new
+                        {
+                            Id = 149,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Likes.Add"
+                        },
+                        new
+                        {
+                            Id = 150,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Likes.Update"
+                        },
+                        new
+                        {
+                            Id = 151,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Likes.Delete"
+                        },
+                        new
+                        {
+                            Id = 152,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "SaledImages.Admin"
+                        },
+                        new
+                        {
+                            Id = 153,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "SaledImages.Read"
+                        },
+                        new
+                        {
+                            Id = 154,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "SaledImages.Write"
+                        },
+                        new
+                        {
+                            Id = 155,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "SaledImages.Add"
+                        },
+                        new
+                        {
+                            Id = 156,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "SaledImages.Update"
+                        },
+                        new
+                        {
+                            Id = 157,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "SaledImages.Delete"
                         });
                 });
 
@@ -934,8 +1222,8 @@ namespace Persistence.Migrations
                             Email = "admin@admin.com",
                             FirstName = "Admin",
                             LastName = "NArchitecture",
-                            PasswordHash = new byte[] { 173, 227, 195, 244, 88, 198, 22, 34, 196, 238, 210, 174, 177, 97, 10, 2, 200, 225, 155, 39, 245, 8, 89, 0, 192, 186, 237, 125, 250, 94, 11, 111, 96, 216, 221, 169, 115, 223, 116, 159, 111, 220, 151, 131, 230, 251, 137, 140, 24, 114, 36, 85, 16, 220, 17, 96, 91, 89, 90, 212, 142, 46, 80, 38 },
-                            PasswordSalt = new byte[] { 0, 227, 155, 174, 47, 60, 241, 18, 182, 145, 38, 186, 230, 187, 130, 186, 38, 29, 122, 100, 42, 23, 26, 0, 229, 16, 21, 136, 61, 123, 201, 21, 61, 250, 71, 74, 177, 210, 130, 158, 95, 177, 35, 245, 230, 118, 190, 183, 238, 249, 12, 165, 34, 56, 46, 75, 115, 157, 181, 39, 132, 122, 140, 248, 197, 158, 127, 62, 7, 58, 67, 27, 247, 47, 79, 245, 93, 187, 97, 108, 186, 29, 64, 214, 124, 143, 19, 155, 8, 14, 138, 240, 116, 155, 29, 171, 71, 254, 67, 211, 255, 115, 98, 61, 164, 18, 181, 141, 12, 253, 37, 122, 55, 101, 36, 118, 95, 250, 59, 163, 83, 225, 198, 104, 100, 214, 209, 64 },
+                            PasswordHash = new byte[] { 43, 255, 184, 102, 162, 239, 223, 162, 7, 242, 101, 192, 254, 77, 2, 85, 108, 181, 230, 235, 12, 157, 253, 23, 192, 80, 246, 97, 121, 62, 25, 213, 158, 26, 178, 255, 42, 166, 214, 183, 39, 117, 142, 17, 85, 180, 97, 116, 10, 21, 162, 5, 165, 7, 80, 159, 80, 145, 136, 240, 171, 30, 232, 222 },
+                            PasswordSalt = new byte[] { 103, 239, 58, 87, 107, 143, 133, 101, 244, 159, 217, 14, 0, 125, 129, 44, 64, 166, 59, 88, 74, 116, 178, 238, 96, 137, 68, 203, 40, 15, 209, 86, 103, 177, 75, 172, 182, 108, 254, 141, 108, 246, 86, 238, 210, 244, 109, 44, 220, 46, 176, 104, 25, 233, 245, 46, 205, 198, 203, 29, 180, 105, 8, 226, 37, 245, 183, 156, 91, 43, 14, 12, 109, 123, 104, 213, 211, 127, 218, 227, 205, 185, 184, 19, 134, 190, 32, 94, 99, 101, 50, 95, 133, 5, 195, 175, 62, 78, 248, 93, 187, 18, 191, 133, 69, 29, 156, 211, 36, 206, 26, 110, 103, 85, 72, 104, 202, 73, 82, 155, 132, 220, 215, 93, 70, 103, 77, 19 },
                             Pro = false,
                             Status = true,
                             Token = 0
@@ -1004,10 +1292,10 @@ namespace Persistence.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("DeletedDate");
 
-                    b.Property<string>("Image")
+                    b.Property<string>("Logo")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
-                        .HasColumnName("Image");
+                        .HasColumnName("Logo");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -1021,6 +1309,35 @@ namespace Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ArtStyles", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.Entities.BannedPrompt", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("Id");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("CreatedDate");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("DeletedDate");
+
+                    b.Property<string>("Prompt")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Prompt");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("UpdatedDate");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("BannedPrompts", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Entities.Category", b =>
@@ -1037,6 +1354,11 @@ namespace Persistence.Migrations
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2")
                         .HasColumnName("DeletedDate");
+
+                    b.Property<string>("Logo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Logo");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -1059,7 +1381,7 @@ namespace Persistence.Migrations
                         .HasColumnType("uniqueidentifier")
                         .HasColumnName("Id");
 
-                    b.Property<Guid>("ArtStyleId")
+                    b.Property<Guid?>("ArtStyleId")
                         .HasColumnType("uniqueidentifier")
                         .HasColumnName("ArtStyleId");
 
@@ -1067,7 +1389,7 @@ namespace Persistence.Migrations
                         .HasColumnType("bit")
                         .HasColumnName("Blocked");
 
-                    b.Property<Guid>("CategoryId")
+                    b.Property<Guid?>("CategoryId")
                         .HasColumnType("uniqueidentifier")
                         .HasColumnName("CategoryId");
 
@@ -1089,14 +1411,12 @@ namespace Persistence.Migrations
                         .HasColumnName("ImageUrl");
 
                     b.Property<string>("ImgToImg")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("ImgToImg");
 
-                    b.Property<string>("Promt")
-                        .IsRequired()
+                    b.Property<string>("Prompt")
                         .HasColumnType("nvarchar(max)")
-                        .HasColumnName("Promt");
+                        .HasColumnName("Prompt");
 
                     b.Property<int>("SalePrice")
                         .HasColumnType("int")
@@ -1110,12 +1430,9 @@ namespace Persistence.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("UpdatedDate");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier")
+                    b.Property<int>("UserId")
+                        .HasColumnType("int")
                         .HasColumnName("UserId");
-
-                    b.Property<int?>("UserId1")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -1123,7 +1440,7 @@ namespace Persistence.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.HasIndex("UserId1");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Images", (string)null);
                 });
@@ -1151,8 +1468,8 @@ namespace Persistence.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("UpdatedDate");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier")
+                    b.Property<int>("UserId")
+                        .HasColumnType("int")
                         .HasColumnName("UserId");
 
                     b.HasKey("Id");
@@ -1185,18 +1502,13 @@ namespace Persistence.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("UpdatedDate");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier")
+                    b.Property<int>("UserId")
+                        .HasColumnType("int")
                         .HasColumnName("UserId");
-
-                    b.Property<int?>("UserId1")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("ImageId");
-
-                    b.HasIndex("UserId1");
 
                     b.ToTable("SaledImages", (string)null);
                 });
@@ -1256,20 +1568,18 @@ namespace Persistence.Migrations
             modelBuilder.Entity("Domain.Entities.Image", b =>
                 {
                     b.HasOne("Domain.Entities.ArtStyle", "ArtStyle")
-                        .WithMany()
-                        .HasForeignKey("ArtStyleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .WithMany("Image")
+                        .HasForeignKey("ArtStyleId");
 
                     b.HasOne("Domain.Entities.Category", "Category")
-                        .WithMany()
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .WithMany("Image")
+                        .HasForeignKey("CategoryId");
 
                     b.HasOne("Core.Security.Entities.User", "User")
                         .WithMany()
-                        .HasForeignKey("UserId1");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("ArtStyle");
 
@@ -1292,18 +1602,12 @@ namespace Persistence.Migrations
             modelBuilder.Entity("Domain.Entities.SaledImage", b =>
                 {
                     b.HasOne("Domain.Entities.Image", "Image")
-                        .WithMany()
+                        .WithMany("SaledImage")
                         .HasForeignKey("ImageId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Security.Entities.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId1");
-
                     b.Navigation("Image");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Core.Security.Entities.OperationClaim", b =>
@@ -1322,9 +1626,21 @@ namespace Persistence.Migrations
                     b.Navigation("UserOperationClaims");
                 });
 
+            modelBuilder.Entity("Domain.Entities.ArtStyle", b =>
+                {
+                    b.Navigation("Image");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Category", b =>
+                {
+                    b.Navigation("Image");
+                });
+
             modelBuilder.Entity("Domain.Entities.Image", b =>
                 {
                     b.Navigation("Like");
+
+                    b.Navigation("SaledImage");
                 });
 #pragma warning restore 612, 618
         }

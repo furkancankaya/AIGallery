@@ -11,5 +11,7 @@ namespace Domain.Entities;
 public class Category : Entity<Guid>
 {
     public string Name { get; set; }
+    public string Logo { get; set; }
 
+    public virtual ICollection<Image> Image { get; set; }
 }

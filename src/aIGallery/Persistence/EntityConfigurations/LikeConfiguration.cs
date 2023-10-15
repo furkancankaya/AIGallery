@@ -16,9 +16,8 @@ public class LikeConfiguration : IEntityTypeConfiguration<Like>
         builder.Property(l => l.CreatedDate).HasColumnName("CreatedDate").IsRequired();
         builder.Property(l => l.UpdatedDate).HasColumnName("UpdatedDate");
         builder.Property(l => l.DeletedDate).HasColumnName("DeletedDate");
+        builder.HasOne(l => l.Image);
 
         builder.HasQueryFilter(l => !l.DeletedDate.HasValue);
-
-        builder.HasOne(l => l.Image);
     }
 }

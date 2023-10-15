@@ -2,20 +2,15 @@ using Application.Features.ArtStyles.Rules;
 using Application.Services.Repositories;
 using AutoMapper;
 using Domain.Entities;
-using Core.Application.Pipelines.Caching;
 using MediatR;
 
 namespace Application.Features.ArtStyles.Commands.Update;
 
-public class UpdateArtStyleCommand : IRequest<UpdatedArtStyleResponse>, ICacheRemoverRequest
+public class UpdateArtStyleCommand : IRequest<UpdatedArtStyleResponse>
 {
     public Guid Id { get; set; }
-    public string Image { get; set; }
+    public string Logo { get; set; }
     public string Name { get; set; }
-
-    public bool BypassCache { get; }
-    public string? CacheKey { get; }
-    public string CacheGroupKey => "GetArtStyles";
 
     public class UpdateArtStyleCommandHandler : IRequestHandler<UpdateArtStyleCommand, UpdatedArtStyleResponse>
     {

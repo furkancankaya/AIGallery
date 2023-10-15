@@ -37,6 +37,15 @@ public static class PersistenceServiceRegistration
         services.AddScoped<ILikeRepository, LikeRepository>();
         services.AddScoped<ILikeRepository, LikeRepository>();
         services.AddScoped<ISaledImageRepository, SaledImageRepository>();
+        services.AddScoped<IArtStyleRepository, ArtStyleRepository>();
+        services.AddScoped<IBannedPromptRepository, BannedPromptRepository>();
+        services.AddScoped<ICategoryRepository, CategoryRepository>();
+        services.AddScoped<ICategoryRepository, CategoryRepository>();
+        services.AddScoped<IImageRepository, ImageRepository>();
+        services.AddScoped<IImageRepository, ImageRepository>();
+        services.AddScoped<ILikeRepository, LikeRepository>();
+        services.AddScoped<ISaledImageRepository, SaledImageRepository>();
+        services.AddScoped<IBannedPromptRepository, BannedPromptRepository>();
         return services;
     }
 }

@@ -9,7 +9,8 @@ namespace Domain.Entities;
 
 public class ArtStyle : Entity<Guid>
 {
-    public string Image { get; set; }
+    public string Logo { get; set; }
     public string Name{ get; set; }
 
+    public virtual ICollection<Image> Image { get; set; }
 }

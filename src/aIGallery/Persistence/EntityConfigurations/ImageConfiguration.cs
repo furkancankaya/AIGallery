@@ -12,7 +12,7 @@ public class ImageConfiguration : IEntityTypeConfiguration<Image>
 
         builder.Property(i => i.Id).HasColumnName("Id").IsRequired();
         builder.Property(i => i.ImageUrl).HasColumnName("ImageUrl");
-        builder.Property(i => i.Promt).HasColumnName("Promt");
+        builder.Property(i => i.Prompt).HasColumnName("Prompt");
         builder.Property(i => i.ArtStyleId).HasColumnName("ArtStyleId");
         builder.Property(i => i.UserId).HasColumnName("UserId");
         builder.Property(i => i.CategoryId).HasColumnName("CategoryId");
@@ -24,11 +24,11 @@ public class ImageConfiguration : IEntityTypeConfiguration<Image>
         builder.Property(i => i.CreatedDate).HasColumnName("CreatedDate").IsRequired();
         builder.Property(i => i.UpdatedDate).HasColumnName("UpdatedDate");
         builder.Property(i => i.DeletedDate).HasColumnName("DeletedDate");
-
         builder.HasOne(i => i.ArtStyle);
         builder.HasOne(i => i.Category);
         builder.HasOne(i => i.User);
         builder.HasMany(i => i.Like);
+        builder.HasMany(i => i.SaledImage);
         builder.HasQueryFilter(i => !i.DeletedDate.HasValue);
     }
 }

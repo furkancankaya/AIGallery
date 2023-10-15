@@ -9,7 +9,7 @@ namespace Application.Features.Likes.Commands.Create;
 
 public class CreateLikeCommand : IRequest<CreatedLikeResponse>, ICacheRemoverRequest
 {
-    public Guid UserId { get; set; }
+    public int UserId { get; set; }
     public Guid ImageId { get; set; }
 
     public bool BypassCache { get; }

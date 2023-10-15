@@ -9,7 +9,7 @@ namespace Application.Features.SaledImages.Commands.Create;
 
 public class CreateSaledImageCommand : IRequest<CreatedSaledImageResponse>, ICacheRemoverRequest
 {
-    public Guid UserId { get; set; }
+    public int UserId { get; set; }
     public Guid ImageId { get; set; }
 
     public bool BypassCache { get; }

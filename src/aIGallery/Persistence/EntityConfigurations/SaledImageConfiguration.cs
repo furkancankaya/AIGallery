@@ -16,11 +16,8 @@ public class SaledImageConfiguration : IEntityTypeConfiguration<SaledImage>
         builder.Property(si => si.CreatedDate).HasColumnName("CreatedDate").IsRequired();
         builder.Property(si => si.UpdatedDate).HasColumnName("UpdatedDate");
         builder.Property(si => si.DeletedDate).HasColumnName("DeletedDate");
-
-        builder.HasQueryFilter(si => !si.DeletedDate.HasValue);
-
-        builder.HasOne(si => si.User);
         builder.HasOne(si => si.Image);
 
+        builder.HasQueryFilter(si => !si.DeletedDate.HasValue);
     }
 }

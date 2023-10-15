@@ -10,7 +10,7 @@ namespace Application.Features.SaledImages.Commands.Update;
 public class UpdateSaledImageCommand : IRequest<UpdatedSaledImageResponse>, ICacheRemoverRequest
 {
     public Guid Id { get; set; }
-    public Guid UserId { get; set; }
+    public int UserId { get; set; }
     public Guid ImageId { get; set; }
 
     public bool BypassCache { get; }

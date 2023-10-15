@@ -20,6 +20,7 @@ using Application.Services.Categories;
 using Application.Services.Images;
 using Application.Services.Likes;
 using Application.Services.SaledImages;
+using Application.Services.BannedPrompts;
 
 namespace Application;
 
@@ -68,6 +69,15 @@ public static class ApplicationServiceRegistration
         services.AddScoped<ILikesService, LikesManager>();
         services.AddScoped<ILikesService, LikesManager>();
         services.AddScoped<ISaledImagesService, SaledImagesManager>();
+        services.AddScoped<IArtStylesService, ArtStylesManager>();
+        services.AddScoped<IBannedPromptsService, BannedPromptsManager>();
+        services.AddScoped<ICategoriesService, CategoriesManager>();
+        services.AddScoped<ICategoriesService, CategoriesManager>();
+        services.AddScoped<IImagesService, ImagesManager>();
+        services.AddScoped<IImagesService, ImagesManager>();
+        services.AddScoped<ILikesService, LikesManager>();
+        services.AddScoped<ISaledImagesService, SaledImagesManager>();
+        services.AddScoped<IBannedPromptsService, BannedPromptsManager>();
         return services;
     }
 

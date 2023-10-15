@@ -10,6 +10,7 @@ namespace Application.Features.Categories.Commands.Create;
 public class CreateCategoryCommand : IRequest<CreatedCategoryResponse>, ICacheRemoverRequest
 {
     public string Name { get; set; }
+    public string Logo { get; set; }
 
     public bool BypassCache { get; }
     public string? CacheKey { get; }

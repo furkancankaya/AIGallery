@@ -11,11 +11,13 @@ public class ArtStyleConfiguration : IEntityTypeConfiguration<ArtStyle>
         builder.ToTable("ArtStyles").HasKey(a => a.Id);
 
         builder.Property(a => a.Id).HasColumnName("Id").IsRequired();
-        builder.Property(a => a.Image).HasColumnName("Image");
+        builder.Property(a => a.Logo).HasColumnName("Logo");
         builder.Property(a => a.Name).HasColumnName("Name");
         builder.Property(a => a.CreatedDate).HasColumnName("CreatedDate").IsRequired();
         builder.Property(a => a.UpdatedDate).HasColumnName("UpdatedDate");
         builder.Property(a => a.DeletedDate).HasColumnName("DeletedDate");
+
+        builder.HasMany(a => a.Image);
 
         builder.HasQueryFilter(a => !a.DeletedDate.HasValue);
     }

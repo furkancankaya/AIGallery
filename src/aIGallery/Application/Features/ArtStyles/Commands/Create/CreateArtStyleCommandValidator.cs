@@ -6,7 +6,7 @@ public class CreateArtStyleCommandValidator : AbstractValidator<CreateArtStyleCo
 {
     public CreateArtStyleCommandValidator()
     {
-        RuleFor(c => c.Image).NotEmpty();
+        RuleFor(c => c.Logo).NotEmpty();
         RuleFor(c => c.Name).NotEmpty();
     }
 }
