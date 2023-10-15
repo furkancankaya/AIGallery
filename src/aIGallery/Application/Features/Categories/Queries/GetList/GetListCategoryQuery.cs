@@ -38,7 +38,7 @@ public class GetListCategoryQuery : IRequest<GetListResponse<GetListCategoryList
                 size: request.PageRequest.PageSize, 
                 cancellationToken: cancellationToken
             );
-
+    
             GetListResponse<GetListCategoryListItemDto> response = _mapper.Map<GetListResponse<GetListCategoryListItemDto>>(categories);
             return response;
         }
