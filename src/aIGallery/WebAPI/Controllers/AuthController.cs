@@ -3,6 +3,7 @@ using Application.Features.Auth.Commands.EnableOtpAuthenticator;
 using Application.Features.Auth.Commands.Login;
 using Application.Features.Auth.Commands.RefreshToken;
 using Application.Features.Auth.Commands.Register;
+using Application.Features.Auth.Commands.RegisterTempUser;
 using Application.Features.Auth.Commands.RevokeToken;
 using Application.Features.Auth.Commands.VerifyEmailAuthenticator;
 using Application.Features.Auth.Commands.VerifyOtpAuthenticator;
@@ -46,6 +47,14 @@ public class AuthController : BaseController
         RegisteredResponse result = await Mediator.Send(registerCommand);
         setRefreshTokenToCookie(result.RefreshToken);
         return Created(uri: "", result.AccessToken);
+    }
+    [HttpPost("RegisterTemp")]
+    public async Task<IActionResult> RegisterTemp([FromBody] UserForRegisterDto userForRegisterDto)
+    {
+        RegisterTempCommand registerCommand = new() { UserForRegisterDto = userForRegisterDto, IpAddress = getIpAddress() };
+        RegisterTempResponse result = await Mediator.Send(registerCommand);
+
+        return Ok(result);
     }
 
     [HttpGet("RefreshToken")]

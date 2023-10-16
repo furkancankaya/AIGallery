@@ -54,9 +54,14 @@ public class RegisterCommand : IRequest<RegisteredResponse>
                     Email = request.UserForRegisterDto.Email,
                     FirstName = request.UserForRegisterDto.FirstName,
                     LastName = request.UserForRegisterDto.LastName,
+                    Nick = request.UserForRegisterDto.Nick,
                     PasswordHash = passwordHash,
                     PasswordSalt = passwordSalt,
                     Status = true,
+                    Pro=false,
+                    Token=10,
+                    Blocked=false,
+                    
                     
                 };
             User createdUser = await _userRepository.AddAsync(newUser);

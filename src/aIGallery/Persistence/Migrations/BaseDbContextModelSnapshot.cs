@@ -1034,6 +1034,42 @@ namespace Persistence.Migrations
                             Id = 157,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "SaledImages.Delete"
+                        },
+                        new
+                        {
+                            Id = 158,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "BannedPrompts.Admin"
+                        },
+                        new
+                        {
+                            Id = 159,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "BannedPrompts.Read"
+                        },
+                        new
+                        {
+                            Id = 160,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "BannedPrompts.Write"
+                        },
+                        new
+                        {
+                            Id = 161,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "BannedPrompts.Add"
+                        },
+                        new
+                        {
+                            Id = 162,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "BannedPrompts.Update"
+                        },
+                        new
+                        {
+                            Id = 163,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "BannedPrompts.Delete"
                         });
                 });
 
@@ -1154,7 +1190,9 @@ namespace Persistence.Migrations
                         .HasColumnName("AuthenticatorType");
 
                     b.Property<bool>("Blocked")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
+                        .HasDefaultValue(false)
                         .HasColumnName("Blocked");
 
                     b.Property<DateTime>("CreatedDate")
@@ -1180,6 +1218,11 @@ namespace Persistence.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("LastName");
 
+                    b.Property<string>("Nick")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Nick");
+
                     b.Property<byte[]>("PasswordHash")
                         .IsRequired()
                         .HasColumnType("varbinary(max)")
@@ -1191,7 +1234,9 @@ namespace Persistence.Migrations
                         .HasColumnName("PasswordSalt");
 
                     b.Property<bool>("Pro")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
+                        .HasDefaultValue(false)
                         .HasColumnName("Pro");
 
                     b.Property<bool>("Status")
@@ -1201,7 +1246,9 @@ namespace Persistence.Migrations
                         .HasColumnName("Status");
 
                     b.Property<int>("Token")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int")
+                        .HasDefaultValue(10)
                         .HasColumnName("Token");
 
                     b.Property<DateTime?>("UpdatedDate")
@@ -1222,8 +1269,9 @@ namespace Persistence.Migrations
                             Email = "admin@admin.com",
                             FirstName = "Admin",
                             LastName = "NArchitecture",
-                            PasswordHash = new byte[] { 43, 255, 184, 102, 162, 239, 223, 162, 7, 242, 101, 192, 254, 77, 2, 85, 108, 181, 230, 235, 12, 157, 253, 23, 192, 80, 246, 97, 121, 62, 25, 213, 158, 26, 178, 255, 42, 166, 214, 183, 39, 117, 142, 17, 85, 180, 97, 116, 10, 21, 162, 5, 165, 7, 80, 159, 80, 145, 136, 240, 171, 30, 232, 222 },
-                            PasswordSalt = new byte[] { 103, 239, 58, 87, 107, 143, 133, 101, 244, 159, 217, 14, 0, 125, 129, 44, 64, 166, 59, 88, 74, 116, 178, 238, 96, 137, 68, 203, 40, 15, 209, 86, 103, 177, 75, 172, 182, 108, 254, 141, 108, 246, 86, 238, 210, 244, 109, 44, 220, 46, 176, 104, 25, 233, 245, 46, 205, 198, 203, 29, 180, 105, 8, 226, 37, 245, 183, 156, 91, 43, 14, 12, 109, 123, 104, 213, 211, 127, 218, 227, 205, 185, 184, 19, 134, 190, 32, 94, 99, 101, 50, 95, 133, 5, 195, 175, 62, 78, 248, 93, 187, 18, 191, 133, 69, 29, 156, 211, 36, 206, 26, 110, 103, 85, 72, 104, 202, 73, 82, 155, 132, 220, 215, 93, 70, 103, 77, 19 },
+                            Nick = "",
+                            PasswordHash = new byte[] { 101, 156, 99, 248, 236, 13, 151, 110, 32, 172, 197, 22, 252, 14, 209, 70, 118, 175, 82, 64, 160, 214, 179, 139, 200, 246, 206, 52, 201, 63, 247, 131, 237, 32, 247, 228, 209, 91, 95, 199, 13, 199, 224, 126, 202, 28, 67, 55, 80, 10, 151, 10, 161, 208, 12, 181, 192, 119, 143, 2, 248, 236, 113, 10 },
+                            PasswordSalt = new byte[] { 225, 209, 19, 180, 78, 3, 22, 174, 102, 194, 59, 240, 93, 117, 151, 144, 77, 107, 248, 108, 192, 200, 182, 228, 61, 69, 251, 194, 72, 230, 122, 53, 25, 188, 193, 145, 209, 157, 17, 78, 197, 46, 36, 20, 189, 182, 18, 26, 98, 145, 67, 35, 65, 235, 165, 87, 35, 192, 238, 254, 204, 205, 243, 155, 209, 134, 45, 165, 178, 65, 15, 77, 107, 126, 230, 15, 107, 213, 116, 186, 96, 131, 199, 139, 124, 101, 218, 184, 125, 173, 45, 130, 55, 222, 213, 235, 60, 210, 130, 35, 99, 245, 206, 231, 163, 191, 141, 142, 73, 216, 76, 4, 221, 192, 230, 15, 186, 217, 247, 4, 0, 19, 52, 179, 205, 44, 17, 119 },
                             Pro = false,
                             Status = true,
                             Token = 0
@@ -1275,6 +1323,39 @@ namespace Persistence.Migrations
                             OperationClaimId = 1,
                             UserId = 1
                         });
+                });
+
+            modelBuilder.Entity("Core.Security.Entities.UserTemp", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("Id");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("CreatedDate");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("DeletedDate");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Email");
+
+                    b.Property<int>("OTP")
+                        .HasColumnType("int")
+                        .HasColumnName("OTP");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("UpdatedDate");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UserTemps", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Entities.ArtStyle", b =>

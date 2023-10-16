@@ -99,7 +99,25 @@ public class AuthenticatorManager : IAuthenticatorService
             }
         );
     }
+    public async Task<int> SendAuthenticatorCodeIntWithEmail(User user)
+    {
+       
 
+        int authenticatorCode = await _emailAuthenticatorHelper.CreateEmailActivationCodeInt();
+ 
+
+        var toEmailList = new List<MailboxAddress> { new(name: $"{user.FirstName} {user.LastName}", user.Email) };
+
+        _mailService.SendMail(
+            new Mail
+            {
+                ToList = toEmailList,
+                Subject = "Authenticator Code - AIGallery",
+                TextBody = $"Enter your authenticator code: {authenticatorCode}"
+            }
+        );
+        return authenticatorCode;
+    }
     private async Task VerifyAuthenticatorCodeWithEmail(User user, string authenticatorCode)
     {
         EmailAuthenticator? emailAuthenticator = await _emailAuthenticatorRepository.GetAsync(predicate: e => e.UserId == user.Id);
@@ -120,4 +138,6 @@ public class AuthenticatorManager : IAuthenticatorService
         if (!result)
             throw new BusinessException("Authenticator code is invalid.");
     }
+
+
 }

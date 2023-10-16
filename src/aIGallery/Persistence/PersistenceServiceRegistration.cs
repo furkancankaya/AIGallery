@@ -18,8 +18,9 @@ public static class PersistenceServiceRegistration
         services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IUserOperationClaimRepository, UserOperationClaimRepository>();
+        services.AddScoped<IUserTempRepository, UserTempRepository>();
 
-        services.AddScoped<IArtStyleRepository, ArtStyleRepository>();
+         services.AddScoped<IArtStyleRepository, ArtStyleRepository>();
         services.AddScoped<ICategoryRepository, CategoryRepository>();
         services.AddScoped<IImageRepository, ImageRepository>();
         services.AddScoped<ILikeRepository, LikeRepository>();

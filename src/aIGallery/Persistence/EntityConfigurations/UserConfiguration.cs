@@ -15,6 +15,7 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder.Property(u => u.FirstName).HasColumnName("FirstName").IsRequired();
         builder.Property(u => u.LastName).HasColumnName("LastName").IsRequired();
         builder.Property(u => u.Email).HasColumnName("Email").IsRequired();
+        builder.Property(u => u.Nick).HasColumnName("Nick").IsRequired();
         builder.Property(u => u.PasswordSalt).HasColumnName("PasswordSalt").IsRequired();
         builder.Property(u => u.PasswordHash).HasColumnName("PasswordHash").IsRequired();
         builder.Property(u => u.Status).HasColumnName("Status").HasDefaultValue(true);
@@ -22,9 +23,9 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder.Property(u => u.CreatedDate).HasColumnName("CreatedDate").IsRequired();
         builder.Property(u => u.UpdatedDate).HasColumnName("UpdatedDate");
         builder.Property(u => u.DeletedDate).HasColumnName("DeletedDate");
-        builder.Property(u => u.Token).HasColumnName("Token");
-        builder.Property(u => u.Pro).HasColumnName("Pro");
-        builder.Property(u => u.Blocked).HasColumnName("Blocked");
+        builder.Property(u => u.Token).HasColumnName("Token").HasDefaultValue(10);
+        builder.Property(u => u.Pro).HasColumnName("Pro").HasDefaultValue(false);
+        builder.Property(u => u.Blocked).HasColumnName("Blocked").HasDefaultValue(false);
 
         builder.HasQueryFilter(u => !u.DeletedDate.HasValue);
 

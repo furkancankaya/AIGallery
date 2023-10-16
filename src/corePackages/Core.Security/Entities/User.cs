@@ -8,7 +8,7 @@ public class User : Entity<int>
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public string Email { get; set; }
- 
+    public string Nick { get; set; }
     public byte[] PasswordSalt { get; set; }
     public byte[] PasswordHash { get; set; }
     public bool Status { get; set; }
@@ -30,6 +30,7 @@ public class User : Entity<int>
         Email = string.Empty;
         PasswordHash = Array.Empty<byte>();
         PasswordSalt = Array.Empty<byte>();
+        Nick = string.Empty;
     }
 
     public User(
@@ -39,16 +40,24 @@ public class User : Entity<int>
         byte[] passwordSalt,
         byte[] passwordHash,
         bool status,
-        AuthenticatorType authenticatorType
+        AuthenticatorType authenticatorType,
+        string nick,
+        int token,
+        bool pro,
+        bool blocked
     )
     {
         FirstName = firstName;
         LastName = lastName;
         Email = email;
+        Nick = nick;
         PasswordSalt = passwordSalt;
         PasswordHash = passwordHash;
         Status = status;
         AuthenticatorType = authenticatorType;
+        Token = token;
+        Pro = pro;
+        Blocked = blocked;
     }
 
     public User(
@@ -59,7 +68,11 @@ public class User : Entity<int>
         byte[] passwordSalt,
         byte[] passwordHash,
         bool status,
-        AuthenticatorType authenticatorType
+        AuthenticatorType authenticatorType,
+            string nick,
+        int token,
+        bool pro,
+        bool blocked
     )
         : base(id)
     {
@@ -70,5 +83,9 @@ public class User : Entity<int>
         PasswordHash = passwordHash;
         Status = status;
         AuthenticatorType = authenticatorType;
+        Nick = nick;
+        Token = token;
+        Pro = pro;
+        Blocked = blocked;
     }
 }

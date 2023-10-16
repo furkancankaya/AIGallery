@@ -21,6 +21,7 @@ public class BaseDbContext : DbContext
     public DbSet<Like> Likes { get; set; }
     public DbSet<SaledImage> SaledImages { get; set; }
     public DbSet<BannedPrompt> BannedPrompts { get; set; }
+    public DbSet<UserTemp> UserTemps { get; set; }
 
     public BaseDbContext(DbContextOptions dbContextOptions, IConfiguration configuration)
         : base(dbContextOptions)

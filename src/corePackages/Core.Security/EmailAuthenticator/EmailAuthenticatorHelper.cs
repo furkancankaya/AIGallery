@@ -18,4 +18,10 @@ public class EmailAuthenticatorHelper : IEmailAuthenticatorHelper
             .PadLeft(totalWidth: 6, paddingChar: '0');
         return Task.FromResult(code);
     }
+    public Task<int> CreateEmailActivationCodeInt()
+    {
+        Random random = new Random();
+        int code = random.Next(1000, 10000); // 1000 ile 9999 arasında rastgele bir tam sayı üretir
+        return Task.FromResult(code);
+    }
 }

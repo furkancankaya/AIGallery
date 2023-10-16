@@ -78,6 +78,7 @@ public static class ApplicationServiceRegistration
         services.AddScoped<ILikesService, LikesManager>();
         services.AddScoped<ISaledImagesService, SaledImagesManager>();
         services.AddScoped<IBannedPromptsService, BannedPromptsManager>();
+        services.AddScoped<IUserTempService, UserTempManager>();
         return services;
     }
 

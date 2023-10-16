@@ -56,16 +56,16 @@ public class MailKitMailService : IMailService
         email.Subject = mail.Subject;
         if (mail.UnsubscribeLink != null)
             email.Headers.Add(field: "List-Unsubscribe", value: $"<{mail.UnsubscribeLink}>");
-        BodyBuilder bodyBuilder = new() { TextBody = mail.TextBody, HtmlBody = mail.HtmlBody };
+        BodyBuilder bodyBuilder = new() { TextBody = mail.TextBody };
 
         if (mail.Attachments != null)
             foreach (MimeEntity? attachment in mail.Attachments)
                 if (attachment != null)
                     bodyBuilder.Attachments.Add(attachment);
-
+   
         email.Body = bodyBuilder.ToMessageBody();
         email.Prepare(EncodingConstraint.SevenBit);
-
+/*
         if (_mailSettings.DkimPrivateKey != null && _mailSettings.DkimSelector != null && _mailSettings.DomainName != null)
         {
             _signer = new DkimSigner(key: ReadPrivateKeyFromPemEncodedString(), _mailSettings.DomainName, _mailSettings.DkimSelector)
@@ -77,7 +77,7 @@ public class MailKitMailService : IMailService
             };
             HeaderId[] headers = { HeaderId.From, HeaderId.Subject, HeaderId.To };
             _signer.Sign(email, headers);
-        }
+        }*/
 
         smtp = new SmtpClient();
         smtp.Connect(_mailSettings.Server, _mailSettings.Port);

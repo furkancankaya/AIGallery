@@ -8,5 +8,6 @@ public interface IAuthenticatorService
     public Task<OtpAuthenticator> CreateOtpAuthenticator(User user);
     public Task<string> ConvertSecretKeyToString(byte[] secretKey);
     public Task SendAuthenticatorCode(User user);
+    public Task<int> SendAuthenticatorCodeIntWithEmail(User user);
     public Task VerifyAuthenticatorCode(User user, string authenticatorCode);
 }
