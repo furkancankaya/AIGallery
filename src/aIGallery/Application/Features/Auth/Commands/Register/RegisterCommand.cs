@@ -1,4 +1,6 @@
-﻿using Application.Features.Auth.Rules;
+﻿using Application.Features.Auth.Commands.Login;
+using Application.Features.Auth.Rules;
+using Application.Features.Users.Queries.GetById;
 using Application.Services.AuthService;
 using Application.Services.Repositories;
 using Core.Application.Dtos;
@@ -72,6 +74,7 @@ public class RegisterCommand : IRequest<RegisteredResponse>
             Core.Security.Entities.RefreshToken addedRefreshToken = await _authService.AddRefreshToken(createdRefreshToken);
 
             RegisteredResponse registeredResponse = new() { AccessToken = createdAccessToken, RefreshToken = addedRefreshToken };
+ 
             return registeredResponse;
         }
     }

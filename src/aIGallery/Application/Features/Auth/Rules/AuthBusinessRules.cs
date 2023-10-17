@@ -11,11 +11,13 @@ namespace Application.Features.Auth.Rules;
 public class AuthBusinessRules : BaseBusinessRules
 {
     private readonly IUserRepository _userRepository;
+    private readonly IUserTempRepository _userTempRepository;
     private readonly IEmailAuthenticatorRepository _emailAuthenticatorRepository;
 
-    public AuthBusinessRules(IUserRepository userRepository, IEmailAuthenticatorRepository emailAuthenticatorRepository)
+    public AuthBusinessRules(IUserRepository userRepository, IEmailAuthenticatorRepository emailAuthenticatorRepository,IUserTempRepository userTempRepository)
     {
         _userRepository = userRepository;
+        _userTempRepository = userTempRepository;
         _emailAuthenticatorRepository = emailAuthenticatorRepository;
     }
 
@@ -88,5 +90,18 @@ public class AuthBusinessRules : BaseBusinessRules
         await UserShouldBeExistsWhenSelected(user);
         if (!HashingHelper.VerifyPasswordHash(password, user!.PasswordHash, user.PasswordSalt))
             throw new BusinessException(AuthMessages.PasswordDontMatch);
+    }
+    public async Task UserTempCheck(int OTP,string Email)
+    {
+        UserTemp? user = await _userTempRepository.GetAsync(predicate :x => x.Email==Email && x.OTP== OTP, enableTracking: true);
+        TimeSpan timeDifference=new TimeSpan();
+        if (user != null)
+             timeDifference = DateTime.UtcNow - user.CreatedDate;
+        
+        if (user ==null)
+            throw new BusinessException(AuthMessages.OtpFalse);
+        else if(timeDifference.TotalSeconds>60)
+            throw new BusinessException(AuthMessages.OtpOverTime);
+       
     }
 }

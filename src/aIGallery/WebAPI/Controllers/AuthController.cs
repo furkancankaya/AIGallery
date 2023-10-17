@@ -7,6 +7,7 @@ using Application.Features.Auth.Commands.RegisterTempUser;
 using Application.Features.Auth.Commands.RevokeToken;
 using Application.Features.Auth.Commands.VerifyEmailAuthenticator;
 using Application.Features.Auth.Commands.VerifyOtpAuthenticator;
+using Application.Features.Auth.Commands.VerifyRegisterTemp;
 using Core.Application.Dtos;
 using Core.Security.Entities;
 using Microsoft.AspNetCore.Mvc;
@@ -56,7 +57,14 @@ public class AuthController : BaseController
 
         return Ok(result);
     }
-
+    [HttpPost("VerifyRegisterTemp")]
+    public async Task<IActionResult> VerifyRegisterTemp([FromBody] VerifyRegisterDto verifyRegisterDto)
+    {
+        VerifyRegisterTempCommand verifyRegisterTempCommand =
+            new() { Otp= verifyRegisterDto.Otp, Email= verifyRegisterDto.Email };
+        await Mediator.Send(verifyRegisterTempCommand);
+        return Ok(true);
+    }
     [HttpGet("RefreshToken")]
     public async Task<IActionResult> RefreshToken()
     {

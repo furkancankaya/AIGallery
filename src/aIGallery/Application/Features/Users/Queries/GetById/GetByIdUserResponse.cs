@@ -9,20 +9,22 @@ public class GetByIdUserResponse : IResponse
     public string LastName { get; set; }
     public string Email { get; set; }
     public bool Status { get; set; }
-
+    public string Nick { get; set; }
     public GetByIdUserResponse()
     {
         FirstName = string.Empty;
         LastName = string.Empty;
         Email = string.Empty;
+        Nick = string.Empty;
     }
 
-    public GetByIdUserResponse(int id, string firstName, string lastName, string email, bool status)
+    public GetByIdUserResponse(int id, string firstName, string lastName, string email, bool status,string nick)
     {
         Id = id;
         FirstName = firstName;
         LastName = lastName;
         Email = email;
         Status = status;
+        Nick = nick;
     }
 }

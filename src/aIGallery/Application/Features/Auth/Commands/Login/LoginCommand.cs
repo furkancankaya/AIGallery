@@ -1,4 +1,5 @@
 ﻿using Application.Features.Auth.Rules;
+using Application.Features.Users.Queries.GetById;
 using Application.Services.AuthenticatorService;
 using Application.Services.AuthService;
 using Application.Services.UsersService;
@@ -78,7 +79,7 @@ public class LoginCommand : IRequest<LoggedResponse>
 
             loggedResponse.AccessToken = createdAccessToken;
             loggedResponse.RefreshToken = addedRefreshToken;
-            return loggedResponse;
+              return loggedResponse;
         }
     }
 }
