@@ -65,4 +65,6 @@ public class UsersController : BaseController
         DeletedUserResponse result = await Mediator.Send(deleteUserCommand);
         return Ok(result);
     }
+
+    
 }

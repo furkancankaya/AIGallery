@@ -19,6 +19,7 @@ public static class PersistenceServiceRegistration
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IUserOperationClaimRepository, UserOperationClaimRepository>();
         services.AddScoped<IUserTempRepository, UserTempRepository>();
+        services.AddScoped<IForgetPasswordRepository, ForgetPasswordRepository>();
 
          services.AddScoped<IArtStyleRepository, ArtStyleRepository>();
         services.AddScoped<ICategoryRepository, CategoryRepository>();

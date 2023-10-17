@@ -12,8 +12,8 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder.ToTable("Users").HasKey(u => u.Id);
 
         builder.Property(u => u.Id).HasColumnName("Id").IsRequired();
-        builder.Property(u => u.FirstName).HasColumnName("FirstName").IsRequired();
-        builder.Property(u => u.LastName).HasColumnName("LastName").IsRequired();
+        builder.Property(u => u.FirstName).HasColumnName("FirstName");
+        builder.Property(u => u.LastName).HasColumnName("LastName");
         builder.Property(u => u.Email).HasColumnName("Email").IsRequired();
         builder.Property(u => u.Nick).HasColumnName("Nick").IsRequired();
         builder.Property(u => u.PasswordSalt).HasColumnName("PasswordSalt").IsRequired();

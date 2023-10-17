@@ -1,5 +1,6 @@
 ﻿using Application.Features.Auth.Commands.EnableEmailAuthenticator;
 using Application.Features.Auth.Commands.EnableOtpAuthenticator;
+using Application.Features.Auth.Commands.ForgetPassword;
 using Application.Features.Auth.Commands.Login;
 using Application.Features.Auth.Commands.RefreshToken;
 using Application.Features.Auth.Commands.Register;
@@ -7,7 +8,6 @@ using Application.Features.Auth.Commands.RegisterTempUser;
 using Application.Features.Auth.Commands.RevokeToken;
 using Application.Features.Auth.Commands.VerifyEmailAuthenticator;
 using Application.Features.Auth.Commands.VerifyOtpAuthenticator;
-using Application.Features.Auth.Commands.VerifyRegisterTemp;
 using Core.Application.Dtos;
 using Core.Security.Entities;
 using Microsoft.AspNetCore.Mvc;
@@ -50,21 +50,47 @@ public class AuthController : BaseController
         return Created(uri: "", result.AccessToken);
     }
     [HttpPost("RegisterTemp")]
-    public async Task<IActionResult> RegisterTemp([FromBody] UserForRegisterDto userForRegisterDto)
+    public async Task<IActionResult> RegisterTemp([FromBody] RegisterTempCommand registerTempCommand)
     {
-        RegisterTempCommand registerCommand = new() { UserForRegisterDto = userForRegisterDto, IpAddress = getIpAddress() };
+        RegisterTempCommand registerCommand = new() { Email = registerTempCommand.Email, IpAddress = getIpAddress() };
         RegisterTempResponse result = await Mediator.Send(registerCommand);
+
+        
 
         return Ok(result);
     }
     [HttpPost("VerifyRegisterTemp")]
-    public async Task<IActionResult> VerifyRegisterTemp([FromBody] VerifyRegisterDto verifyRegisterDto)
-    {
+    public async Task<IActionResult> VerifyRegisterTemp([FromBody] VerifyRegisterTempCommand verifyRegisterDto)
+    { 
         VerifyRegisterTempCommand verifyRegisterTempCommand =
             new() { Otp= verifyRegisterDto.Otp, Email= verifyRegisterDto.Email };
         await Mediator.Send(verifyRegisterTempCommand);
         return Ok(true);
     }
+
+    [HttpPost("ForgetPassword")]
+    public async Task<IActionResult> ForgetPassword([FromBody] ForgetPasswordCommand forgetPasswordCommand)
+    {
+        ForgetPasswordCommand registerCommand = new() {Email  = forgetPasswordCommand.Email, IpAddress = getIpAddress() };
+
+
+        ForgetPasswordResponse result = await Mediator.Send(registerCommand);
+
+        return Ok(result);
+    }
+    [HttpPost("VerifyForgetPassword")]
+    public async Task<IActionResult> VerifyForgetPassword([FromBody] VerifyForgetPasswordCommand verifyRegisterDto)
+    {
+        VerifyForgetPasswordCommand verifyRegisterTempCommand =
+            new() { Otp = verifyRegisterDto.Otp, Email = verifyRegisterDto.Email };
+        await Mediator.Send(verifyRegisterTempCommand);
+        return Ok(true);
+    }
+
+
+
+
+
     [HttpGet("RefreshToken")]
     public async Task<IActionResult> RefreshToken()
     {
