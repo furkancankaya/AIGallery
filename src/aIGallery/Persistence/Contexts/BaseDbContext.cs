@@ -22,6 +22,7 @@ public class BaseDbContext : DbContext
     public DbSet<SaledImage> SaledImages { get; set; }
     public DbSet<BannedPrompt> BannedPrompts { get; set; }
     public DbSet<UserTemp> UserTemps { get; set; }
+    public DbSet<ForgetPassword> ForgetPassword { get; set; }
 
     public BaseDbContext(DbContextOptions dbContextOptions, IConfiguration configuration)
         : base(dbContextOptions)

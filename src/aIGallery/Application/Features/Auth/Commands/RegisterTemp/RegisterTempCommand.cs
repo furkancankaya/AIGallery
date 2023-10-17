@@ -13,25 +13,26 @@ namespace Application.Features.Auth.Commands.Register;
 
 public class RegisterTempCommand : IRequest<RegisterTempResponse>
 {
-    public UserForRegisterDto UserForRegisterDto { get; set; }
+    public string Email { get; set; }
     public string IpAddress { get; set; }
 
     public RegisterTempCommand()
     {
-        UserForRegisterDto = null!;
+        Email = string.Empty;
         IpAddress = string.Empty;
     }
 
-    public RegisterTempCommand(UserForRegisterDto userForRegisterDto, string ipAddress)
+    public RegisterTempCommand(string email, string ipAddress)
     {
-        UserForRegisterDto = userForRegisterDto;
+        Email = email;
         IpAddress = ipAddress;
     }
 
     public class RegisterTempCommandHandler : IRequestHandler<RegisterTempCommand, RegisterTempResponse>
     {
         private readonly IUserTempRepository _userTempRepository;
-         private readonly AuthBusinessRules _authBusinessRules;
+        private readonly IForgetPasswordRepository _forgetPasswordRepository;
+        private readonly AuthBusinessRules _authBusinessRules;
         private readonly IAuthenticatorService _authenticatorService;
 
         public RegisterTempCommandHandler(IUserTempRepository userTempRepository,   AuthBusinessRules authBusinessRules, IAuthenticatorService authenticatorService)
@@ -44,14 +45,14 @@ public class RegisterTempCommand : IRequest<RegisterTempResponse>
 
         public async Task<RegisterTempResponse> Handle(RegisterTempCommand request, CancellationToken cancellationToken)
         {
-            await _authBusinessRules.UserEmailShouldBeNotExists(request.UserForRegisterDto.Email);
+            await _authBusinessRules.UserEmailShouldBeNotExists(request.Email);
 
 
-            int otp = await _authenticatorService.SendAuthenticatorCodeIntWithEmail(new User { FirstName = request.UserForRegisterDto.FirstName, LastName = request.UserForRegisterDto.LastName, Email = request.UserForRegisterDto.Email });
+            int otp = await _authenticatorService.SendAuthenticatorCodeIntWithEmail(new User {Email = request.Email });
             UserTemp newUser =
                 new()
                 {
-                    Email = request.UserForRegisterDto.Email,
+                    Email = request.Email,
                     OTP = otp
                 };
             UserTemp createdUser = await _userTempRepository.AddAsync(newUser);

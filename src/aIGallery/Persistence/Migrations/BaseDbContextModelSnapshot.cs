@@ -62,6 +62,39 @@ namespace Persistence.Migrations
                     b.ToTable("EmailAuthenticators", (string)null);
                 });
 
+            modelBuilder.Entity("Core.Security.Entities.ForgetPassword", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("Id");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("CreatedDate");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("DeletedDate");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Email");
+
+                    b.Property<int>("OTP")
+                        .HasColumnType("int")
+                        .HasColumnName("OTP");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("UpdatedDate");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ForgetPasswords", (string)null);
+                });
+
             modelBuilder.Entity("Core.Security.Entities.OperationClaim", b =>
                 {
                     b.Property<int>("Id")
@@ -1270,8 +1303,13 @@ namespace Persistence.Migrations
                             FirstName = "Admin",
                             LastName = "NArchitecture",
                             Nick = "",
+<<<<<<< HEAD
                             PasswordHash = new byte[] { 113, 121, 195, 209, 48, 247, 62, 207, 234, 216, 81, 65, 89, 100, 150, 98, 41, 6, 149, 242, 129, 103, 168, 135, 34, 1, 137, 83, 82, 168, 129, 92, 56, 237, 139, 26, 55, 30, 132, 38, 11, 223, 18, 185, 96, 210, 183, 119, 164, 111, 141, 175, 27, 203, 153, 60, 219, 161, 103, 120, 8, 128, 239, 144 },
                             PasswordSalt = new byte[] { 160, 41, 142, 49, 59, 7, 68, 40, 12, 218, 142, 179, 194, 156, 55, 1, 41, 166, 79, 163, 123, 86, 47, 246, 37, 218, 65, 210, 4, 213, 151, 2, 243, 107, 135, 202, 109, 203, 98, 31, 55, 51, 136, 155, 14, 123, 231, 231, 112, 36, 66, 132, 232, 92, 207, 165, 250, 210, 29, 33, 139, 54, 78, 189, 161, 82, 167, 90, 120, 236, 111, 136, 45, 239, 162, 228, 254, 142, 63, 248, 249, 200, 144, 134, 225, 0, 234, 132, 55, 196, 204, 94, 192, 247, 66, 50, 120, 247, 207, 191, 234, 140, 24, 193, 159, 226, 94, 228, 133, 149, 237, 37, 6, 237, 107, 232, 193, 1, 224, 231, 144, 91, 64, 142, 170, 128, 80, 4 },
+=======
+                            PasswordHash = new byte[] { 83, 42, 215, 71, 247, 106, 20, 115, 109, 171, 152, 216, 104, 6, 3, 178, 98, 242, 213, 69, 111, 73, 27, 185, 102, 140, 110, 115, 119, 20, 128, 163, 60, 165, 209, 11, 100, 99, 75, 237, 229, 15, 90, 25, 18, 61, 68, 103, 255, 163, 232, 90, 55, 156, 217, 210, 5, 154, 254, 47, 41, 11, 54, 61 },
+                            PasswordSalt = new byte[] { 3, 33, 210, 92, 137, 25, 163, 106, 82, 164, 171, 83, 132, 250, 207, 217, 217, 252, 219, 147, 176, 3, 125, 134, 7, 232, 192, 136, 248, 151, 210, 55, 75, 219, 83, 154, 190, 180, 234, 62, 157, 240, 167, 2, 177, 39, 89, 164, 199, 146, 230, 87, 184, 223, 97, 197, 205, 233, 32, 253, 215, 20, 194, 82, 62, 249, 12, 229, 236, 202, 144, 92, 212, 211, 240, 188, 223, 126, 228, 94, 23, 204, 172, 60, 33, 126, 109, 202, 70, 212, 168, 167, 85, 233, 197, 134, 142, 120, 92, 130, 149, 104, 23, 76, 25, 141, 16, 38, 164, 37, 9, 58, 16, 40, 86, 0, 143, 177, 169, 206, 210, 112, 180, 223, 184, 10, 183, 145 },
+>>>>>>> b6b845cb4f0598bce03fb321d9695a2506f0d496
                             Pro = false,
                             Status = true,
                             Token = 0

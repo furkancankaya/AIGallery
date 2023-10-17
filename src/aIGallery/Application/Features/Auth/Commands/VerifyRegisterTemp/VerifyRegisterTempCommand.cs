@@ -10,40 +10,42 @@ namespace Application.Features.Auth.Commands.VerifyOtpAuthenticator;
 
 public class VerifyRegisterTempCommand : IRequest<bool>
 {
- 
+
     public int Otp { get; set; }
     public string Email { get; set; }
 
     public VerifyRegisterTempCommand()
     {
         Otp = 0;
+        Email = string.Empty;
     }
 
-    public VerifyRegisterTempCommand(int otp)
+    public VerifyRegisterTempCommand(int otp,string email)
     {
         Otp = otp;
+        Email = email;
     }
 
-    public class VerifyOtpAuthenticatorCommandHandler : IRequestHandler<VerifyRegisterTempCommand,bool>
+    public class VerifyRegisterTempCommandHandler : IRequestHandler<VerifyRegisterTempCommand, bool>
     {
         private readonly AuthBusinessRules _authBusinessRules;
-  
+
         private readonly IUserTempService _userTempService;
 
 
-        public VerifyOtpAuthenticatorCommandHandler(
+        public VerifyRegisterTempCommandHandler(
             AuthBusinessRules authBusinessRules,
             IUserTempService userService
         )
         {
-             _authBusinessRules = authBusinessRules;
+            _authBusinessRules = authBusinessRules;
             _userTempService = userService;
-         }
+        }
 
         public async Task<bool> Handle(VerifyRegisterTempCommand request, CancellationToken cancellationToken)
         {
-          await _authBusinessRules.UserTempCheck(request.Otp,request.Email);
-          return true;
+            await _authBusinessRules.UserTempCheck(request.Otp, request.Email);
+            return true;
         }
     }
 }

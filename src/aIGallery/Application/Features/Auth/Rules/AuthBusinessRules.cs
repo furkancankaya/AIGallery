@@ -12,12 +12,14 @@ public class AuthBusinessRules : BaseBusinessRules
 {
     private readonly IUserRepository _userRepository;
     private readonly IUserTempRepository _userTempRepository;
+    private readonly IForgetPasswordRepository _forgetPasswordRepository;
     private readonly IEmailAuthenticatorRepository _emailAuthenticatorRepository;
 
-    public AuthBusinessRules(IUserRepository userRepository, IEmailAuthenticatorRepository emailAuthenticatorRepository,IUserTempRepository userTempRepository)
+    public AuthBusinessRules(IUserRepository userRepository, IEmailAuthenticatorRepository emailAuthenticatorRepository,IUserTempRepository userTempRepository, IForgetPasswordRepository forgetPasswordRepository)
     {
         _userRepository = userRepository;
         _userTempRepository = userTempRepository;
+        _forgetPasswordRepository = forgetPasswordRepository;
         _emailAuthenticatorRepository = emailAuthenticatorRepository;
     }
 
@@ -83,7 +85,12 @@ public class AuthBusinessRules : BaseBusinessRules
         if (doesExists)
             throw new BusinessException(AuthMessages.UserMailAlreadyExists);
     }
-
+    public async Task UserEmailShouldBeExists(string email)
+    {
+        bool doesExists = await _userRepository.AnyAsync(predicate: u => u.Email == email, enableTracking: false);
+        if (!doesExists)
+            throw new BusinessException(AuthMessages.UserMailAlreadyExists);
+    }
     public async Task UserPasswordShouldBeMatch(int id, string password)
     {
         User? user = await _userRepository.GetAsync(predicate: u => u.Id == id, enableTracking: false);
@@ -103,5 +110,19 @@ public class AuthBusinessRules : BaseBusinessRules
         else if(timeDifference.TotalSeconds>60)
             throw new BusinessException(AuthMessages.OtpOverTime);
        
+    }
+
+    public async Task ForgetPasswordCheck(int OTP, string Email)
+    {
+        ForgetPassword? user = await _forgetPasswordRepository.GetAsync(predicate: x => x.Email == Email && x.OTP == OTP, enableTracking: true);
+        TimeSpan timeDifference = new TimeSpan();
+        if (user != null)
+            timeDifference = DateTime.UtcNow - user.CreatedDate;
+
+        if (user == null)
+            throw new BusinessException(AuthMessages.OtpFalse);
+        else if (timeDifference.TotalSeconds > 60)
+            throw new BusinessException(AuthMessages.OtpOverTime);
+
     }
 }

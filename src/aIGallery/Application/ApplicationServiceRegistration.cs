@@ -79,6 +79,8 @@ public static class ApplicationServiceRegistration
         services.AddScoped<ISaledImagesService, SaledImagesManager>();
         services.AddScoped<IBannedPromptsService, BannedPromptsManager>();
         services.AddScoped<IUserTempService, UserTempManager>();
+        services.AddScoped<IForgetPasswordService, ForgetPasswordManager>();
+        
         return services;
     }
 
