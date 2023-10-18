@@ -25,8 +25,7 @@ public class RegisterTempCommand : IRequest<RegisterTempResponse>
     public RegisterTempCommand(string email, string ipAddress)
     {
         Email = email;
-        IpAddress = ipAddress;
-    }
+      }
 
     public class RegisterTempCommandHandler : IRequestHandler<RegisterTempCommand, RegisterTempResponse>
     {

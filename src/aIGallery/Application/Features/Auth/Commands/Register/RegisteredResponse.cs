@@ -14,7 +14,7 @@ public class RegisteredResponse : IResponse
         RefreshToken = null!;
      }
 
-    public RegisteredResponse(AccessToken accessToken, Core.Security.Entities.RefreshToken refreshToken,GetByIdUserResponse user)
+    public RegisteredResponse(AccessToken accessToken, Core.Security.Entities.RefreshToken refreshToken)
     {
         AccessToken = accessToken;
         RefreshToken = refreshToken;

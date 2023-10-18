@@ -7,6 +7,7 @@ using Application.Features.Auth.Commands.Register;
 using Application.Features.Auth.Commands.RegisterTempUser;
 using Application.Features.Auth.Commands.RevokeToken;
 using Application.Features.Auth.Commands.VerifyEmailAuthenticator;
+using Application.Features.Auth.Commands.VerifyForgetPassword;
 using Application.Features.Auth.Commands.VerifyOtpAuthenticator;
 using Core.Application.Dtos;
 using Core.Security.Entities;
@@ -55,15 +56,15 @@ public class AuthController : BaseController
         RegisterTempCommand registerCommand = new() { Email = registerTempCommand.Email, IpAddress = getIpAddress() };
         RegisterTempResponse result = await Mediator.Send(registerCommand);
 
-        
+
 
         return Ok(result);
     }
     [HttpPost("VerifyRegisterTemp")]
     public async Task<IActionResult> VerifyRegisterTemp([FromBody] VerifyRegisterTempCommand verifyRegisterDto)
-    { 
+    {
         VerifyRegisterTempCommand verifyRegisterTempCommand =
-            new() { Otp= verifyRegisterDto.Otp, Email= verifyRegisterDto.Email };
+            new() { Otp = verifyRegisterDto.Otp, Email = verifyRegisterDto.Email };
         await Mediator.Send(verifyRegisterTempCommand);
         return Ok(true);
     }
@@ -71,7 +72,7 @@ public class AuthController : BaseController
     [HttpPost("ForgetPassword")]
     public async Task<IActionResult> ForgetPassword([FromBody] ForgetPasswordCommand forgetPasswordCommand)
     {
-        ForgetPasswordCommand registerCommand = new() {Email  = forgetPasswordCommand.Email, IpAddress = getIpAddress() };
+        ForgetPasswordCommand registerCommand = new() { Email = forgetPasswordCommand.Email};
 
 
         ForgetPasswordResponse result = await Mediator.Send(registerCommand);
@@ -82,9 +83,9 @@ public class AuthController : BaseController
     public async Task<IActionResult> VerifyForgetPassword([FromBody] VerifyForgetPasswordCommand verifyRegisterDto)
     {
         VerifyForgetPasswordCommand verifyRegisterTempCommand =
-            new() { Otp = verifyRegisterDto.Otp, Email = verifyRegisterDto.Email };
-        await Mediator.Send(verifyRegisterTempCommand);
-        return Ok(true);
+            new() { Otp = verifyRegisterDto.Otp, Email = verifyRegisterDto.Email, IpAddress = getIpAddress() };
+        VerifyForgetPasswordResponse verifyForgetPasswordResponse = await Mediator.Send(verifyRegisterTempCommand);
+        return Ok(verifyForgetPasswordResponse);
     }
 
 

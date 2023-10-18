@@ -58,7 +58,14 @@ public class UsersController : BaseController
         UpdatedUserFromAuthResponse result = await Mediator.Send(updateUserFromAuthCommand);
         return Ok(result);
     }
-
+    [HttpPut("UpdateFromNewPasswordAuth")]
+    public async Task<IActionResult> UpdateFromNewPasswordAuth([FromBody] UpdateUserFromAuthNewPasswordCommand updateUserFromAuthNewPasswordCommand)
+    {
+        updateUserFromAuthNewPasswordCommand.Id = getUserIdFromRequest();
+         
+        UpdateUserFromAuthNewPasswordResponse result = await Mediator.Send(updateUserFromAuthNewPasswordCommand);
+        return Ok(result);
+    }
     [HttpDelete]
     public async Task<IActionResult> Delete([FromBody] DeleteUserCommand deleteUserCommand)
     {
