@@ -23,6 +23,8 @@ public class BaseDbContext : DbContext
     public DbSet<BannedPrompt> BannedPrompts { get; set; }
     public DbSet<UserTemp> UserTemps { get; set; }
     public DbSet<ForgetPassword> ForgetPassword { get; set; }
+    public DbSet<Pro> Pros { get; set; }
+    public DbSet<TokenHistory> TokenHistories { get; set; }
 
     public BaseDbContext(DbContextOptions dbContextOptions, IConfiguration configuration)
         : base(dbContextOptions)

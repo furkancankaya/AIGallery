@@ -592,3 +592,4 @@ C:\Users\Radon\Desktop\AIGallery\src\aIGallery\WebAPI\obj\Debug\net7.0\refint\We
 C:\Users\Radon\Desktop\AIGallery\src\aIGallery\WebAPI\obj\Debug\net7.0\WebAPI.pdb
 C:\Users\Radon\Desktop\AIGallery\src\aIGallery\WebAPI\obj\Debug\net7.0\WebAPI.genruntimeconfig.cache
 C:\Users\Radon\Desktop\AIGallery\src\aIGallery\WebAPI\obj\Debug\net7.0\ref\WebAPI.dll
+C:\Users\Radon\Desktop\AIGallery\src\aIGallery\WebAPI\obj\Debug\net7.0\WebAPI.MvcApplicationPartsAssemblyInfo.cs

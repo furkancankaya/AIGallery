@@ -411,6 +411,34 @@ public class OperationClaimConfiguration : IEntityTypeConfiguration<OperationCla
         
         #endregion
         
+        
+        #region Pros
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "Pros.Admin" });
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "Pros.Read" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "Pros.Write" });
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "Pros.Add" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "Pros.Update" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "Pros.Delete" });
+        
+        #endregion
+        
+        
+        #region TokenHistories
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "TokenHistories.Admin" });
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "TokenHistories.Read" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "TokenHistories.Write" });
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "TokenHistories.Add" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "TokenHistories.Update" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "TokenHistories.Delete" });
+        
+        #endregion
+        
         return seeds;
     }
 }

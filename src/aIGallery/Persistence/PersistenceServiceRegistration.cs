@@ -48,6 +48,8 @@ public static class PersistenceServiceRegistration
         services.AddScoped<ILikeRepository, LikeRepository>();
         services.AddScoped<ISaledImageRepository, SaledImageRepository>();
         services.AddScoped<IBannedPromptRepository, BannedPromptRepository>();
+        services.AddScoped<IProRepository, ProRepository>();
+        services.AddScoped<ITokenHistoryRepository, TokenHistoryRepository>();
         return services;
     }
 }

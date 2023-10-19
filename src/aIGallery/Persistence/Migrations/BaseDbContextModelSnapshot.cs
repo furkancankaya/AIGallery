@@ -1103,6 +1103,78 @@ namespace Persistence.Migrations
                             Id = 163,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "BannedPrompts.Delete"
+                        },
+                        new
+                        {
+                            Id = 164,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Pros.Admin"
+                        },
+                        new
+                        {
+                            Id = 165,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Pros.Read"
+                        },
+                        new
+                        {
+                            Id = 166,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Pros.Write"
+                        },
+                        new
+                        {
+                            Id = 167,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Pros.Add"
+                        },
+                        new
+                        {
+                            Id = 168,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Pros.Update"
+                        },
+                        new
+                        {
+                            Id = 169,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Pros.Delete"
+                        },
+                        new
+                        {
+                            Id = 170,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "TokenHistories.Admin"
+                        },
+                        new
+                        {
+                            Id = 171,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "TokenHistories.Read"
+                        },
+                        new
+                        {
+                            Id = 172,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "TokenHistories.Write"
+                        },
+                        new
+                        {
+                            Id = 173,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "TokenHistories.Add"
+                        },
+                        new
+                        {
+                            Id = 174,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "TokenHistories.Update"
+                        },
+                        new
+                        {
+                            Id = 175,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "TokenHistories.Delete"
                         });
                 });
 
@@ -1299,12 +1371,12 @@ namespace Persistence.Migrations
                             AuthenticatorType = 0,
                             Blocked = false,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "admin@admin.com",
+                            Email = "husok99@mail.com",
                             FirstName = "Admin",
                             LastName = "NArchitecture",
                             Nick = "",
-                            PasswordHash = new byte[] { 76, 32, 152, 22, 205, 43, 220, 188, 243, 57, 11, 161, 119, 133, 151, 86, 179, 71, 176, 67, 70, 165, 63, 101, 78, 35, 6, 185, 201, 212, 1, 138, 43, 97, 139, 53, 174, 61, 22, 81, 160, 94, 197, 99, 94, 64, 239, 232, 177, 49, 108, 211, 216, 248, 223, 148, 254, 217, 118, 228, 174, 99, 203, 36 },
-                            PasswordSalt = new byte[] { 119, 236, 250, 199, 57, 190, 217, 170, 71, 201, 254, 56, 221, 97, 147, 191, 200, 166, 5, 218, 254, 105, 249, 117, 71, 130, 1, 170, 37, 142, 28, 233, 159, 156, 253, 38, 33, 25, 79, 4, 10, 156, 246, 232, 107, 150, 2, 236, 154, 244, 55, 74, 148, 245, 172, 124, 38, 167, 247, 7, 227, 107, 78, 66, 123, 151, 205, 186, 152, 176, 177, 182, 170, 7, 30, 185, 28, 47, 34, 206, 216, 171, 212, 228, 10, 117, 9, 49, 212, 25, 30, 67, 158, 62, 111, 114, 130, 24, 195, 195, 196, 206, 151, 36, 88, 83, 219, 192, 172, 255, 90, 63, 228, 130, 255, 16, 69, 26, 107, 158, 184, 89, 244, 181, 189, 243, 49, 196 },
+                            PasswordHash = new byte[] { 91, 129, 166, 142, 109, 179, 126, 48, 61, 11, 193, 175, 239, 169, 221, 133, 30, 58, 181, 208, 203, 168, 93, 139, 149, 244, 116, 0, 247, 215, 102, 18, 65, 117, 13, 13, 144, 222, 111, 240, 0, 223, 2, 33, 51, 19, 101, 93, 195, 129, 188, 175, 192, 236, 17, 223, 58, 248, 110, 6, 20, 122, 77, 15 },
+                            PasswordSalt = new byte[] { 64, 62, 253, 34, 172, 58, 109, 109, 44, 7, 144, 136, 41, 36, 50, 123, 36, 87, 28, 215, 213, 237, 143, 41, 41, 41, 19, 167, 202, 79, 42, 172, 176, 84, 182, 204, 137, 43, 206, 37, 53, 97, 247, 40, 128, 136, 93, 237, 163, 198, 37, 158, 235, 254, 99, 171, 25, 166, 230, 152, 226, 221, 173, 179, 209, 251, 123, 116, 70, 147, 209, 176, 88, 13, 108, 25, 61, 128, 238, 131, 118, 43, 84, 108, 113, 122, 157, 248, 53, 166, 15, 142, 71, 0, 253, 198, 169, 80, 145, 71, 108, 188, 169, 68, 157, 213, 123, 102, 188, 69, 227, 58, 100, 94, 227, 8, 65, 101, 103, 113, 138, 135, 202, 17, 188, 115, 194, 102 },
                             Pro = false,
                             Status = true,
                             Token = 0
@@ -1593,6 +1665,40 @@ namespace Persistence.Migrations
                     b.ToTable("Likes", (string)null);
                 });
 
+            modelBuilder.Entity("Domain.Entities.Pro", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("Id");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("CreatedDate");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("DeletedDate");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int")
+                        .HasColumnName("Type");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("UpdatedDate");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int")
+                        .HasColumnName("UserId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Pros", (string)null);
+                });
+
             modelBuilder.Entity("Domain.Entities.SaledImage", b =>
                 {
                     b.Property<Guid>("Id")
@@ -1625,6 +1731,44 @@ namespace Persistence.Migrations
                     b.HasIndex("ImageId");
 
                     b.ToTable("SaledImages", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.Entities.TokenHistory", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("Id");
+
+                    b.Property<int>("Amount")
+                        .HasColumnType("int")
+                        .HasColumnName("Amount");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("CreatedDate");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("DeletedDate");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("int")
+                        .HasColumnName("Price");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("UpdatedDate");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int")
+                        .HasColumnName("UserId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("TokenHistories", (string)null);
                 });
 
             modelBuilder.Entity("Core.Security.Entities.EmailAuthenticator", b =>
@@ -1713,6 +1857,17 @@ namespace Persistence.Migrations
                     b.Navigation("Image");
                 });
 
+            modelBuilder.Entity("Domain.Entities.Pro", b =>
+                {
+                    b.HasOne("Core.Security.Entities.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Domain.Entities.SaledImage", b =>
                 {
                     b.HasOne("Domain.Entities.Image", "Image")
@@ -1722,6 +1877,17 @@ namespace Persistence.Migrations
                         .IsRequired();
 
                     b.Navigation("Image");
+                });
+
+            modelBuilder.Entity("Domain.Entities.TokenHistory", b =>
+                {
+                    b.HasOne("Core.Security.Entities.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Core.Security.Entities.OperationClaim", b =>

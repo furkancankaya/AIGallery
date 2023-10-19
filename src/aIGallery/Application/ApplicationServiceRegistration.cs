@@ -21,6 +21,8 @@ using Application.Services.Images;
 using Application.Services.Likes;
 using Application.Services.SaledImages;
 using Application.Services.BannedPrompts;
+using Application.Services.Pros;
+using Application.Services.TokenHistories;
 
 namespace Application;
 
@@ -81,6 +83,8 @@ public static class ApplicationServiceRegistration
         services.AddScoped<IUserTempService, UserTempManager>();
         services.AddScoped<IForgetPasswordService, ForgetPasswordManager>();
         
+        services.AddScoped<IProsService, ProsManager>();
+        services.AddScoped<ITokenHistoriesService, TokenHistoriesManager>();
         return services;
     }
 
