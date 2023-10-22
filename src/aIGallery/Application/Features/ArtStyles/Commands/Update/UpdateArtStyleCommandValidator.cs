@@ -9,5 +9,7 @@ public class UpdateArtStyleCommandValidator : AbstractValidator<UpdateArtStyleCo
         RuleFor(c => c.Id).NotEmpty();
         RuleFor(c => c.Logo).NotEmpty();
         RuleFor(c => c.Name).NotEmpty();
+        RuleFor(c => c.Prompt).NotEmpty();
+        RuleFor(c => c.Sort).NotEmpty();
     }
 }

@@ -52,7 +52,7 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
                 Id = 1,
                 FirstName = "Admin",
                 LastName = "NArchitecture",
-                Email = "husok99@mail.com",
+                Email = "husok99@gmail.com",
                 Status = true,
                 PasswordHash = passwordHash,
                 PasswordSalt = passwordSalt

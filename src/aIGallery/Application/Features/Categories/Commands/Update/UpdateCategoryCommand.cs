@@ -12,6 +12,7 @@ public class UpdateCategoryCommand : IRequest<UpdatedCategoryResponse>, ICacheRe
     public Guid Id { get; set; }
     public string Name { get; set; }
     public string Logo { get; set; }
+    public int Sort { get; set; }
 
     public bool BypassCache { get; }
     public string? CacheKey { get; }

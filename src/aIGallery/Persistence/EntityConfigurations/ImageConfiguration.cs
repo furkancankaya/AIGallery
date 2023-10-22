@@ -12,9 +12,9 @@ public class ImageConfiguration : IEntityTypeConfiguration<Image>
 
         builder.Property(i => i.Id).HasColumnName("Id").IsRequired();
         builder.Property(i => i.ImageUrl).HasColumnName("ImageUrl");
-        builder.Property(i => i.Prompt).HasColumnName("Prompt");
+        builder.Property(i => i.Prompt).HasColumnName("Prompt").IsRequired();
         builder.Property(i => i.ArtStyleId).HasColumnName("ArtStyleId");
-        builder.Property(i => i.UserId).HasColumnName("UserId");
+        builder.Property(i => i.UserId).HasColumnName("UserId").IsRequired();
         builder.Property(i => i.CategoryId).HasColumnName("CategoryId");
         builder.Property(i => i.ImgToImg).HasColumnName("ImgToImg");
         builder.Property(i => i.Discover).HasColumnName("Discover");

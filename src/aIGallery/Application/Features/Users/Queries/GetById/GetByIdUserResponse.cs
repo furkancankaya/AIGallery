@@ -10,15 +10,19 @@ public class GetByIdUserResponse : IResponse
     public string Email { get; set; }
     public bool Status { get; set; }
     public string Nick { get; set; }
+    public int Token { get; set; }
+    public bool Pro { get; set; }
     public GetByIdUserResponse()
     {
         FirstName = string.Empty;
         LastName = string.Empty;
         Email = string.Empty;
         Nick = string.Empty;
+        Token = 0;
+        Pro = false;
     }
 
-    public GetByIdUserResponse(int id, string firstName, string lastName, string email, bool status,string nick)
+    public GetByIdUserResponse(int id, string firstName, string lastName, string email, bool status,string nick, int token, bool pro)
     {
         Id = id;
         FirstName = firstName;
@@ -26,5 +30,7 @@ public class GetByIdUserResponse : IResponse
         Email = email;
         Status = status;
         Nick = nick;
+        Token = token;
+        Pro = pro;
     }
 }

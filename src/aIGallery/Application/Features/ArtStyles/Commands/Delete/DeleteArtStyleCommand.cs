@@ -3,13 +3,18 @@ using Application.Features.ArtStyles.Rules;
 using Application.Services.Repositories;
 using AutoMapper;
 using Domain.Entities;
+using Core.Application.Pipelines.Caching;
 using MediatR;
 
 namespace Application.Features.ArtStyles.Commands.Delete;
 
-public class DeleteArtStyleCommand : IRequest<DeletedArtStyleResponse>
+public class DeleteArtStyleCommand : IRequest<DeletedArtStyleResponse>, ICacheRemoverRequest
 {
     public Guid Id { get; set; }
+
+    public bool BypassCache { get; }
+    public string? CacheKey { get; }
+    public string CacheGroupKey => "GetArtStyles";
 
     public class DeleteArtStyleCommandHandler : IRequestHandler<DeleteArtStyleCommand, DeletedArtStyleResponse>
     {

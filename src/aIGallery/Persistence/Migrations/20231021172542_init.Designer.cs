@@ -12,8 +12,8 @@ using Persistence.Contexts;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(BaseDbContext))]
-    [Migration("20231018181201_addproandtoken")]
-    partial class addproandtoken
+    [Migration("20231021172542_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -1178,6 +1178,186 @@ namespace Persistence.Migrations
                             Id = 175,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "TokenHistories.Delete"
+                        },
+                        new
+                        {
+                            Id = 176,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "ArtStyles.Admin"
+                        },
+                        new
+                        {
+                            Id = 177,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "ArtStyles.Read"
+                        },
+                        new
+                        {
+                            Id = 178,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "ArtStyles.Write"
+                        },
+                        new
+                        {
+                            Id = 179,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "ArtStyles.Add"
+                        },
+                        new
+                        {
+                            Id = 180,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "ArtStyles.Update"
+                        },
+                        new
+                        {
+                            Id = 181,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "ArtStyles.Delete"
+                        },
+                        new
+                        {
+                            Id = 182,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "PreparedPromts.Admin"
+                        },
+                        new
+                        {
+                            Id = 183,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "PreparedPromts.Read"
+                        },
+                        new
+                        {
+                            Id = 184,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "PreparedPromts.Write"
+                        },
+                        new
+                        {
+                            Id = 185,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "PreparedPromts.Add"
+                        },
+                        new
+                        {
+                            Id = 186,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "PreparedPromts.Update"
+                        },
+                        new
+                        {
+                            Id = 187,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "PreparedPromts.Delete"
+                        },
+                        new
+                        {
+                            Id = 188,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "PreparedPromts.Admin"
+                        },
+                        new
+                        {
+                            Id = 189,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "PreparedPromts.Read"
+                        },
+                        new
+                        {
+                            Id = 190,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "PreparedPromts.Write"
+                        },
+                        new
+                        {
+                            Id = 191,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "PreparedPromts.Add"
+                        },
+                        new
+                        {
+                            Id = 192,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "PreparedPromts.Update"
+                        },
+                        new
+                        {
+                            Id = 193,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "PreparedPromts.Delete"
+                        },
+                        new
+                        {
+                            Id = 194,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Categories.Admin"
+                        },
+                        new
+                        {
+                            Id = 195,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Categories.Read"
+                        },
+                        new
+                        {
+                            Id = 196,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Categories.Write"
+                        },
+                        new
+                        {
+                            Id = 197,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Categories.Add"
+                        },
+                        new
+                        {
+                            Id = 198,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Categories.Update"
+                        },
+                        new
+                        {
+                            Id = 199,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Categories.Delete"
+                        },
+                        new
+                        {
+                            Id = 200,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "PreparedPrompts.Admin"
+                        },
+                        new
+                        {
+                            Id = 201,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "PreparedPrompts.Read"
+                        },
+                        new
+                        {
+                            Id = 202,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "PreparedPrompts.Write"
+                        },
+                        new
+                        {
+                            Id = 203,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "PreparedPrompts.Add"
+                        },
+                        new
+                        {
+                            Id = 204,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "PreparedPrompts.Update"
+                        },
+                        new
+                        {
+                            Id = 205,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "PreparedPrompts.Delete"
                         });
                 });
 
@@ -1374,12 +1554,12 @@ namespace Persistence.Migrations
                             AuthenticatorType = 0,
                             Blocked = false,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "husok99@mail.com",
+                            Email = "husok99@gmail.com",
                             FirstName = "Admin",
                             LastName = "NArchitecture",
                             Nick = "",
-                            PasswordHash = new byte[] { 181, 84, 200, 68, 20, 135, 133, 171, 206, 101, 246, 109, 129, 81, 2, 133, 173, 21, 191, 18, 227, 31, 106, 30, 223, 139, 240, 132, 147, 211, 54, 188, 195, 204, 71, 251, 165, 123, 174, 8, 171, 175, 142, 167, 95, 132, 237, 90, 131, 23, 167, 215, 219, 189, 100, 73, 173, 232, 150, 178, 28, 2, 95, 206 },
-                            PasswordSalt = new byte[] { 239, 9, 134, 231, 31, 53, 1, 190, 15, 243, 96, 63, 176, 254, 201, 208, 85, 16, 241, 28, 161, 166, 177, 147, 236, 11, 140, 199, 56, 59, 79, 46, 97, 152, 18, 126, 114, 250, 211, 168, 176, 32, 50, 148, 64, 15, 229, 217, 109, 25, 182, 172, 83, 249, 168, 8, 13, 168, 102, 221, 81, 207, 63, 118, 27, 13, 206, 189, 89, 20, 158, 132, 4, 32, 203, 54, 28, 217, 226, 167, 28, 12, 93, 185, 163, 100, 161, 8, 68, 160, 30, 255, 205, 36, 93, 183, 240, 92, 156, 22, 93, 123, 140, 246, 111, 225, 253, 34, 80, 182, 93, 208, 97, 7, 67, 156, 28, 234, 90, 13, 19, 49, 209, 239, 216, 25, 75, 77 },
+                            PasswordHash = new byte[] { 252, 132, 231, 100, 31, 73, 243, 224, 206, 73, 26, 113, 138, 12, 135, 170, 65, 55, 146, 225, 57, 219, 46, 2, 6, 235, 126, 29, 77, 137, 17, 85, 248, 153, 125, 10, 98, 82, 137, 190, 48, 220, 121, 195, 222, 113, 41, 79, 181, 102, 98, 51, 172, 31, 22, 33, 61, 131, 140, 69, 54, 205, 137, 200 },
+                            PasswordSalt = new byte[] { 234, 133, 1, 211, 53, 37, 190, 18, 32, 209, 6, 122, 141, 243, 193, 14, 89, 207, 176, 170, 243, 162, 134, 223, 182, 233, 244, 158, 215, 77, 212, 145, 208, 8, 155, 207, 6, 232, 184, 231, 185, 57, 38, 51, 97, 175, 242, 174, 48, 78, 118, 185, 15, 11, 132, 96, 15, 55, 212, 225, 131, 206, 120, 35, 105, 231, 226, 210, 33, 206, 209, 21, 187, 61, 174, 185, 173, 113, 189, 7, 87, 203, 170, 111, 82, 105, 79, 188, 100, 103, 143, 46, 77, 128, 238, 243, 49, 117, 126, 70, 86, 149, 164, 232, 191, 207, 175, 89, 91, 221, 179, 64, 150, 171, 7, 82, 210, 69, 171, 77, 28, 153, 74, 193, 156, 51, 51, 207 },
                             Pro = false,
                             Status = true,
                             Token = 0
@@ -1491,6 +1671,15 @@ namespace Persistence.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("Name");
 
+                    b.Property<string>("Prompt")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Prompt");
+
+                    b.Property<int>("Sort")
+                        .HasColumnType("int")
+                        .HasColumnName("Sort");
+
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2")
                         .HasColumnName("UpdatedDate");
@@ -1498,6 +1687,80 @@ namespace Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ArtStyles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("ae18c3b8-3dbc-44e5-a4ce-62a1f9e6f05b"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Logo = "https://storagez.aiart.limited/app/realai/generated/fab123 (8).png",
+                            Name = "Magical",
+                            Prompt = "Magical",
+                            Sort = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("3df05a34-ef39-4bf3-9aba-32dff7940a94"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Logo = "https://storagez.aiart.limited/app/realai/generated/fab123 (6).png",
+                            Name = "Neon",
+                            Prompt = "Neon",
+                            Sort = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("e9699a96-11e6-48ff-80c3-78bdcdff8f83"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Logo = "https://storagez.aiart.limited/app/realai/generated/fab123 (7).png",
+                            Name = "Characters",
+                            Prompt = "Characters",
+                            Sort = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("0fd6f908-4d81-4152-802d-3fa5cd34a91c"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Logo = "https://storagez.aiart.limited/app/realai/generated/fab123 (3).png",
+                            Name = "Digital Art",
+                            Prompt = "Digital Art",
+                            Sort = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("4d5a7e89-8938-48d7-b7c5-c2ec6deb3d08"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Logo = "https://storagez.aiart.limited/app/realai/generated/fab123 (2).png",
+                            Name = "Anime",
+                            Prompt = "Anime",
+                            Sort = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("df688bc9-6afb-4240-9728-143d937257d0"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Logo = "https://storagez.aiart.limited/app/realai/generated/fab123 (4).png",
+                            Name = "Beauty",
+                            Prompt = "Beauty",
+                            Sort = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("03f0f648-7957-4253-b046-0e6e7b8fc676"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Logo = "https://storagez.aiart.limited/app/realai/generated/fab123 (5).png",
+                            Name = "Pencil Art",
+                            Prompt = "Pencil Art",
+                            Sort = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("e1e5fe70-b05c-4b14-a7aa-4a3cfc5aead5"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Logo = "https://storagez.aiart.limited/app/realai/generated/fab123 (1).png",
+                            Name = "Realistic",
+                            Prompt = "Realistic",
+                            Sort = 0
+                        });
                 });
 
             modelBuilder.Entity("Domain.Entities.BannedPrompt", b =>
@@ -1554,6 +1817,10 @@ namespace Persistence.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("Name");
 
+                    b.Property<int>("Sort")
+                        .HasColumnType("int")
+                        .HasColumnName("Sort");
+
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2")
                         .HasColumnName("UpdatedDate");
@@ -1561,6 +1828,64 @@ namespace Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("65a6062d-43c6-4e54-8ce3-528f67c2a0c0"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Logo = "https://storages.aiart.limited/app/realai/generated/zqBEZVjuO.png",
+                            Name = "Animals",
+                            Sort = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("a3dbcefd-0e08-463a-a005-24b5b2b31b26"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Logo = "https://storages.aiart.limited/app/realai/generated/vcP7Viv7R.png",
+                            Name = "Anime",
+                            Sort = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("ebfea034-6090-4297-98d8-7816b9a2b657"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Logo = "https://storages.aiart.limited/app/realai/generated/h9xJfxLyJ.png",
+                            Name = "Funny",
+                            Sort = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("d188e571-db2c-4e81-9043-9d8fdc8a7363"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Logo = "https://storages.aiart.limited/app/realai/generated/yTddOHaqG.png",
+                            Name = "Games",
+                            Sort = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("f1dfbfa1-b74f-48ef-9979-81d52bbf6ede"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Logo = "https://storages.aiart.limited/app/realai/generated/5pA66bWhH.png",
+                            Name = "Music",
+                            Sort = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("36701018-ba79-486a-90de-baffff756798"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Logo = "https://storages.aiart.limited/app/realai/generated/i2LlVn3AC.png",
+                            Name = "Space",
+                            Sort = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("3e75d12a-4228-4298-ba5f-3eb23e23e4bf"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Logo = "https://storages.aiart.limited/app/realai/generated/MO32CXfmz.png",
+                            Name = "Logos",
+                            Sort = 0
+                        });
                 });
 
             modelBuilder.Entity("Domain.Entities.Image", b =>
@@ -1604,6 +1929,7 @@ namespace Persistence.Migrations
                         .HasColumnName("ImgToImg");
 
                     b.Property<string>("Prompt")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("Prompt");
 
@@ -1666,6 +1992,290 @@ namespace Persistence.Migrations
                     b.HasIndex("ImageId");
 
                     b.ToTable("Likes", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.Entities.PreparedPrompt", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("Id");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("CreatedDate");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("DeletedDate");
+
+                    b.Property<int>("Gender")
+                        .HasColumnType("int")
+                        .HasColumnName("Gender");
+
+                    b.Property<string>("Logo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Logo");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Name");
+
+                    b.Property<string>("Prompt")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Prompt");
+
+                    b.Property<int>("Sort")
+                        .HasColumnType("int")
+                        .HasColumnName("Sort");
+
+                    b.Property<bool>("TextToImage")
+                        .HasColumnType("bit")
+                        .HasColumnName("TextToImage");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("UpdatedDate");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PreparedPrompts", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("2fe5d3d7-67de-4ec4-8d1b-97ba412ee3f3"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Gender = 0,
+                            Logo = "https://storages.aiart.limited/app/realai/generated/3.jpg",
+                            Name = "ironman 4k musculer",
+                            Prompt = "ironman 4k musculer",
+                            Sort = 0,
+                            TextToImage = true
+                        },
+                        new
+                        {
+                            Id = new Guid("377f914c-b979-4d90-8085-97d4da0799ef"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Gender = 0,
+                            Logo = "https://storages.aiart.limited/app/realai/generated/4.jpg",
+                            Name = "platinum short hair playboy model",
+                            Prompt = "platinum short hair playboy model",
+                            Sort = 0,
+                            TextToImage = true
+                        },
+                        new
+                        {
+                            Id = new Guid("ff7d481b-bfe8-41f3-bdef-221a3cef3d8c"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Gender = 0,
+                            Logo = "https://storages.aiart.limited/app/realai/generated/13.jpg",
+                            Name = "Azure female viking warrior",
+                            Prompt = "Azure female viking warrior",
+                            Sort = 0,
+                            TextToImage = true
+                        },
+                        new
+                        {
+                            Id = new Guid("2e2d9394-b04e-48d8-ac5a-b84b783c55ae"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Gender = 0,
+                            Logo = "https://storages.aiart.limited/app/realai/generated/14.jpg",
+                            Name = "A cairn terrier dog as the doomslayer",
+                            Prompt = "A cairn terrier dog as the doomslayer",
+                            Sort = 0,
+                            TextToImage = true
+                        },
+                        new
+                        {
+                            Id = new Guid("29311f1e-9e3c-489b-a5cd-044bb20717d4"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Gender = 0,
+                            Logo = "https://storages.aiart.limited/app/realai/generated/15.jpg",
+                            Name = "A bird pokemon with horns and 4 wings",
+                            Prompt = "A bird pokemon with horns and 4 wings",
+                            Sort = 0,
+                            TextToImage = true
+                        },
+                        new
+                        {
+                            Id = new Guid("1efce480-5c2f-44f1-80ad-6176278af203"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Gender = 0,
+                            Logo = " in space",
+                            Name = "Male astronaut",
+                            Prompt = "Male astronaut",
+                            Sort = 0,
+                            TextToImage = true
+                        },
+                        new
+                        {
+                            Id = new Guid("53d838ed-c75f-47c2-8493-e018055198fd"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Gender = 0,
+                            Logo = "https://storages.aiart.limited/app/realai/generated/18.jpg",
+                            Name = "A cute adorable phoenix",
+                            Prompt = "A cute adorable phoenix",
+                            Sort = 0,
+                            TextToImage = true
+                        },
+                        new
+                        {
+                            Id = new Guid("0f5018e7-93d4-4f69-91f2-317b8cd9fe0d"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Gender = 0,
+                            Logo = "https://storages.aiart.limited/app/realai/generated/3 (4).jpg",
+                            Name = "Keanu Reeves",
+                            Prompt = "Keanu Reeves",
+                            Sort = 0,
+                            TextToImage = false
+                        },
+                        new
+                        {
+                            Id = new Guid("4022369a-0809-4bdf-9d9b-6dec4e265107"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Gender = 0,
+                            Logo = "https://storages.aiart.limited/app/realai/generated/0 (4).jpg",
+                            Name = "Neat Curly Quiff",
+                            Prompt = "Neat Curly Quiff",
+                            Sort = 0,
+                            TextToImage = false
+                        },
+                        new
+                        {
+                            Id = new Guid("0159e038-15e2-4955-bf24-721af55c645e"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Gender = 0,
+                            Logo = "https://storages.aiart.limited/app/realai/generated/capt.jpg",
+                            Name = "Captain America",
+                            Prompt = "Captain America",
+                            Sort = 0,
+                            TextToImage = false
+                        },
+                        new
+                        {
+                            Id = new Guid("779927d5-63a6-4f91-be83-1503471b3eca"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Gender = 0,
+                            Logo = "https://storages.aiart.limited/app/realai/generated/brr.jpg",
+                            Name = "Brad Pitt",
+                            Prompt = "Brad Pitt",
+                            Sort = 0,
+                            TextToImage = false
+                        },
+                        new
+                        {
+                            Id = new Guid("44fab0c8-f4c3-4938-ae61-571a78daebf9"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Gender = 0,
+                            Logo = "https://storages.aiart.limited/app/realai/generated/cris (2).jpg",
+                            Name = "Chris Evans",
+                            Prompt = "Chris Evans",
+                            Sort = 0,
+                            TextToImage = false
+                        },
+                        new
+                        {
+                            Id = new Guid("8fcf4e8c-8753-4139-bb5b-485fd5c77dae"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Gender = 0,
+                            Logo = "https://storages.aiart.limited/app/realai/generated/2 (2).jpg",
+                            Name = "Soldier",
+                            Prompt = "Soldier",
+                            Sort = 0,
+                            TextToImage = false
+                        },
+                        new
+                        {
+                            Id = new Guid("dd34c29c-e2d3-4a1e-866a-68842d1f6878"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Gender = 0,
+                            Logo = "https://storages.aiart.limited/app/realai/generated/1 (1).jpg",
+                            Name = "Superman",
+                            Prompt = "Superman",
+                            Sort = 0,
+                            TextToImage = false
+                        },
+                        new
+                        {
+                            Id = new Guid("eba1612a-4afc-46d7-b423-2137d32b5adf"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Gender = 1,
+                            Logo = "https://storages.aiart.limited/app/realai/generated/011.jpg",
+                            Name = "Evening Dresses",
+                            Prompt = "Evening Dresses",
+                            Sort = 0,
+                            TextToImage = false
+                        },
+                        new
+                        {
+                            Id = new Guid("085f1b93-671f-4050-aa53-a40ba5d264d0"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Gender = 1,
+                            Logo = "https://storages.aiart.limited/app/realai/generated/0amber.jpg",
+                            Name = "Amber Heard",
+                            Prompt = "Amber Heard",
+                            Sort = 0,
+                            TextToImage = false
+                        },
+                        new
+                        {
+                            Id = new Guid("e221b065-1b16-4a3b-81db-e5946651ead9"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Gender = 1,
+                            Logo = "https://storages.aiart.limited/app/realai/generated/platin.jpg",
+                            Name = "Platinum Short",
+                            Prompt = "Platinum Short",
+                            Sort = 0,
+                            TextToImage = false
+                        },
+                        new
+                        {
+                            Id = new Guid("f6078b8f-7512-44d4-952f-6841296285a7"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Gender = 1,
+                            Logo = "https://storages.aiart.limited/app/realai/generated/tanga.jpg",
+                            Name = "Daenerys Targaryen",
+                            Prompt = "Daenerys Targaryen",
+                            Sort = 0,
+                            TextToImage = false
+                        },
+                        new
+                        {
+                            Id = new Guid("857bd5d0-19f9-471d-9850-753794029d69"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Gender = 1,
+                            Logo = "https://storages.aiart.limited/app/realai/generated/harly.jpg",
+                            Name = "Harley Quinn",
+                            Prompt = "Harley Quinn",
+                            Sort = 0,
+                            TextToImage = false
+                        },
+                        new
+                        {
+                            Id = new Guid("817c629e-2fea-4121-9d79-7bfa8cf3d5e5"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Gender = 1,
+                            Logo = "https://storages.aiart.limited/app/realai/generated/kardas.jpg",
+                            Name = "Kim Kardashian",
+                            Prompt = "Kim Kardashian",
+                            Sort = 0,
+                            TextToImage = false
+                        },
+                        new
+                        {
+                            Id = new Guid("a11dc26c-60c5-414a-a468-ea4bc20ccbd1"),
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Gender = 1,
+                            Logo = "https://storages.aiart.limited/app/realai/generated/angelina.jpg",
+                            Name = "Angelina Jolie",
+                            Prompt = "Angelina Jolie",
+                            Sort = 0,
+                            TextToImage = false
+                        });
                 });
 
             modelBuilder.Entity("Domain.Entities.Pro", b =>

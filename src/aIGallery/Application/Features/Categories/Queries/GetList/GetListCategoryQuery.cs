@@ -6,7 +6,6 @@ using Core.Application.Requests;
 using Core.Application.Responses;
 using Core.Persistence.Paging;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 
 namespace Application.Features.Categories.Queries.GetList;
 
@@ -33,12 +32,11 @@ public class GetListCategoryQuery : IRequest<GetListResponse<GetListCategoryList
         public async Task<GetListResponse<GetListCategoryListItemDto>> Handle(GetListCategoryQuery request, CancellationToken cancellationToken)
         {
             IPaginate<Category> categories = await _categoryRepository.GetListAsync(
-                include:x=>x.Include(x=>x.Image),
                 index: request.PageRequest.PageIndex,
                 size: request.PageRequest.PageSize, 
                 cancellationToken: cancellationToken
             );
-    
+
             GetListResponse<GetListCategoryListItemDto> response = _mapper.Map<GetListResponse<GetListCategoryListItemDto>>(categories);
             return response;
         }

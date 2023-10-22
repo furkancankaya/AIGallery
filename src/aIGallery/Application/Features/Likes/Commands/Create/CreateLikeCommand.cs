@@ -32,6 +32,7 @@ public class CreateLikeCommand : IRequest<CreatedLikeResponse>, ICacheRemoverReq
 
         public async Task<CreatedLikeResponse> Handle(CreateLikeCommand request, CancellationToken cancellationToken)
         {
+
             Like like = _mapper.Map<Like>(request);
 
             await _likeRepository.AddAsync(like);

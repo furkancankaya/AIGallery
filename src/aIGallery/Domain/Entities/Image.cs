@@ -11,7 +11,7 @@ namespace Domain.Entities
     public class Image : Entity<Guid>
     {
         public string ImageUrl { get; set; }
-        public string? Prompt { get; set; }
+        public string Prompt { get; set; }
         public Guid? ArtStyleId { get; set; }
         public int UserId { get; set; }
         public Guid? CategoryId { get; set; }

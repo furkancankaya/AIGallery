@@ -50,6 +50,9 @@ public static class PersistenceServiceRegistration
         services.AddScoped<IBannedPromptRepository, BannedPromptRepository>();
         services.AddScoped<IProRepository, ProRepository>();
         services.AddScoped<ITokenHistoryRepository, TokenHistoryRepository>();
+        services.AddScoped<IArtStyleRepository, ArtStyleRepository>();
+        services.AddScoped<ICategoryRepository, CategoryRepository>();
+        services.AddScoped<IPreparedPromptRepository, PreparedPromptRepository>();
         return services;
     }
 }

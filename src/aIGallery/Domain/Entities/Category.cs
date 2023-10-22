@@ -12,6 +12,7 @@ public class Category : Entity<Guid>
 {
     public string Name { get; set; }
     public string Logo { get; set; }
+    public int Sort { get; set; }
 
     public virtual ICollection<Image> Image { get; set; }
 }

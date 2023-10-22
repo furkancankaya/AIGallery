@@ -439,6 +439,76 @@ public class OperationClaimConfiguration : IEntityTypeConfiguration<OperationCla
         
         #endregion
         
+        
+        #region ArtStyles
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "ArtStyles.Admin" });
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "ArtStyles.Read" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "ArtStyles.Write" });
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "ArtStyles.Add" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "ArtStyles.Update" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "ArtStyles.Delete" });
+        
+        #endregion
+        
+        
+        #region PreparedPromts
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "PreparedPromts.Admin" });
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "PreparedPromts.Read" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "PreparedPromts.Write" });
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "PreparedPromts.Add" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "PreparedPromts.Update" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "PreparedPromts.Delete" });
+        
+        #endregion
+        
+        
+        #region PreparedPromts
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "PreparedPromts.Admin" });
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "PreparedPromts.Read" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "PreparedPromts.Write" });
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "PreparedPromts.Add" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "PreparedPromts.Update" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "PreparedPromts.Delete" });
+        
+        #endregion
+        
+        
+        #region Categories
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "Categories.Admin" });
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "Categories.Read" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "Categories.Write" });
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "Categories.Add" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "Categories.Update" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "Categories.Delete" });
+        
+        #endregion
+        
+        
+        #region PreparedPrompts
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "PreparedPrompts.Admin" });
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "PreparedPrompts.Read" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "PreparedPrompts.Write" });
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "PreparedPrompts.Add" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "PreparedPrompts.Update" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "PreparedPrompts.Delete" });
+        
+        #endregion
+        
         return seeds;
     }
 }

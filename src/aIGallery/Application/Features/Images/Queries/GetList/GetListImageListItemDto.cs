@@ -1,3 +1,4 @@
+using Application.Features.Users.Queries.GetList;
 using Core.Application.Dtos;
 using Core.Security.Entities;
 
@@ -12,7 +13,7 @@ public class GetListImageListItemDto : IDto
     public string ArtStyleName { get; set; }
     public int UserId { get; set; }
     public string UserEmail { get; set; }
-    public User User { get; set; }
+    public GetListUserListUserDto User { get; set; }
     public Guid? CategoryId { get; set; }
     public string CategoryName { get; set; }
     public string? ImgToImg { get; set; }

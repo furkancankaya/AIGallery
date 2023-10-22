@@ -8,5 +8,6 @@ public class CreateCategoryCommandValidator : AbstractValidator<CreateCategoryCo
     {
         RuleFor(c => c.Name).NotEmpty();
         RuleFor(c => c.Logo).NotEmpty();
+        RuleFor(c => c.Sort).NotEmpty();
     }
 }

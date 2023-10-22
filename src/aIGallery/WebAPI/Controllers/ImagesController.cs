@@ -16,6 +16,7 @@ public class ImagesController : BaseController
     [HttpPost]
     public async Task<IActionResult> Add([FromBody] CreateImageCommand createImageCommand)
     {
+        createImageCommand.UserId = getUserIdFromRequest();
         CreatedImageResponse response = await Mediator.Send(createImageCommand);
 
         return Created(uri: "", response);
@@ -49,6 +50,14 @@ public class ImagesController : BaseController
     {
         GetListImageQuery getListImageQuery = new() { PageRequest = pageRequest };
         GetListResponse<GetListImageListItemDto> response = await Mediator.Send(getListImageQuery);
+        return Ok(response);
+    }
+    [HttpGet("GetListByUserId")]
+    public async Task<IActionResult> GetListByUserId([FromQuery] PageRequestWithUserId pageRequest)
+    {
+    
+        GetListImageByUserIdQuery getListImageByUserIdQuery = new() { PageRequestWithUserId = pageRequest };
+        GetListResponse<GetListImageListItemDto> response = await Mediator.Send(getListImageByUserIdQuery);
         return Ok(response);
     }
 }

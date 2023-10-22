@@ -7,6 +7,8 @@ using AutoMapper;
 using Core.Application.Responses;
 using Domain.Entities;
 using Core.Persistence.Paging;
+using Application.Features.Users.Queries.GetList;
+using Core.Security.Entities;
 
 namespace Application.Features.Images.Profiles;
 
@@ -22,6 +24,11 @@ public class MappingProfiles : Profile
         CreateMap<Image, DeletedImageResponse>().ReverseMap();
         CreateMap<Image, GetByIdImageResponse>().ReverseMap();
         CreateMap<Image, GetListImageListItemDto>().ReverseMap();
+        //alt 3 ünü mapleme için ben yazdým
+        CreateMap<Image, GetListUserListUserDto>().ReverseMap();
+        CreateMap<User, GetListUserListUserDto>().ReverseMap();
+        CreateMap<GetListUserListUserDto, GetListImageListItemDto>().ReverseMap();
+        //
         CreateMap<IPaginate<Image>, GetListResponse<GetListImageListItemDto>>().ReverseMap();
     }
 }

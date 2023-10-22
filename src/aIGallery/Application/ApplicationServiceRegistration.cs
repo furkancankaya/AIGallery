@@ -23,6 +23,7 @@ using Application.Services.SaledImages;
 using Application.Services.BannedPrompts;
 using Application.Services.Pros;
 using Application.Services.TokenHistories;
+using Application.Services.PreparedPrompts;
 
 namespace Application;
 
@@ -85,6 +86,10 @@ public static class ApplicationServiceRegistration
         
         services.AddScoped<IProsService, ProsManager>();
         services.AddScoped<ITokenHistoriesService, TokenHistoriesManager>();
+        services.AddScoped<IArtStylesService, ArtStylesManager>();
+
+        services.AddScoped<ICategoriesService, CategoriesManager>();
+        services.AddScoped<IPreparedPromptsService, PreparedPromptsManager>();
         return services;
     }
 

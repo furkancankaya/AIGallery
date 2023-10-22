@@ -10,7 +10,7 @@ namespace Application.Features.Images.Commands.Create;
 public class CreateImageCommand : IRequest<CreatedImageResponse>, ICacheRemoverRequest
 {
     public string ImageUrl { get; set; }
-    public string? Prompt { get; set; }
+    public string Prompt { get; set; }
     public Guid? ArtStyleId { get; set; }
     public int UserId { get; set; }
     public Guid? CategoryId { get; set; }
@@ -19,7 +19,6 @@ public class CreateImageCommand : IRequest<CreatedImageResponse>, ICacheRemoverR
     public bool SaleStatus { get; set; }
     public int SalePrice { get; set; }
     public bool Blocked { get; set; }
-
     public bool BypassCache { get; }
     public string? CacheKey { get; }
     public string CacheGroupKey => "GetImages";
@@ -40,6 +39,10 @@ public class CreateImageCommand : IRequest<CreatedImageResponse>, ICacheRemoverR
 
         public async Task<CreatedImageResponse> Handle(CreateImageCommand request, CancellationToken cancellationToken)
         {
+            request.Blocked = false;
+            request.SalePrice = 0;
+            request.SaleStatus = false;
+            request.Discover = false;
             Image image = _mapper.Map<Image>(request);
 
             await _imageRepository.AddAsync(image);
