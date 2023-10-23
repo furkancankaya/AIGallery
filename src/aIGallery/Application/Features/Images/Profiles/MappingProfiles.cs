@@ -25,8 +25,8 @@ public class MappingProfiles : Profile
         CreateMap<Image, GetByIdImageResponse>().ReverseMap();
         CreateMap<Image, GetListImageListItemDto>().ReverseMap();
         //alt 3 ünü mapleme için ben yazdım
-        CreateMap<Image, GetListUserListUserDto>().ReverseMap();
         CreateMap<User, GetListUserListUserDto>().ReverseMap();
+        CreateMap<Image, GetListUserListUserDto>().ReverseMap();
         CreateMap<GetListUserListUserDto, GetListImageListItemDto>().ReverseMap();
         //
         CreateMap<IPaginate<Image>, GetListResponse<GetListImageListItemDto>>().ReverseMap();

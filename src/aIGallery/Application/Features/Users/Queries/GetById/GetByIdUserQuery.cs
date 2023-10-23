@@ -1,7 +1,9 @@
+using Application.Features.Pros.Rules;
 using Application.Features.Users.Rules;
 using Application.Services.Repositories;
 using AutoMapper;
 using Core.Security.Entities;
+using MailKit.Search;
 using MediatR;
 
 namespace Application.Features.Users.Queries.GetById;
@@ -15,12 +17,14 @@ public class GetByIdUserQuery : IRequest<GetByIdUserResponse>
         private readonly IUserRepository _userRepository;
         private readonly IMapper _mapper;
         private readonly UserBusinessRules _userBusinessRules;
+        private readonly IProRepository _proRepository;
 
-        public GetByIdUserQueryHandler(IUserRepository userRepository, IMapper mapper, UserBusinessRules userBusinessRules)
+        public GetByIdUserQueryHandler(IUserRepository userRepository, IMapper mapper, UserBusinessRules userBusinessRules, IProRepository proRepository)
         {
             _userRepository = userRepository;
             _mapper = mapper;
             _userBusinessRules = userBusinessRules;
+            _proRepository = proRepository;
         }
 
         public async Task<GetByIdUserResponse> Handle(GetByIdUserQuery request, CancellationToken cancellationToken)
@@ -29,7 +33,28 @@ public class GetByIdUserQuery : IRequest<GetByIdUserResponse>
             await _userBusinessRules.UserShouldBeExistsWhenSelected(user);
 
             GetByIdUserResponse response = _mapper.Map<GetByIdUserResponse>(user);
+            var data =await _proRepository.GetListAsync(predicate: b => b.UserId == request.Id, orderBy: x => x.OrderByDescending(x=>x.CreatedDate));
+            if (data.Items.Count > 0)
+            {
+                var data2 = data.Items.FirstOrDefault();
+                TimeSpan dateTime = (DateTime.UtcNow.Date - data2.CreatedDate);
+
+                if (data2.Type == 1)
+                {
+                    response.Pro = dateTime.Days > 30 ? false : true;
+                }
+                else if(data2.Type == 2)
+                {
+                     response.Pro = dateTime.Days > 360 ? false : true;
+                }
+            }
+            else
+            {
+                response.Pro = false;
+            }
+
             return response;
         }
     }
 }
+

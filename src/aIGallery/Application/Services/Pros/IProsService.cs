@@ -27,4 +27,5 @@ public interface IProsService
     Task<Pro> AddAsync(Pro pro);
     Task<Pro> UpdateAsync(Pro pro);
     Task<Pro> DeleteAsync(Pro pro, bool permanent = false);
+ 
 }
