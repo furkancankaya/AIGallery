@@ -29,10 +29,10 @@ public class LikesController : BaseController
         return Ok(response);
     }
 
-    [HttpDelete("{id}")]
-    public async Task<IActionResult> Delete([FromRoute] Guid id)
+    [HttpPost("UnLike")]
+    public async Task<IActionResult> Delete([FromBody] DeleteLikeCommand request)
     {
-        DeletedLikeResponse response = await Mediator.Send(new DeleteLikeCommand { Id = id });
+        DeletedLikeResponse response = await Mediator.Send(request);
 
         return Ok(response);
     }
@@ -45,9 +45,9 @@ public class LikesController : BaseController
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetList([FromQuery] PageRequest pageRequest)
+    public async Task<IActionResult> GetList([FromQuery] PageRequestWithUserId pageRequestWithUserId)
     {
-        GetListLikeQuery getListLikeQuery = new() { PageRequest = pageRequest };
+        GetListLikeQuery getListLikeQuery = new() { PageRequestWithUserId = pageRequestWithUserId };
         GetListResponse<GetListLikeListItemDto> response = await Mediator.Send(getListLikeQuery);
         return Ok(response);
     }

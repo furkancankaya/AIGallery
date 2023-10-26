@@ -34,7 +34,7 @@ public class GetListImageByUserIdQuery : IRequest<GetListResponse<GetListImageLi
         {
             IPaginate<Image> images = await _imageRepository.GetListAsync(
                 predicate:x=>x.UserId == request.PageRequestWithUserId.UserId,
-                include: x=>x.Include(x=>x.User).Include(x=>x.Like).Include(x=>x.ArtStyle).Include(x=>x.Category).Include(x=>x.SaledImage),
+                include: x=>x.Include(x=>x.User).Include(x=>x.Like).Include(x=>x.ArtStyle).Include(x=>x.Category).Include(x=>x.SaledImage).Include(x=>x.Like),
                 index: request.PageRequestWithUserId.PageIndex,
                 size: request.PageRequestWithUserId.PageSize, 
                 cancellationToken: cancellationToken

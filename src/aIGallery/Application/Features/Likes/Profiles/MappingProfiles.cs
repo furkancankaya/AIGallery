@@ -7,6 +7,9 @@ using AutoMapper;
 using Core.Application.Responses;
 using Domain.Entities;
 using Core.Persistence.Paging;
+using Application.Features.Users.Queries.GetList;
+using Core.Security.Entities;
+using Application.Features.Images.Queries.GetList;
 
 namespace Application.Features.Likes.Profiles;
 
@@ -21,7 +24,14 @@ public class MappingProfiles : Profile
         CreateMap<Like, DeleteLikeCommand>().ReverseMap();
         CreateMap<Like, DeletedLikeResponse>().ReverseMap();
         CreateMap<Like, GetByIdLikeResponse>().ReverseMap();
+        //
+
+
+        //
+
+
         CreateMap<Like, GetListLikeListItemDto>().ReverseMap();
+        CreateMap<Image, LikeImageDto>().ReverseMap();
         CreateMap<IPaginate<Like>, GetListResponse<GetListLikeListItemDto>>().ReverseMap();
     }
 }

@@ -1,3 +1,4 @@
+using Application.Features.Categories.Queries.GetList;
 using Core.Application.Responses;
 
 namespace Application.Features.ArtStyles.Queries.GetById;
@@ -9,4 +10,6 @@ public class GetByIdArtStyleResponse : IResponse
     public string Name { get; set; }
     public string Prompt { get; set; }
     public int Sort { get; set; }
+    public List<CategoryImageDtos> Image { get; set; }
+
 }

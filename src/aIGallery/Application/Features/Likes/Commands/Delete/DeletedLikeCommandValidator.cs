@@ -6,6 +6,7 @@ public class DeleteLikeCommandValidator : AbstractValidator<DeleteLikeCommand>
 {
     public DeleteLikeCommandValidator()
     {
-        RuleFor(c => c.Id).NotEmpty();
+        RuleFor(c => c.UserId).NotEmpty();
+        RuleFor(c => c.ImageId).NotEmpty();
     }
 }

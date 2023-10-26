@@ -3,6 +3,7 @@ using Core.Security.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,5 +12,6 @@ public class Like : Entity<Guid>
 {
     public int UserId { get; set; }
     public Guid ImageId { get; set; }
-    public virtual Image? Image { get; set; }
+    public virtual Image Image { get; set; }
+   
 }

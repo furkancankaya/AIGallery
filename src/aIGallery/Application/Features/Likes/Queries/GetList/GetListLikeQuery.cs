@@ -6,15 +6,16 @@ using Core.Application.Requests;
 using Core.Application.Responses;
 using Core.Persistence.Paging;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 
 namespace Application.Features.Likes.Queries.GetList;
 
 public class GetListLikeQuery : IRequest<GetListResponse<GetListLikeListItemDto>>, ICachableRequest
 {
-    public PageRequest PageRequest { get; set; }
+    public PageRequestWithUserId PageRequestWithUserId { get; set; }
 
     public bool BypassCache { get; }
-    public string CacheKey => $"GetListLikes({PageRequest.PageIndex},{PageRequest.PageSize})";
+    public string CacheKey => $"GetListLikes({PageRequestWithUserId.UserId},{PageRequestWithUserId.PageIndex},{PageRequestWithUserId.PageSize})";
     public string CacheGroupKey => "GetLikes";
     public TimeSpan? SlidingExpiration { get; }
 
@@ -32,8 +33,10 @@ public class GetListLikeQuery : IRequest<GetListResponse<GetListLikeListItemDto>
         public async Task<GetListResponse<GetListLikeListItemDto>> Handle(GetListLikeQuery request, CancellationToken cancellationToken)
         {
             IPaginate<Like> likes = await _likeRepository.GetListAsync(
-                index: request.PageRequest.PageIndex,
-                size: request.PageRequest.PageSize, 
+               predicate: x => x.UserId == request.PageRequestWithUserId.UserId,
+                include: x => x.Include(x => x.Image).Include(x=>x.Image.Category).Include(x => x.Image.ArtStyle).Include(x => x.Image.User),
+                index: request.PageRequestWithUserId.PageIndex,
+                size: request.PageRequestWithUserId.PageSize, 
                 cancellationToken: cancellationToken
             );
 

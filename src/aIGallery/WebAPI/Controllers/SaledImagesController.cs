@@ -51,4 +51,11 @@ public class SaledImagesController : BaseController
         GetListResponse<GetListSaledImageListItemDto> response = await Mediator.Send(getListSaledImageQuery);
         return Ok(response);
     }
+    [HttpGet("GetListByUserId")]
+    public async Task<IActionResult> GetListByUserId([FromQuery] PageRequestWithUserId pageRequestWithUserId)
+    {
+        GetListSaledImageByUserIdQuery getListSaledImageQuery = new() { PageRequestWithUserId = pageRequestWithUserId };
+        GetListResponse<GetListSaledImageListItemDto> response = await Mediator.Send(getListSaledImageQuery);
+        return Ok(response);
+    }
 }

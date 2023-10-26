@@ -21,4 +21,6 @@ public class GetListImageListItemDto : IDto
     public bool SaleStatus { get; set; }
     public int SalePrice { get; set; }
     public bool Blocked { get; set; }
+    public List<int> LikedUsers { get; set; }
+ 
 }

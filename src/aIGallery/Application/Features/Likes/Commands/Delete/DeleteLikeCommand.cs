@@ -10,7 +10,8 @@ namespace Application.Features.Likes.Commands.Delete;
 
 public class DeleteLikeCommand : IRequest<DeletedLikeResponse>, ICacheRemoverRequest
 {
-    public Guid Id { get; set; }
+    public Guid ImageId { get; set; }
+    public int UserId { get; set; }
 
     public bool BypassCache { get; }
     public string? CacheKey { get; }
@@ -32,7 +33,7 @@ public class DeleteLikeCommand : IRequest<DeletedLikeResponse>, ICacheRemoverReq
 
         public async Task<DeletedLikeResponse> Handle(DeleteLikeCommand request, CancellationToken cancellationToken)
         {
-            Like? like = await _likeRepository.GetAsync(predicate: l => l.Id == request.Id, cancellationToken: cancellationToken);
+            Like? like = await _likeRepository.GetAsync(predicate: l => l.ImageId == request.ImageId && l.UserId == request.UserId, cancellationToken: cancellationToken);
             await _likeBusinessRules.LikeShouldExistWhenSelected(like);
 
             await _likeRepository.DeleteAsync(like!);
