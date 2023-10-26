@@ -56,7 +56,7 @@ public class RegisterCommand : IRequest<RegisteredResponse>
                     Email = request.UserForRegisterDto.Email,
                     FirstName = request.UserForRegisterDto.FirstName,
                     LastName = request.UserForRegisterDto.LastName,
-                    Nick = request.UserForRegisterDto.Nick,
+                    Nick = request.UserForRegisterDto.FirstName,
                     PasswordHash = passwordHash,
                     PasswordSalt = passwordSalt,
                     Status = true,
