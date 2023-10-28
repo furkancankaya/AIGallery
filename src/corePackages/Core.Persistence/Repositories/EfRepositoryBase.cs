@@ -94,7 +94,7 @@ public class EfRepositoryBase<TEntity, TEntityId, TContext> : IAsyncRepository<T
             return await orderBy(queryable).ToPaginateAsync(index, size, from: 0, cancellationToken);
         return await queryable.ToPaginateAsync(index, size, from: 0, cancellationToken);
     }
-
+   
     public async Task<TEntity?> GetAsync(
         Expression<Func<TEntity, bool>> predicate,
         Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null,

@@ -2,6 +2,7 @@
 using Core.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore.Query;
 using Moq;
+using System.Collections.Generic;
 using System.Linq.Expressions;
 
 namespace Core.Test.Application.Helpers;
@@ -23,6 +24,7 @@ public static class MockRepositoryHelper
         where TRepository : class, IAsyncRepository<TEntity, TEntityId>, IRepository<TEntity, TEntityId>
     {
         SetupGetListAsync<TRepository, TEntity, TEntityId>(mockRepo, entityList);
+       
         SetupGetAsync<TRepository, TEntity, TEntityId>(mockRepo, entityList);
         SetupAddAsync<TRepository, TEntity, TEntityId>(mockRepo, entityList);
         SetupUpdateAsync<TRepository, TEntity, TEntityId>(mockRepo, entityList);
@@ -69,7 +71,7 @@ public static class MockRepositoryHelper
                     return paginateList;
                 }
             );
-
+ 
     private static void SetupGetAsync<TRepository, TEntity, TEntityId>(Mock<TRepository> mockRepo, List<TEntity> entityList)
         where TEntity : Entity<TEntityId>, new()
         where TRepository : class, IAsyncRepository<TEntity, TEntityId>, IRepository<TEntity, TEntityId> =>

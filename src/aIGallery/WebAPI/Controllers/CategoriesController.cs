@@ -37,10 +37,10 @@ public class CategoriesController : BaseController
         return Ok(response);
     }
 
-    [HttpGet("{id}")]
-    public async Task<IActionResult> GetById([FromRoute] Guid id)
+    [HttpGet("ById")]
+    public async Task<IActionResult> GetById([FromQuery] GetByIdCategoryQuery request)
     {
-        GetByIdCategoryResponse response = await Mediator.Send(new GetByIdCategoryQuery { Id = id });
+        GetByIdCategoryResponse response = await Mediator.Send(request);
         return Ok(response);
     }
 

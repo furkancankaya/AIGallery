@@ -3,6 +3,7 @@ using Application.Features.Images.Commands.Delete;
 using Application.Features.Images.Commands.Update;
 using Application.Features.Images.Queries.GetById;
 using Application.Features.Images.Queries.GetList;
+using Application.Features.Images.Queries.GetTopCreators;
 using Core.Application.Requests;
 using Core.Application.Responses;
 using Microsoft.AspNetCore.Mvc;
@@ -60,4 +61,13 @@ public class ImagesController : BaseController
         GetListResponse<GetListImageListItemDto> response = await Mediator.Send(getListImageByUserIdQuery);
         return Ok(response);
     }
+    [HttpGet("TopCreators")]
+    public async Task<IActionResult> GetListByUserId( )
+    {
+
+        GetTopCreatorsQuery getListImageByUserIdQuery = new() { };
+        GetListResponse<GetTopCreatorsListItemDto> response = await Mediator.Send(getListImageByUserIdQuery);
+        return Ok(response);
+    }
+    
 }
