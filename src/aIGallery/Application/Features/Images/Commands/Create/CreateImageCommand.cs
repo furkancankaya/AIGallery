@@ -39,6 +39,9 @@ public class CreateImageCommand : IRequest<CreatedImageResponse>, ICacheRemoverR
 
         public async Task<CreatedImageResponse> Handle(CreateImageCommand request, CancellationToken cancellationToken)
         {
+            // user Blocked ise üretemez false dönecek true ise => token check appisi jwt token ile çalýþan 5den fazla ise true  5 den az ise false
+            // user Blocked ise üretemez
+
             request.Blocked = false;
             request.SalePrice = 0;
             request.SaleStatus = false;

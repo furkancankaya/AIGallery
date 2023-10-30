@@ -39,6 +39,9 @@ public class UpdateImageCommand : IRequest<UpdatedImageResponse>, ICacheRemoverR
 
         public async Task<UpdatedImageResponse> Handle(UpdateImageCommand request, CancellationToken cancellationToken)
         {
+            // yasaklý kelimeler check
+            // sales status true olyuor ise sale price girilmeli 
+            // prompt,image,UserId,Blocked uppdate edilemez  update edilemez 
             Image? image = await _imageRepository.GetAsync(predicate: i => i.Id == request.Id, cancellationToken: cancellationToken);
             await _imageBusinessRules.ImageShouldExistWhenSelected(image);
             image = _mapper.Map(request, image);
