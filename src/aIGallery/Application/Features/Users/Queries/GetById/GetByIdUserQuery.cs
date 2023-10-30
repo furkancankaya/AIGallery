@@ -5,6 +5,7 @@ using AutoMapper;
 using Core.Security.Entities;
 using MailKit.Search;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 
 namespace Application.Features.Users.Queries.GetById;
 
@@ -29,7 +30,7 @@ public class GetByIdUserQuery : IRequest<GetByIdUserResponse>
 
         public async Task<GetByIdUserResponse> Handle(GetByIdUserQuery request, CancellationToken cancellationToken)
         {
-            User? user = await _userRepository.GetAsync(predicate: b => b.Id == request.Id, cancellationToken: cancellationToken);
+            User? user = await _userRepository.GetAsync(predicate: b => b.Id == request.Id, include:x=>x.Include(x=>x.Images),cancellationToken: cancellationToken);
             await _userBusinessRules.UserShouldBeExistsWhenSelected(user);
 
             GetByIdUserResponse response = _mapper.Map<GetByIdUserResponse>(user);

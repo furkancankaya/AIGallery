@@ -16,6 +16,7 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder.Property(u => u.LastName).HasColumnName("LastName");
         builder.Property(u => u.Email).HasColumnName("Email").IsRequired();
         builder.Property(u => u.Nick).HasColumnName("Nick").IsRequired();
+        builder.Property(u => u.Photo).HasColumnName("Photo");
         builder.Property(u => u.PasswordSalt).HasColumnName("PasswordSalt").IsRequired();
         builder.Property(u => u.PasswordHash).HasColumnName("PasswordHash").IsRequired();
         builder.Property(u => u.Status).HasColumnName("Status").HasDefaultValue(true);
@@ -33,6 +34,7 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder.HasMany(u => u.RefreshTokens);
         builder.HasMany(u => u.EmailAuthenticators);
         builder.HasMany(u => u.OtpAuthenticators);
+        builder.HasMany(u => u.Images);
 
         builder.HasData(getSeeds());
     }

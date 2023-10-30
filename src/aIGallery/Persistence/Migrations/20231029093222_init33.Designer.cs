@@ -12,8 +12,8 @@ using Persistence.Contexts;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(BaseDbContext))]
-    [Migration("20231024174138_init12")]
-    partial class init12
+    [Migration("20231029093222_init33")]
+    partial class init33
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -1521,6 +1521,11 @@ namespace Persistence.Migrations
                         .HasColumnType("varbinary(max)")
                         .HasColumnName("PasswordSalt");
 
+                    b.Property<string>("Photo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Photo");
+
                     b.Property<bool>("Pro")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
@@ -1558,8 +1563,9 @@ namespace Persistence.Migrations
                             FirstName = "Admin",
                             LastName = "NArchitecture",
                             Nick = "",
-                            PasswordHash = new byte[] { 54, 183, 198, 91, 215, 34, 231, 96, 122, 188, 234, 138, 203, 161, 40, 134, 7, 206, 87, 230, 31, 255, 97, 104, 187, 129, 184, 26, 96, 210, 59, 79, 188, 87, 92, 29, 39, 190, 24, 113, 106, 117, 4, 72, 177, 205, 91, 109, 58, 40, 111, 161, 201, 154, 51, 169, 139, 169, 141, 205, 44, 106, 126, 251 },
-                            PasswordSalt = new byte[] { 53, 225, 193, 55, 60, 45, 194, 82, 132, 246, 181, 174, 210, 156, 115, 76, 155, 60, 186, 0, 50, 208, 202, 125, 56, 135, 108, 167, 135, 205, 240, 210, 96, 218, 171, 153, 170, 154, 251, 4, 21, 91, 113, 72, 62, 147, 153, 255, 40, 18, 242, 58, 57, 205, 9, 108, 120, 66, 249, 27, 171, 130, 220, 117, 190, 81, 86, 107, 49, 71, 39, 164, 140, 38, 27, 96, 27, 196, 207, 144, 79, 207, 19, 11, 161, 207, 192, 83, 31, 199, 231, 122, 68, 229, 18, 207, 220, 27, 88, 201, 103, 162, 191, 212, 63, 95, 214, 126, 54, 96, 44, 183, 239, 3, 211, 80, 28, 115, 51, 23, 55, 101, 157, 141, 161, 32, 113, 104 },
+                            PasswordHash = new byte[] { 107, 17, 172, 211, 9, 72, 89, 171, 29, 50, 171, 112, 116, 195, 235, 144, 11, 179, 15, 217, 54, 219, 162, 187, 78, 243, 185, 136, 125, 60, 237, 12, 148, 179, 165, 128, 58, 236, 8, 94, 13, 120, 125, 229, 175, 114, 97, 80, 218, 206, 60, 113, 68, 11, 44, 87, 145, 77, 108, 206, 144, 50, 246, 43 },
+                            PasswordSalt = new byte[] { 119, 103, 75, 24, 198, 85, 6, 238, 21, 178, 60, 86, 163, 12, 88, 234, 18, 30, 172, 5, 108, 160, 92, 215, 228, 163, 68, 84, 106, 46, 196, 197, 206, 24, 32, 42, 25, 66, 25, 53, 115, 135, 12, 242, 59, 237, 2, 214, 6, 186, 22, 37, 211, 14, 61, 191, 13, 1, 79, 80, 255, 232, 214, 208, 26, 230, 50, 118, 60, 203, 13, 102, 74, 243, 170, 66, 251, 11, 130, 197, 134, 206, 216, 12, 115, 137, 124, 202, 182, 193, 231, 152, 196, 203, 132, 16, 115, 59, 242, 238, 168, 124, 90, 41, 194, 63, 168, 24, 69, 186, 104, 67, 82, 21, 244, 11, 30, 51, 126, 168, 88, 169, 38, 16, 10, 99, 50, 147 },
+                            Photo = "",
                             Pro = false,
                             Status = true,
                             Token = 0
@@ -1691,7 +1697,7 @@ namespace Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("4189ff58-2917-4dcf-8b34-f98e3aa5cdf0"),
+                            Id = new Guid("9fc691ea-2367-4a33-a28d-db2b76afca04"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Logo = "https://storagez.aiart.limited/app/realai/generated/fab123 (8).png",
                             Name = "Magical",
@@ -1700,7 +1706,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2e276226-2a3b-4e4c-a5e9-0ad627ec62b8"),
+                            Id = new Guid("0daa5079-01c6-45e8-a2a7-49aaf264d4b5"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Logo = "https://storagez.aiart.limited/app/realai/generated/fab123 (6).png",
                             Name = "Neon",
@@ -1709,7 +1715,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6a212d61-79d9-4988-954f-b95ea765eed8"),
+                            Id = new Guid("10a73ad1-b892-4c19-8c3c-adb03dfcefa2"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Logo = "https://storagez.aiart.limited/app/realai/generated/fab123 (7).png",
                             Name = "Characters",
@@ -1718,7 +1724,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3e1762df-ad45-43e0-9dc4-16a05ac3b321"),
+                            Id = new Guid("143ccb17-fc50-472f-bf21-aefe85185214"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Logo = "https://storagez.aiart.limited/app/realai/generated/fab123 (3).png",
                             Name = "Digital Art",
@@ -1727,7 +1733,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2477e786-7b39-46f6-a596-42f18a50e256"),
+                            Id = new Guid("85c1e881-2c3b-455c-9262-178ed4525d10"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Logo = "https://storagez.aiart.limited/app/realai/generated/fab123 (2).png",
                             Name = "Anime",
@@ -1736,7 +1742,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0634dc38-42da-41d7-a4fb-4e472afecc4f"),
+                            Id = new Guid("655b6af8-c906-4c9d-a63a-5c2fb02d9dfe"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Logo = "https://storagez.aiart.limited/app/realai/generated/fab123 (4).png",
                             Name = "Beauty",
@@ -1745,7 +1751,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e822a86f-f2c4-4562-912a-b5d41d07df93"),
+                            Id = new Guid("2afc2105-6eb1-447b-b037-408aeb5eef03"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Logo = "https://storagez.aiart.limited/app/realai/generated/fab123 (5).png",
                             Name = "Pencil Art",
@@ -1754,7 +1760,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9c360ca3-02b1-4870-a40e-e87cd95391c2"),
+                            Id = new Guid("f47298b6-bc13-4b58-814e-56eda0ddab56"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Logo = "https://storagez.aiart.limited/app/realai/generated/fab123 (1).png",
                             Name = "Realistic",
@@ -1832,7 +1838,7 @@ namespace Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("c172d687-17e1-426a-8e74-df191494a072"),
+                            Id = new Guid("698af294-3be7-47a6-9b9b-c6d5701a7a94"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Logo = "https://storages.aiart.limited/app/realai/generated/zqBEZVjuO.png",
                             Name = "Animals",
@@ -1840,7 +1846,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7311b2bf-cfff-4f12-9f01-b314570c7874"),
+                            Id = new Guid("2b2b39f6-35d1-41b9-9346-d0e5caebd57d"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Logo = "https://storages.aiart.limited/app/realai/generated/vcP7Viv7R.png",
                             Name = "Anime",
@@ -1848,7 +1854,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c296f8ae-a5a5-417c-9793-d6b8d233dcfe"),
+                            Id = new Guid("5570cdfd-23d5-45a8-bb35-5fe78b547afc"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Logo = "https://storages.aiart.limited/app/realai/generated/h9xJfxLyJ.png",
                             Name = "Funny",
@@ -1856,7 +1862,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f692c90d-0e7a-4142-a022-5f742b9d95ff"),
+                            Id = new Guid("156c95f7-5340-4f6d-b9bc-507e172a802c"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Logo = "https://storages.aiart.limited/app/realai/generated/yTddOHaqG.png",
                             Name = "Games",
@@ -1864,7 +1870,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8eb3df47-3ba6-478a-8dad-fdeae4d889f3"),
+                            Id = new Guid("08b4e3cf-84c5-4f48-8b5d-c99181d6f2e6"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Logo = "https://storages.aiart.limited/app/realai/generated/5pA66bWhH.png",
                             Name = "Music",
@@ -1872,7 +1878,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("455c74a4-63e9-48c3-b52c-a7b81733168d"),
+                            Id = new Guid("72c9925d-f0eb-4694-8ed3-502d81f398a8"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Logo = "https://storages.aiart.limited/app/realai/generated/i2LlVn3AC.png",
                             Name = "Space",
@@ -1880,7 +1886,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("09bd8497-ce12-4ad2-94d0-f2692937abaf"),
+                            Id = new Guid("4aa792cd-772a-4640-8cca-07cb9d6e5a31"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Logo = "https://storages.aiart.limited/app/realai/generated/MO32CXfmz.png",
                             Name = "Logos",
@@ -1989,6 +1995,8 @@ namespace Persistence.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ImageId");
+
                     b.ToTable("Likes", (string)null);
                 });
 
@@ -2045,7 +2053,7 @@ namespace Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("af640753-3656-4d58-a4f8-6fac01ac0020"),
+                            Id = new Guid("059c0f2d-c2a2-44bc-a9e2-0a08895cd3f2"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Gender = 0,
                             Logo = "https://storages.aiart.limited/app/realai/generated/3.jpg",
@@ -2056,7 +2064,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e9aad59e-35de-4d64-93e5-5be2752ab4e9"),
+                            Id = new Guid("a2b25a5d-9a1f-4269-a346-0cecee9fc6e6"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Gender = 0,
                             Logo = "https://storages.aiart.limited/app/realai/generated/4.jpg",
@@ -2067,7 +2075,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("282d4565-27db-455e-8a64-e6a14283cd91"),
+                            Id = new Guid("a2f169f9-0ed3-45f1-b25e-20617ec1c65f"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Gender = 0,
                             Logo = "https://storages.aiart.limited/app/realai/generated/13.jpg",
@@ -2078,7 +2086,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c1366707-686d-4d91-8f98-6c4d478edceb"),
+                            Id = new Guid("4bbfb8e6-34f2-4468-bdb4-af9155e128aa"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Gender = 0,
                             Logo = "https://storages.aiart.limited/app/realai/generated/14.jpg",
@@ -2089,7 +2097,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("de4fe841-b68d-4b0c-9903-74823db6279a"),
+                            Id = new Guid("58e48f22-3262-47b2-96a0-c91c211bba6b"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Gender = 0,
                             Logo = "https://storages.aiart.limited/app/realai/generated/15.jpg",
@@ -2100,7 +2108,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6fd15dec-df45-4fa5-a4a3-e7246e155db9"),
+                            Id = new Guid("31f45cf1-9723-432f-a35f-8749722956d7"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Gender = 0,
                             Logo = " in space",
@@ -2111,7 +2119,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c8b90ca6-a567-4726-9ce5-3f3660d82af5"),
+                            Id = new Guid("1b0c75bb-e67e-463d-b88e-9531989fe3ac"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Gender = 0,
                             Logo = "https://storages.aiart.limited/app/realai/generated/18.jpg",
@@ -2122,7 +2130,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f026d37b-d488-4ff4-af8c-5ee5d74e2317"),
+                            Id = new Guid("ccd2aa3d-f55d-4e98-8ba1-726340c58fe8"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Gender = 0,
                             Logo = "https://storages.aiart.limited/app/realai/generated/3 (4).jpg",
@@ -2133,7 +2141,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2dccce32-4e0b-45ce-adf7-4d58520825a5"),
+                            Id = new Guid("a084c795-f70d-42aa-a945-36b90284603f"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Gender = 0,
                             Logo = "https://storages.aiart.limited/app/realai/generated/0 (4).jpg",
@@ -2144,7 +2152,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b8c1cd54-f849-41ce-83da-95b4eea64487"),
+                            Id = new Guid("acb703b3-99b5-4ca2-88dc-2868f6c9df9d"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Gender = 0,
                             Logo = "https://storages.aiart.limited/app/realai/generated/capt.jpg",
@@ -2155,7 +2163,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("78278637-4de0-4274-9491-4eeea5d567a3"),
+                            Id = new Guid("f50525c6-6aa2-425e-99b1-15fe5b1078be"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Gender = 0,
                             Logo = "https://storages.aiart.limited/app/realai/generated/brr.jpg",
@@ -2166,7 +2174,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c5025be7-a1c9-4160-bbac-077a11f4ee2a"),
+                            Id = new Guid("20ca67b6-e14d-4c60-9c41-d093f8cdd07e"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Gender = 0,
                             Logo = "https://storages.aiart.limited/app/realai/generated/cris (2).jpg",
@@ -2177,7 +2185,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6920214a-b31f-47f4-b634-f98e2b4ffa54"),
+                            Id = new Guid("fd5b6486-eb3b-467b-93d1-9677b36cfaa9"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Gender = 0,
                             Logo = "https://storages.aiart.limited/app/realai/generated/2 (2).jpg",
@@ -2188,7 +2196,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ec8f3377-ae1d-404e-9ea5-84f773937ef5"),
+                            Id = new Guid("21946739-b06e-4a19-9075-8a291af365d9"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Gender = 0,
                             Logo = "https://storages.aiart.limited/app/realai/generated/1 (1).jpg",
@@ -2199,7 +2207,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2ae558d4-d2d5-4e5f-8fe5-0ad51bbcc90f"),
+                            Id = new Guid("6a1106dc-a758-4c6b-9ba5-f9146f7561d5"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Gender = 1,
                             Logo = "https://storages.aiart.limited/app/realai/generated/011.jpg",
@@ -2210,7 +2218,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b7d3eba5-ad26-42d6-8a97-a73c688fd316"),
+                            Id = new Guid("a1716fd6-a0c8-43f5-ae43-f0223d029625"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Gender = 1,
                             Logo = "https://storages.aiart.limited/app/realai/generated/0amber.jpg",
@@ -2221,7 +2229,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("86f6fd98-694a-44f6-95b4-2e9adc640d97"),
+                            Id = new Guid("38185e6d-2cb9-46f4-92ba-3eb043c19abe"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Gender = 1,
                             Logo = "https://storages.aiart.limited/app/realai/generated/platin.jpg",
@@ -2232,7 +2240,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a7ec947f-f29b-40d0-8dba-a32bf1d42bf1"),
+                            Id = new Guid("7837b55f-731e-4625-8ee4-41e3e1532eec"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Gender = 1,
                             Logo = "https://storages.aiart.limited/app/realai/generated/tanga.jpg",
@@ -2243,7 +2251,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e10ed0eb-bbf1-4bbf-99c4-c45b5ea8d25f"),
+                            Id = new Guid("ec0de4a7-646e-4b54-a4c2-f2a7e87e5920"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Gender = 1,
                             Logo = "https://storages.aiart.limited/app/realai/generated/harly.jpg",
@@ -2254,7 +2262,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8c14b97b-d5ed-4bc6-800b-d14273c15c80"),
+                            Id = new Guid("94a561b3-c408-415f-a0fa-b968e9a944f8"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Gender = 1,
                             Logo = "https://storages.aiart.limited/app/realai/generated/kardas.jpg",
@@ -2265,7 +2273,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8d1bdcdd-bda4-4b40-b748-19de3f069c91"),
+                            Id = new Guid("584b726e-b0f6-43cc-b796-2cc24cac7957"),
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Gender = 1,
                             Logo = "https://storages.aiart.limited/app/realai/generated/angelina.jpg",
@@ -2382,21 +2390,6 @@ namespace Persistence.Migrations
                     b.ToTable("TokenHistories", (string)null);
                 });
 
-            modelBuilder.Entity("ImageLike", b =>
-                {
-                    b.Property<Guid>("ImageId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("LikeId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("ImageId", "LikeId");
-
-                    b.HasIndex("LikeId");
-
-                    b.ToTable("ImageLike");
-                });
-
             modelBuilder.Entity("Core.Security.Entities.EmailAuthenticator", b =>
                 {
                     b.HasOne("Core.Security.Entities.User", "User")
@@ -2460,7 +2453,7 @@ namespace Persistence.Migrations
                         .HasForeignKey("CategoryId");
 
                     b.HasOne("Core.Security.Entities.User", "User")
-                        .WithMany()
+                        .WithMany("Images")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -2470,6 +2463,17 @@ namespace Persistence.Migrations
                     b.Navigation("Category");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Like", b =>
+                {
+                    b.HasOne("Domain.Entities.Image", "Image")
+                        .WithMany("Like")
+                        .HasForeignKey("ImageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Image");
                 });
 
             modelBuilder.Entity("Domain.Entities.Pro", b =>
@@ -2505,21 +2509,6 @@ namespace Persistence.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("ImageLike", b =>
-                {
-                    b.HasOne("Domain.Entities.Image", null)
-                        .WithMany()
-                        .HasForeignKey("ImageId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Domain.Entities.Like", null)
-                        .WithMany()
-                        .HasForeignKey("LikeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("Core.Security.Entities.OperationClaim", b =>
                 {
                     b.Navigation("UserOperationClaims");
@@ -2528,6 +2517,8 @@ namespace Persistence.Migrations
             modelBuilder.Entity("Core.Security.Entities.User", b =>
                 {
                     b.Navigation("EmailAuthenticators");
+
+                    b.Navigation("Images");
 
                     b.Navigation("OtpAuthenticators");
 
@@ -2548,6 +2539,8 @@ namespace Persistence.Migrations
 
             modelBuilder.Entity("Domain.Entities.Image", b =>
                 {
+                    b.Navigation("Like");
+
                     b.Navigation("SaledImage");
                 });
 #pragma warning restore 612, 618

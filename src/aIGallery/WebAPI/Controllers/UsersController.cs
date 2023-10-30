@@ -72,6 +72,12 @@ public class UsersController : BaseController
         DeletedUserResponse result = await Mediator.Send(deleteUserCommand);
         return Ok(result);
     }
+    [HttpGet("TopCreators")]
+    public async Task<IActionResult> TopCreators([FromQuery] PageRequest pageRequest)
+    {
+        GetTopCreatorsQuery getTopCreatorsQuery = new() { PageRequest = pageRequest };
+        GetListResponse<GetListUserListItemDto> result = await Mediator.Send(getTopCreatorsQuery);
+        return Ok(result);
+    }
 
-    
 }

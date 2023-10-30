@@ -62,8 +62,7 @@ public class RegisterCommand : IRequest<RegisteredResponse>
                     Status = true,
                     Pro=false,
                     Token=10,
-                    Blocked=false,
-                    
+                    Blocked=false
                     
                 };
             User createdUser = await _userRepository.AddAsync(newUser);

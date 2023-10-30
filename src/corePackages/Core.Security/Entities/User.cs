@@ -1,5 +1,6 @@
 ﻿using Core.Persistence.Repositories;
 using Core.Security.Enums;
+using Domain.Entities;
 
 namespace Core.Security.Entities;
 
@@ -9,6 +10,8 @@ public class User : Entity<int>
     public string LastName { get; set; }
     public string Email { get; set; }
     public string Nick { get; set; }
+    public string Photo { get; set; }
+
     public byte[] PasswordSalt { get; set; }
     public byte[] PasswordHash { get; set; }
     public bool Status { get; set; }
@@ -22,6 +25,7 @@ public class User : Entity<int>
     public virtual ICollection<RefreshToken> RefreshTokens { get; set; } = null!;
     public virtual ICollection<EmailAuthenticator> EmailAuthenticators { get; set; } = null!;
     public virtual ICollection<OtpAuthenticator> OtpAuthenticators { get; set; } = null!;
+    public virtual ICollection<Image> Images { get; set; } = null!;
 
     public User()
     {
@@ -30,6 +34,7 @@ public class User : Entity<int>
         PasswordHash = Array.Empty<byte>();
         PasswordSalt = Array.Empty<byte>();
         Nick = string.Empty;
+        Photo= string.Empty;
     }
 
     public User(
@@ -43,7 +48,7 @@ public class User : Entity<int>
         string nick,
         int token,
         bool pro,
-        bool blocked
+        bool blocked,string photo
     )
     {
         FirstName = firstName;
@@ -57,6 +62,7 @@ public class User : Entity<int>
         Token = token;
         Pro = pro;
         Blocked = blocked;
+        Photo = photo;
     }
 
     public User(
@@ -71,7 +77,7 @@ public class User : Entity<int>
             string nick,
         int token,
         bool pro,
-        bool blocked
+        bool blocked, string photo
     )
         : base(id)
     {
@@ -86,5 +92,6 @@ public class User : Entity<int>
         Token = token;
         Pro = pro;
         Blocked = blocked;
+        Photo = photo;
     }
 }
