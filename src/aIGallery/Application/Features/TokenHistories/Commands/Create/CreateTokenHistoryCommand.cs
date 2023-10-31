@@ -15,6 +15,7 @@ namespace Application.Features.TokenHistories.Commands.Create;
 
 public class CreateTokenHistoryCommand : IRequest<CreatedTokenHistoryResponse>, ICacheRemoverRequest
 {
+    
     public int Amount { get; set; }
     public int Price { get; set; }
     public int UserId { get; set; }

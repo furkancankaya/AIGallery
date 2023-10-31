@@ -22,6 +22,24 @@ public class ImagesController : BaseController
 
         return Created(uri: "", response);
     }
+    [HttpGet("AreBlocked")]
+    public async Task<IActionResult> AreBlocked([FromBody] AreBlockedCommand areBlockedCommand)
+    {
+        areBlockedCommand.UserId=getUserIdFromRequest();
+
+        AreBlockedResponse response = await Mediator.Send(areBlockedCommand);
+
+        return Created(uri: "", response);
+    }
+    [HttpGet("HavingEnoughToken")]
+    public async Task<IActionResult> HavingEnoughToken([FromBody] HavingEnoughTokenCommand havingEnoughTokenCommand)
+    {
+        havingEnoughTokenCommand.UserId = getUserIdFromRequest();
+
+        HavingEnoughTokenResponse response = await Mediator.Send(havingEnoughTokenCommand);
+
+        return Created(uri: "", response);
+    }
 
     [HttpPut]
     public async Task<IActionResult> Update([FromBody] UpdateImageCommand updateImageCommand)
@@ -69,5 +87,6 @@ public class ImagesController : BaseController
         GetListResponse<GetListImageListItemDto> response = await Mediator.Send(getListImageByUserIdQuery);
         return Ok(response);
     }
+
 
 }

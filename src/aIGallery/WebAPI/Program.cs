@@ -86,7 +86,7 @@ if (app.Environment.IsDevelopment())
     });
 }
 
-if (app.Environment.IsDevelopment())
+if (app.Environment.IsProduction())
     app.ConfigureCustomExceptionMiddleware();
 
 app.UseAuthentication();

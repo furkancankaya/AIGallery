@@ -1,3 +1,4 @@
+using Application.Features.BannedPrompts.Constants;
 using Application.Features.Users.Constants;
 using Application.Features.Users.Rules;
 using Application.Services.Repositories;
@@ -6,11 +7,12 @@ using Core.Application.Pipelines.Authorization;
 using Core.Security.Entities;
 using Core.Security.Hashing;
 using MediatR;
+using System.Threading;
 using static Application.Features.Users.Constants.UsersOperationClaims;
 
 namespace Application.Features.Users.Commands.Update;
 
-public class UpdateUserCommand : IRequest<UpdatedUserResponse>, ISecuredRequest
+public class UpdateUserCommand : IRequest<UpdatedUserResponse>
 {
     public int Id { get; set; }
     public string FirstName { get; set; }
@@ -18,6 +20,9 @@ public class UpdateUserCommand : IRequest<UpdatedUserResponse>, ISecuredRequest
     public string Email { get; set; }
     public string Password { get; set; }
     public string Nick { get; set; }
+    public string Photo { get; set; }
+
+    // public string[] Roles => Array.Empty<string>();, ISecuredRequest
 
     public UpdateUserCommand()
     {
@@ -26,9 +31,9 @@ public class UpdateUserCommand : IRequest<UpdatedUserResponse>, ISecuredRequest
         Email = string.Empty;
         Password = string.Empty;
         Nick = string.Empty;
+        Photo = string.Empty;
     }
-
-    public UpdateUserCommand(int id, string firstName, string lastName, string email, string password, string nick)
+    public UpdateUserCommand(int id, string firstName, string lastName, string email, string password, string nick, string photo)
     {
         Id = id;
         FirstName = firstName;
@@ -36,9 +41,10 @@ public class UpdateUserCommand : IRequest<UpdatedUserResponse>, ISecuredRequest
         Email = email;
         Password = password;
         Nick = nick;
+        Photo = photo;
     }
 
-    public string[] Roles => new[] { Admin, Write, UsersOperationClaims.Update };
+
 
     public class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, UpdatedUserResponse>
     {
@@ -53,20 +59,65 @@ public class UpdateUserCommand : IRequest<UpdatedUserResponse>, ISecuredRequest
             _userBusinessRules = userBusinessRules;
         }
 
+        public string SaveBase64Image(string base64Image, string imageFolderPath, string fileName)
+        {
+
+            byte[] imageBytes = Convert.FromBase64String(base64Image);
+
+            if (!Directory.Exists(imageFolderPath))
+            {
+                Directory.CreateDirectory(imageFolderPath);
+            }
+
+
+            string filePath = Path.Combine(imageFolderPath, fileName);
+
+
+            File.WriteAllBytes(filePath, imageBytes);
+
+            return filePath;
+        }
+
         public async Task<UpdatedUserResponse> Handle(UpdateUserCommand request, CancellationToken cancellationToken)
         {
             User? user = await _userRepository.GetAsync(predicate: u => u.Id == request.Id, cancellationToken: cancellationToken);
             await _userBusinessRules.UserShouldBeExistsWhenSelected(user);
-            await _userBusinessRules.UserEmailShouldNotExistsWhenUpdate(user!.Id, user.Email);
-            user = _mapper.Map(request, user);
 
-            HashingHelper.CreatePasswordHash(
-                request.Password,
-                passwordHash: out byte[] passwordHash,
-                passwordSalt: out byte[] passwordSalt
-            );
-            user!.PasswordHash = passwordHash;
-            user.PasswordSalt = passwordSalt;
+
+            if (!string.IsNullOrEmpty(request.Photo))
+            {
+                string imageFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "Images");
+                string fileName = $"{user.Id}_profile_image.png";
+
+                string imagePath = SaveBase64Image(request.Photo, imageFolderPath, fileName);
+                user.Photo = imagePath;
+            }
+            if (!string.IsNullOrEmpty(request.Email))
+            {
+                await _userBusinessRules.UserEmailShouldNotExistsWhenUpdate(user!.Id, request.Email);
+                user.Email = request.Email;
+            }
+
+            if (!string.IsNullOrEmpty(request.Nick))
+            {
+                await _userBusinessRules.UserNickShouldNotExistsWhenUpdate(user!.Id, request.Nick);
+                user.Nick = request.Nick;
+            }
+
+            user.FirstName = request.FirstName;
+            user.LastName = request.LastName;
+
+            if (!string.IsNullOrEmpty(request.Password))
+            {
+                HashingHelper.CreatePasswordHash(
+                    request.Password,
+                    passwordHash: out byte[] passwordHash,
+                    passwordSalt: out byte[] passwordSalt
+                );
+                user!.PasswordHash = passwordHash;
+                user.PasswordSalt = passwordSalt;
+            }
+
             await _userRepository.UpdateAsync(user);
 
             UpdatedUserResponse response = _mapper.Map<UpdatedUserResponse>(user);

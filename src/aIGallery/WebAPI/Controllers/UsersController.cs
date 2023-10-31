@@ -1,4 +1,5 @@
-﻿using Application.Features.Users.Commands.Create;
+﻿using Application.Features.Images.Commands.Create;
+using Application.Features.Users.Commands.Create;
 using Application.Features.Users.Commands.Delete;
 using Application.Features.Users.Commands.Update;
 using Application.Features.Users.Commands.UpdateFromAuth;
@@ -47,6 +48,7 @@ public class UsersController : BaseController
     [HttpPut]
     public async Task<IActionResult> Update([FromBody] UpdateUserCommand updateUserCommand)
     {
+        updateUserCommand.Id = getUserIdFromRequest();
         UpdatedUserResponse result = await Mediator.Send(updateUserCommand);
         return Ok(result);
     }

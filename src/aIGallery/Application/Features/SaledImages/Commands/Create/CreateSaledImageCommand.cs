@@ -4,6 +4,9 @@ using AutoMapper;
 using Domain.Entities;
 using Core.Application.Pipelines.Caching;
 using MediatR;
+using Core.Security.Entities;
+using Org.BouncyCastle.Math;
+using Npgsql.PostgresTypes;
 
 namespace Application.Features.SaledImages.Commands.Create;
 
@@ -21,17 +24,30 @@ public class CreateSaledImageCommand : IRequest<CreatedSaledImageResponse>, ICac
         private readonly IMapper _mapper;
         private readonly ISaledImageRepository _saledImageRepository;
         private readonly SaledImageBusinessRules _saledImageBusinessRules;
+        private readonly IImageRepository _imageRepository;
+        private readonly IUserRepository _userRepository;
 
         public CreateSaledImageCommandHandler(IMapper mapper, ISaledImageRepository saledImageRepository,
-                                         SaledImageBusinessRules saledImageBusinessRules)
+                                         SaledImageBusinessRules saledImageBusinessRules, IImageRepository imageRepository, IUserRepository userRepository)
         {
             _mapper = mapper;
             _saledImageRepository = saledImageRepository;
             _saledImageBusinessRules = saledImageBusinessRules;
+            _imageRepository = imageRepository;
+            _userRepository = userRepository;
         }
 
         public async Task<CreatedSaledImageResponse> Handle(CreateSaledImageCommand request, CancellationToken cancellationToken)
         {
+            Image image = await _imageRepository.GetAsync(x => x.Id == request.ImageId);
+            User sellerUser=  await _userRepository.GetAsync(x => x.Id == image.UserId);
+            User buyyerUser = await _userRepository.GetAsync(x => x.Id == request.UserId);
+            
+            sellerUser.Token += (int)(image.SalePrice * 0.8);
+            buyyerUser.Token -=image.SalePrice;
+            await _userRepository.UpdateAsync(sellerUser);
+            await _userRepository.UpdateAsync(buyyerUser);
+           
             SaledImage saledImage = _mapper.Map<SaledImage>(request);
 
             await _saledImageRepository.AddAsync(saledImage);

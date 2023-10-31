@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\aIGallery\\Domain\\Domain.csproj": {}
+    "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\aIGallery\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\aIGallery\\Domain\\Domain.csproj": {
+    "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\aIGallery\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\aIGallery\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\aIGallery\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\aIGallery\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\halaga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\aIGallery\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\aIGallery\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Radon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\aIGallery\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\halaga\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Radon\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,11 +28,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj": {
-                "projectPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj"
+              "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj": {
+                "projectPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj"
               },
-              "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Security\\Core.Security.csproj": {
-                "projectPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Security\\Core.Security.csproj"
+              "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Security\\Core.Security.csproj": {
+                "projectPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Security\\Core.Security.csproj"
               }
             }
           }
@@ -62,21 +62,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj": {
+    "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj",
         "projectName": "Kodlamaio.NArchitecture.Core.Persistence",
-        "projectPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj",
-        "packagesPath": "C:\\Users\\halaga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Persistence\\obj\\",
+        "projectPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj",
+        "packagesPath": "C:\\Users\\Radon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\halaga\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Radon\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -127,21 +127,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Security\\Core.Security.csproj": {
+    "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Security\\Core.Security.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Security\\Core.Security.csproj",
+        "projectUniqueName": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Security\\Core.Security.csproj",
         "projectName": "Kodlamaio.NArchitecture.Core.Security",
-        "projectPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Security\\Core.Security.csproj",
-        "packagesPath": "C:\\Users\\halaga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Security\\obj\\",
+        "projectPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Security\\Core.Security.csproj",
+        "packagesPath": "C:\\Users\\Radon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Security\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\halaga\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Radon\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -155,8 +155,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj": {
-                "projectPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj"
+              "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj": {
+                "projectPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj"
               }
             }
           }
@@ -208,7 +208,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

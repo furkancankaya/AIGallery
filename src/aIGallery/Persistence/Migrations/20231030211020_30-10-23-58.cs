@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Persistence.Migrations
 {
     /// <inheritdoc />
-    public partial class init : Migration
+    public partial class _30102358 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -125,6 +125,7 @@ namespace Persistence.Migrations
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Nick = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Photo = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PasswordSalt = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
                     PasswordHash = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
                     Status = table.Column<bool>(type: "bit", nullable: false, defaultValue: true),
@@ -397,14 +398,14 @@ namespace Persistence.Migrations
                 columns: new[] { "Id", "CreatedDate", "DeletedDate", "Logo", "Name", "Prompt", "Sort", "UpdatedDate" },
                 values: new object[,]
                 {
-                    { new Guid("308a5dec-7e1f-48b7-a692-a630a5da1c1f"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "https://storagez.aiart.limited/app/realai/generated/fab123 (8).png", "Magical", "Magical", 0, null },
-                    { new Guid("31aab8dc-7d85-40fb-87c7-7fc43d163f06"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "https://storagez.aiart.limited/app/realai/generated/fab123 (6).png", "Neon", "Neon", 0, null },
-                    { new Guid("a73e3f56-8441-4c5e-af1b-f658977d4e91"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "https://storagez.aiart.limited/app/realai/generated/fab123 (3).png", "Digital Art", "Digital Art", 0, null },
-                    { new Guid("ab83c9ca-3f97-43a4-bf6d-9b893a8cdab2"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "https://storagez.aiart.limited/app/realai/generated/fab123 (1).png", "Realistic", "Realistic", 0, null },
-                    { new Guid("b0dbba83-d92e-4ebd-b8d6-d4783ff51a12"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "https://storagez.aiart.limited/app/realai/generated/fab123 (5).png", "Pencil Art", "Pencil Art", 0, null },
-                    { new Guid("b4f931ce-6cb4-4905-a509-cb48ff3975a5"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "https://storagez.aiart.limited/app/realai/generated/fab123 (2).png", "Anime", "Anime", 0, null },
-                    { new Guid("c1503267-8ad4-439f-a164-af1788430f4f"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "https://storagez.aiart.limited/app/realai/generated/fab123 (4).png", "Beauty", "Beauty", 0, null },
-                    { new Guid("e628f536-b82e-4c25-aa8e-4acfb398ca54"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "https://storagez.aiart.limited/app/realai/generated/fab123 (7).png", "Characters", "Characters", 0, null }
+                    { new Guid("10657aa1-8e8e-45b6-8d0f-ae2c782b509a"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "https://storagez.aiart.limited/app/realai/generated/fab123 (1).png", "Realistic", "Realistic", 0, null },
+                    { new Guid("11019f25-d13c-4f9d-b13d-46eb59f47b3e"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "https://storagez.aiart.limited/app/realai/generated/fab123 (4).png", "Beauty", "Beauty", 0, null },
+                    { new Guid("1c091fec-341d-4502-890c-582e3a394360"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "https://storagez.aiart.limited/app/realai/generated/fab123 (7).png", "Characters", "Characters", 0, null },
+                    { new Guid("484d22a7-05c6-4a31-8847-e5aed7c171d8"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "https://storagez.aiart.limited/app/realai/generated/fab123 (5).png", "Pencil Art", "Pencil Art", 0, null },
+                    { new Guid("84564c10-3f7b-41a2-8d24-671cd3a1c5ea"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "https://storagez.aiart.limited/app/realai/generated/fab123 (6).png", "Neon", "Neon", 0, null },
+                    { new Guid("b0d7cb99-12b2-45bf-bc3c-1a6c511d5af4"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "https://storagez.aiart.limited/app/realai/generated/fab123 (8).png", "Magical", "Magical", 0, null },
+                    { new Guid("bedda685-f283-470f-b333-c0dee8c147ee"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "https://storagez.aiart.limited/app/realai/generated/fab123 (2).png", "Anime", "Anime", 0, null },
+                    { new Guid("bf6a103e-c27f-4225-99b8-090876ace9f9"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "https://storagez.aiart.limited/app/realai/generated/fab123 (3).png", "Digital Art", "Digital Art", 0, null }
                 });
 
             migrationBuilder.InsertData(
@@ -412,13 +413,13 @@ namespace Persistence.Migrations
                 columns: new[] { "Id", "CreatedDate", "DeletedDate", "Logo", "Name", "Sort", "UpdatedDate" },
                 values: new object[,]
                 {
-                    { new Guid("02b8791d-60a8-4390-88a8-a625b84e8165"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "https://storages.aiart.limited/app/realai/generated/i2LlVn3AC.png", "Space", 0, null },
-                    { new Guid("1c4ebc82-445f-41c3-b9a9-553789ba646f"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "https://storages.aiart.limited/app/realai/generated/yTddOHaqG.png", "Games", 0, null },
-                    { new Guid("4db28f8c-7184-4e53-a19d-f8ddfc8ae9dc"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "https://storages.aiart.limited/app/realai/generated/zqBEZVjuO.png", "Animals", 0, null },
-                    { new Guid("60e8f38c-c6d8-442c-8305-d2d3bf52b68b"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "https://storages.aiart.limited/app/realai/generated/MO32CXfmz.png", "Logos", 0, null },
-                    { new Guid("65d8a782-0fa9-45e5-ba39-d8871a4e338b"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "https://storages.aiart.limited/app/realai/generated/h9xJfxLyJ.png", "Funny", 0, null },
-                    { new Guid("c41200f7-670b-4aa8-b115-9e37243893b6"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "https://storages.aiart.limited/app/realai/generated/vcP7Viv7R.png", "Anime", 0, null },
-                    { new Guid("fc07bceb-d2fa-417e-a3ae-7f4a597ff2a2"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "https://storages.aiart.limited/app/realai/generated/5pA66bWhH.png", "Music", 0, null }
+                    { new Guid("19bfd3d2-3b7c-463d-aeb5-7edb8c848280"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "https://storages.aiart.limited/app/realai/generated/5pA66bWhH.png", "Music", 0, null },
+                    { new Guid("26ff3c32-aac7-41c5-8dde-c2b279b36911"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "https://storages.aiart.limited/app/realai/generated/vcP7Viv7R.png", "Anime", 0, null },
+                    { new Guid("36a41135-c38c-4df4-b88b-944103fcd059"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "https://storages.aiart.limited/app/realai/generated/i2LlVn3AC.png", "Space", 0, null },
+                    { new Guid("42ef03e8-967a-46f8-b604-4ba3d5606c37"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "https://storages.aiart.limited/app/realai/generated/zqBEZVjuO.png", "Animals", 0, null },
+                    { new Guid("6e04783e-e919-4fa4-ae17-6100cdcfc00c"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "https://storages.aiart.limited/app/realai/generated/MO32CXfmz.png", "Logos", 0, null },
+                    { new Guid("c4190926-41bc-4f82-8b8c-e8d558aebe8e"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "https://storages.aiart.limited/app/realai/generated/yTddOHaqG.png", "Games", 0, null },
+                    { new Guid("e9bd0264-69d2-4482-a845-f85661732201"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "https://storages.aiart.limited/app/realai/generated/h9xJfxLyJ.png", "Funny", 0, null }
                 });
 
             migrationBuilder.InsertData(
@@ -638,33 +639,33 @@ namespace Persistence.Migrations
                 columns: new[] { "Id", "CreatedDate", "DeletedDate", "Gender", "Logo", "Name", "Prompt", "Sort", "TextToImage", "UpdatedDate" },
                 values: new object[,]
                 {
-                    { new Guid("016b9251-591a-433b-8e0a-e66b4fe46fe1"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 1, "https://storages.aiart.limited/app/realai/generated/tanga.jpg", "Daenerys Targaryen", "Daenerys Targaryen", 0, false, null },
-                    { new Guid("04924b4f-1362-4ede-b9db-9335573a10bc"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 0, "https://storages.aiart.limited/app/realai/generated/14.jpg", "A cairn terrier dog as the doomslayer", "A cairn terrier dog as the doomslayer", 0, true, null },
-                    { new Guid("0fc3e297-a026-478a-8d8c-24d0b19715a1"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 0, "https://storages.aiart.limited/app/realai/generated/3 (4).jpg", "Keanu Reeves", "Keanu Reeves", 0, false, null },
-                    { new Guid("1b068522-e895-428c-9def-5a1bd15cdfb7"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 1, "https://storages.aiart.limited/app/realai/generated/011.jpg", "Evening Dresses", "Evening Dresses", 0, false, null },
-                    { new Guid("2c51fe7a-09ed-44f6-a36e-439b044f5b5a"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 0, "https://storages.aiart.limited/app/realai/generated/3.jpg", "ironman 4k musculer", "ironman 4k musculer", 0, true, null },
-                    { new Guid("39be740b-9bb5-4154-981b-fc9fdee2b62a"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 1, "https://storages.aiart.limited/app/realai/generated/0amber.jpg", "Amber Heard", "Amber Heard", 0, false, null },
-                    { new Guid("3ab10224-91d6-4bc4-b7db-efa7b45b3544"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 0, "https://storages.aiart.limited/app/realai/generated/1 (1).jpg", "Superman", "Superman", 0, false, null },
-                    { new Guid("3bf5b096-38c5-4feb-8e91-666ea457f3dd"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 0, " in space", "Male astronaut", "Male astronaut", 0, true, null },
-                    { new Guid("3d09367d-2678-4dcc-97a1-63ffbc8cd1c8"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 0, "https://storages.aiart.limited/app/realai/generated/4.jpg", "platinum short hair playboy model", "platinum short hair playboy model", 0, true, null },
-                    { new Guid("48897e69-7ffd-43f7-820f-03c5039374e3"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 1, "https://storages.aiart.limited/app/realai/generated/harly.jpg", "Harley Quinn", "Harley Quinn", 0, false, null },
-                    { new Guid("4a7b4c4c-ea83-4912-8193-8e22f323f66d"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 0, "https://storages.aiart.limited/app/realai/generated/0 (4).jpg", "Neat Curly Quiff", "Neat Curly Quiff", 0, false, null },
-                    { new Guid("5fd62773-8ca6-4e37-862b-1e9a934b5271"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 0, "https://storages.aiart.limited/app/realai/generated/18.jpg", "A cute adorable phoenix", "A cute adorable phoenix", 0, true, null },
-                    { new Guid("6d673815-631d-49ad-9cfd-b48b0541a6a7"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 0, "https://storages.aiart.limited/app/realai/generated/brr.jpg", "Brad Pitt", "Brad Pitt", 0, false, null },
-                    { new Guid("6e9e5a86-bd70-4c6a-aa7e-01e40c8fcb81"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 0, "https://storages.aiart.limited/app/realai/generated/capt.jpg", "Captain America", "Captain America", 0, false, null },
-                    { new Guid("80577fbe-bb6b-4572-b5bb-8b85ffb0ac61"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 1, "https://storages.aiart.limited/app/realai/generated/platin.jpg", "Platinum Short", "Platinum Short", 0, false, null },
-                    { new Guid("8c53d848-ee72-4043-8d55-95f357c554a4"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 0, "https://storages.aiart.limited/app/realai/generated/13.jpg", "Azure female viking warrior", "Azure female viking warrior", 0, true, null },
-                    { new Guid("a5a24afc-7693-4ab0-9454-dbab3d532b46"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 1, "https://storages.aiart.limited/app/realai/generated/angelina.jpg", "Angelina Jolie", "Angelina Jolie", 0, false, null },
-                    { new Guid("b8e449ae-d4a8-4aac-b0dd-e0139d67bb4d"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 0, "https://storages.aiart.limited/app/realai/generated/cris (2).jpg", "Chris Evans", "Chris Evans", 0, false, null },
-                    { new Guid("c68edc6a-e2b9-4f81-8abc-c35d67f6404c"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 1, "https://storages.aiart.limited/app/realai/generated/kardas.jpg", "Kim Kardashian", "Kim Kardashian", 0, false, null },
-                    { new Guid("e9b32cab-4b79-4cb2-ae64-82291f5f104b"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 0, "https://storages.aiart.limited/app/realai/generated/2 (2).jpg", "Soldier", "Soldier", 0, false, null },
-                    { new Guid("f5f04550-9130-45ba-b13f-4cc4ef973fdd"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 0, "https://storages.aiart.limited/app/realai/generated/15.jpg", "A bird pokemon with horns and 4 wings", "A bird pokemon with horns and 4 wings", 0, true, null }
+                    { new Guid("00a9f69f-27e5-4adc-b918-f8ea7956c5f7"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 0, "https://storages.aiart.limited/app/realai/generated/brr.jpg", "Brad Pitt", "Brad Pitt", 0, false, null },
+                    { new Guid("51bb547d-a8e2-4b56-865e-897ddd2228fd"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 0, "https://storages.aiart.limited/app/realai/generated/13.jpg", "Azure female viking warrior", "Azure female viking warrior", 0, true, null },
+                    { new Guid("613863af-627a-40b4-8dff-d0cbb7d696ea"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 0, "https://storages.aiart.limited/app/realai/generated/0 (4).jpg", "Neat Curly Quiff", "Neat Curly Quiff", 0, false, null },
+                    { new Guid("6efa40af-fd6e-43fa-b6ec-69a066bff137"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 0, "https://storages.aiart.limited/app/realai/generated/capt.jpg", "Captain America", "Captain America", 0, false, null },
+                    { new Guid("7357dbd6-267f-419f-b3fb-f49a32e8f69a"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 0, "https://storages.aiart.limited/app/realai/generated/cris (2).jpg", "Chris Evans", "Chris Evans", 0, false, null },
+                    { new Guid("7a90b36a-f9bb-4a08-a9a3-b7cfae5d2d90"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 0, "https://storages.aiart.limited/app/realai/generated/18.jpg", "A cute adorable phoenix", "A cute adorable phoenix", 0, true, null },
+                    { new Guid("81069c0b-5264-4206-890a-059f06c6e7a0"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 0, "https://storages.aiart.limited/app/realai/generated/2 (2).jpg", "Soldier", "Soldier", 0, false, null },
+                    { new Guid("8589053e-1e8a-4054-a076-78dcbc5c6b42"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 1, "https://storages.aiart.limited/app/realai/generated/platin.jpg", "Platinum Short", "Platinum Short", 0, false, null },
+                    { new Guid("8657e2be-cd4c-43b0-9631-d10679c7296d"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 0, " in space", "Male astronaut", "Male astronaut", 0, true, null },
+                    { new Guid("8898958b-c50a-4b77-9af9-b0b8ee75efcd"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 0, "https://storages.aiart.limited/app/realai/generated/15.jpg", "A bird pokemon with horns and 4 wings", "A bird pokemon with horns and 4 wings", 0, true, null },
+                    { new Guid("9391bfa7-c0df-4dce-b7a0-6d48a83e38a5"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 0, "https://storages.aiart.limited/app/realai/generated/3 (4).jpg", "Keanu Reeves", "Keanu Reeves", 0, false, null },
+                    { new Guid("a9e4803e-a48d-4673-bdc1-2f3149e00a44"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 1, "https://storages.aiart.limited/app/realai/generated/angelina.jpg", "Angelina Jolie", "Angelina Jolie", 0, false, null },
+                    { new Guid("b47aef1e-e09a-4e8a-822f-2f62c14627a4"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 1, "https://storages.aiart.limited/app/realai/generated/011.jpg", "Evening Dresses", "Evening Dresses", 0, false, null },
+                    { new Guid("b64eb46b-11ee-4c7f-92b8-410a4ec0798f"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 1, "https://storages.aiart.limited/app/realai/generated/0amber.jpg", "Amber Heard", "Amber Heard", 0, false, null },
+                    { new Guid("bd0123b2-94f8-4ca9-816e-6d23f36a6570"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 1, "https://storages.aiart.limited/app/realai/generated/harly.jpg", "Harley Quinn", "Harley Quinn", 0, false, null },
+                    { new Guid("bef5995d-f376-48df-b235-8150e42b6e7b"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 0, "https://storages.aiart.limited/app/realai/generated/14.jpg", "A cairn terrier dog as the doomslayer", "A cairn terrier dog as the doomslayer", 0, true, null },
+                    { new Guid("de2071fe-927c-4c73-845a-4d57dcab6f25"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 0, "https://storages.aiart.limited/app/realai/generated/4.jpg", "platinum short hair playboy model", "platinum short hair playboy model", 0, true, null },
+                    { new Guid("e1a40a86-8239-4287-aa8c-926854e6ec60"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 0, "https://storages.aiart.limited/app/realai/generated/3.jpg", "ironman 4k musculer", "ironman 4k musculer", 0, true, null },
+                    { new Guid("e2942664-6a10-4114-9a5d-66465a064bdc"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 1, "https://storages.aiart.limited/app/realai/generated/kardas.jpg", "Kim Kardashian", "Kim Kardashian", 0, false, null },
+                    { new Guid("e4580b87-2a51-44ee-b0c8-d25f274993f7"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 1, "https://storages.aiart.limited/app/realai/generated/tanga.jpg", "Daenerys Targaryen", "Daenerys Targaryen", 0, false, null },
+                    { new Guid("f183811a-4940-43f7-9939-632f45419221"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, 0, "https://storages.aiart.limited/app/realai/generated/1 (1).jpg", "Superman", "Superman", 0, false, null }
                 });
 
             migrationBuilder.InsertData(
                 table: "Users",
-                columns: new[] { "Id", "AuthenticatorType", "CreatedDate", "DeletedDate", "Email", "FirstName", "LastName", "Nick", "PasswordHash", "PasswordSalt", "Status", "UpdatedDate" },
-                values: new object[] { 1, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "husok99@gmail.com", "Admin", "NArchitecture", "", new byte[] { 97, 255, 76, 77, 170, 133, 55, 59, 185, 237, 93, 191, 169, 130, 102, 188, 57, 185, 51, 54, 221, 170, 166, 110, 158, 255, 125, 93, 95, 91, 12, 10, 254, 120, 207, 121, 25, 253, 224, 66, 90, 144, 2, 196, 31, 233, 227, 1, 88, 226, 126, 15, 39, 194, 245, 119, 28, 1, 116, 157, 35, 56, 84, 10 }, new byte[] { 217, 185, 65, 50, 148, 249, 4, 230, 83, 61, 123, 80, 190, 194, 51, 194, 146, 107, 206, 150, 61, 241, 67, 181, 225, 250, 19, 232, 65, 81, 134, 221, 140, 13, 234, 182, 189, 70, 58, 109, 147, 222, 52, 135, 234, 26, 187, 185, 151, 80, 219, 14, 119, 162, 107, 89, 190, 210, 232, 97, 220, 255, 128, 238, 66, 102, 77, 180, 188, 56, 126, 139, 83, 80, 200, 17, 29, 180, 35, 77, 41, 161, 10, 201, 60, 69, 61, 109, 125, 85, 179, 234, 9, 163, 130, 30, 205, 116, 241, 141, 242, 150, 171, 69, 139, 58, 129, 21, 84, 52, 199, 77, 13, 187, 60, 193, 15, 176, 50, 58, 74, 90, 206, 85, 2, 96, 32, 220 }, true, null });
+                columns: new[] { "Id", "AuthenticatorType", "CreatedDate", "DeletedDate", "Email", "FirstName", "LastName", "Nick", "PasswordHash", "PasswordSalt", "Photo", "Status", "UpdatedDate" },
+                values: new object[] { 1, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "husok99@gmail.com", "Admin", "NArchitecture", "", new byte[] { 12, 203, 231, 109, 180, 51, 12, 117, 40, 194, 201, 178, 154, 136, 38, 154, 234, 121, 157, 142, 196, 216, 162, 207, 159, 58, 1, 35, 173, 210, 164, 58, 48, 53, 208, 248, 246, 98, 83, 130, 106, 114, 174, 94, 249, 218, 246, 24, 67, 66, 225, 215, 193, 100, 38, 234, 216, 14, 111, 233, 198, 57, 201, 142 }, new byte[] { 97, 157, 5, 254, 173, 181, 213, 159, 217, 222, 184, 247, 195, 186, 135, 169, 211, 15, 46, 155, 126, 192, 156, 208, 171, 112, 38, 227, 209, 114, 114, 106, 234, 181, 59, 174, 14, 134, 190, 204, 120, 36, 169, 211, 68, 182, 91, 7, 44, 31, 138, 177, 221, 156, 182, 141, 231, 220, 154, 193, 17, 234, 225, 115, 23, 21, 48, 172, 28, 146, 218, 38, 219, 173, 46, 227, 25, 30, 177, 150, 127, 120, 100, 177, 169, 124, 178, 245, 234, 205, 92, 202, 13, 145, 21, 108, 96, 57, 219, 203, 55, 188, 121, 252, 19, 92, 191, 226, 47, 254, 122, 204, 46, 72, 106, 136, 62, 104, 160, 111, 104, 192, 183, 123, 23, 98, 15, 141 }, "", true, null });
 
             migrationBuilder.InsertData(
                 table: "UserOperationClaims",
