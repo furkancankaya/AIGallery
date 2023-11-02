@@ -29,6 +29,7 @@ public class GetTopImagesQuery : IRequest<GetListResponse<GetListImageListItemDt
         {
             IPaginate<Image> images = await _imageRepository.GetListAsync(
                 orderBy:x=>x.OrderByDescending(y=>y.Like.Count),
+                include:x=>x.Include(y=>y.User).Include(x => x.Like).Include(x=>x.SaledImage),
                 index: request.PageRequest.PageIndex,
                 size: request.PageRequest.PageSize, 
                 cancellationToken: cancellationToken

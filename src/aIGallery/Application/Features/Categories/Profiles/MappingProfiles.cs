@@ -21,10 +21,11 @@ public class MappingProfiles : Profile
         CreateMap<Category, DeleteCategoryCommand>().ReverseMap();
         CreateMap<Category, DeletedCategoryResponse>().ReverseMap();
         CreateMap<Category, GetByIdCategoryResponse>().ReverseMap();
-        CreateMap<Image, CategoryImageDtos>().ReverseMap();
+        CreateMap<Image, CategoryImageDtos>()
+        .ForMember(destinationMember: c => c.LikedUsers, memberOptions: opt => opt.MapFrom(c => c.Like.Select(x => x.UserId)))
+        .ForMember(destinationMember: c => c.BuyedUsers, memberOptions: opt => opt.MapFrom(c => c.SaledImage.Select(x => x.UserId))).ReverseMap();
         CreateMap<Category, GetListCategoryListItemDto>()
-           
-            .ReverseMap();
+        .ReverseMap();
         CreateMap<IPaginate<Category>, GetListResponse<GetListCategoryListItemDto>>().ReverseMap();
     }
 }

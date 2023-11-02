@@ -33,7 +33,9 @@ public class GetListCategoryQuery : IRequest<GetListResponse<GetListCategoryList
         public async Task<GetListResponse<GetListCategoryListItemDto>> Handle(GetListCategoryQuery request, CancellationToken cancellationToken)
         {
             IPaginate<Category> categories = await _categoryRepository.GetListAsync(
-                include:x=>x.Include(x=>x.Image.Skip(0).Take(10)).ThenInclude(x=>x.User),
+                include: x => x.Include(x => x.Image.Skip(0).Take(10)).ThenInclude(x => x.User)
+                .Include(x => x.Image).ThenInclude(x => x.Like)
+                .Include(x => x.Image).ThenInclude(x => x.SaledImage),
                 index: request.PageRequest.PageIndex,
                 size: request.PageRequest.PageSize, 
                 cancellationToken: cancellationToken

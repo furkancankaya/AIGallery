@@ -16,7 +16,7 @@ public class GetListLikeQuery : IRequest<GetListResponse<GetListLikeListItemDto>
 
     public bool BypassCache { get; }
     public string CacheKey => $"GetListLikes({PageRequestWithUserId.UserId},{PageRequestWithUserId.PageIndex},{PageRequestWithUserId.PageSize})";
-    public string CacheGroupKey => "GetLikes";
+    public string CacheGroupKey => "GetImages";
     public TimeSpan? SlidingExpiration { get; }
 
     public class GetListLikeQueryHandler : IRequestHandler<GetListLikeQuery, GetListResponse<GetListLikeListItemDto>>

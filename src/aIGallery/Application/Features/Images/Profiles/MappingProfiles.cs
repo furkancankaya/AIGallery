@@ -25,9 +25,8 @@ public class MappingProfiles : Profile
         CreateMap<Image, GetByIdImageResponse>().ReverseMap();
         CreateMap<Image, GetListImageListItemDto>()
         .ForMember(destinationMember: c => c.LikedUsers, memberOptions: opt => opt.MapFrom(c => c.Like.Select(x=>x.UserId)))
- 
-
-            .ReverseMap();
+        .ForMember(destinationMember: c => c.BuyedUsers, memberOptions: opt => opt.MapFrom(c => c.SaledImage.Select(x=>x.UserId)))
+        .ReverseMap();
         //alt 3 ünü mapleme için ben yazdım
         CreateMap<User, GetListUserListUserDto>().ReverseMap();
         CreateMap<Image, GetListUserListUserDto>().ReverseMap();

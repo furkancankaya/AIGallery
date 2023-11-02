@@ -30,7 +30,9 @@ public class GetByIdCategoryQuery : IRequest<GetByIdCategoryResponse>
         {
             Category? category = await _categoryRepository.GetAsync(
                 predicate: c => c.Id == request.Id, 
-                include: x => x.Include(x => x.Image.Skip(request.PageIndex* request.PageSize).Take(request.PageSize)).ThenInclude(x => x.User),
+                include: x => x.Include(x => x.Image.Skip(request.PageIndex* request.PageSize).Take(request.PageSize)).ThenInclude(x => x.User)
+                .Include(x=>x.Image).ThenInclude(x=>x.Like)
+                .Include(x=>x.Image).ThenInclude(x=>x.SaledImage),
                 cancellationToken: cancellationToken);
             await _categoryBusinessRules.CategoryShouldExistWhenSelected(category);
 

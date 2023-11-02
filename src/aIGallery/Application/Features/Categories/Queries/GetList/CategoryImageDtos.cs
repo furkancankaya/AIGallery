@@ -22,6 +22,6 @@ public class CategoryImageDtos
     public bool SaleStatus { get; set; }
     public int SalePrice { get; set; }
     public bool Blocked { get; set; }
-    public int LikeCount { get; set; }
-    public int SaledCount { get; set; }
+    public List<int> LikedUsers { get; set; }
+    public List<int> BuyedUsers { get; set; }
 }
