@@ -86,7 +86,7 @@ public class UpdateUserCommand : IRequest<UpdatedUserResponse>
 
             if (!string.IsNullOrEmpty(request.Photo))
             {
-                string imageFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "Images");
+                string imageFolderPath = Path.Combine(Directory.GetCurrentDirectory() + "\\wwwroot", "Images");
                 string fileName = $"{user.Id}_profile_image.png";
 
                 string imagePath = SaveBase64Image(request.Photo, imageFolderPath, fileName);

@@ -11,6 +11,7 @@ public static class AuthMessages
     public const string RefreshDontExists = "Refresh don't exists.";
     public const string InvalidRefreshToken = "Invalid refresh token.";
     public const string UserMailAlreadyExists = "User mail already exists.";
+    public const string UserNickAlreadyExists = "User nick already exists.";
     public const string PasswordDontMatch = "Password don't match.";
     public const string OtpOverTime = "Time Out";
     public const string OtpFalse = "Otp False";

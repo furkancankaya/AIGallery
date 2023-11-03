@@ -10,6 +10,8 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Persistence;
 using Swashbuckle.AspNetCore.SwaggerUI;
+using System.Net;
+using System.Net.Http.Headers;
 using WebAPI;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
@@ -76,6 +78,7 @@ builder.Services.AddSwaggerGen(opt =>
 
 WebApplication app = builder.Build();
 
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -86,11 +89,31 @@ if (app.Environment.IsDevelopment())
     });
 }
 
-if (app.Environment.IsDevelopment())
+
+if (app.Environment.IsProduction())
     app.ConfigureCustomExceptionMiddleware();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.MapGet("/Images/{fileName}", (string fileName) =>
+{
+    var imagePath = Path.Combine(app.Environment.ContentRootPath, "wwwroot", "Images", fileName);
+
+    if (File.Exists(imagePath))
+    {
+        var imageBytes = File.ReadAllBytes(imagePath);
+        var contentType = "image/png"; // Resim türüne uygun bir MIME türü belirtin.
+
+        var result = Results.File(imageBytes, contentType); // Resmi doðrudan dön
+
+        return result;
+    }
+    else
+    {
+        return Results.NotFound("Resim bulunamadý.");
+    }
+});
 
 app.MapControllers();
 

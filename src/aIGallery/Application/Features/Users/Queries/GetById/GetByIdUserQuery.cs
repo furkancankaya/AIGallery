@@ -6,6 +6,7 @@ using Core.Security.Entities;
 using MailKit.Search;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace Application.Features.Users.Queries.GetById;
 
@@ -19,13 +20,15 @@ public class GetByIdUserQuery : IRequest<GetByIdUserResponse>
         private readonly IMapper _mapper;
         private readonly UserBusinessRules _userBusinessRules;
         private readonly IProRepository _proRepository;
+        private readonly IConfiguration _configuration;
 
-        public GetByIdUserQueryHandler(IUserRepository userRepository, IMapper mapper, UserBusinessRules userBusinessRules, IProRepository proRepository)
+        public GetByIdUserQueryHandler(IUserRepository userRepository, IMapper mapper, UserBusinessRules userBusinessRules, IProRepository proRepository, IConfiguration configuration)
         {
             _userRepository = userRepository;
             _mapper = mapper;
             _userBusinessRules = userBusinessRules;
             _proRepository = proRepository;
+            _configuration = configuration;
         }
 
         public async Task<GetByIdUserResponse> Handle(GetByIdUserQuery request, CancellationToken cancellationToken)
@@ -53,6 +56,12 @@ public class GetByIdUserQuery : IRequest<GetByIdUserResponse>
             {
                 response.Pro = false;
             }
+
+            string apiDomain = _configuration["ImageConfiguration"];
+            string photo = response.Photo;
+            string[] parts = photo.Split(new string[] { "\\" }, StringSplitOptions.None);
+            string desiredPart = apiDomain+ "/Images/" + parts.Last();
+            response.Photo = desiredPart;
 
             return response;
         }

@@ -57,8 +57,10 @@ public class UpdateImageCommand : IRequest<UpdatedImageResponse>, ICacheRemoverR
             {
                 throw new BusinessException(ImagesBusinessMessages.HasSalePrice);
             }
-            
-            
+            if(request.CategoryId==null)
+                throw new BusinessException(ImagesBusinessMessages.HasMustCategory);
+
+
             image = _mapper.Map(request, image);
 
             await _imageRepository.UpdateAsync(image!);

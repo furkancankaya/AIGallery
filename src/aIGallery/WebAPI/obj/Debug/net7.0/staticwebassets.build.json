@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "7/8N/7vR8Gil4oF52j1JyaDaDh/w/bwrwTANJiMV94U=",
+  "Hash": "9784QjgGu+z2l0hUxaQsvHdohPeCuEikFo1RCOqyl04=",
   "Source": "WebAPI",
   "BasePath": "_content/WebAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "WebAPI\\wwwroot",
+      "Source": "WebAPI",
+      "ContentRoot": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\aIGallery\\WebAPI\\wwwroot\\",
+      "BasePath": "_content/WebAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\aIGallery\\WebAPI\\wwwroot\\Images\\6_profile_image.png",
+      "SourceId": "WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\aIGallery\\WebAPI\\wwwroot\\",
+      "BasePath": "_content/WebAPI",
+      "RelativePath": "Images/6_profile_image.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\6_profile_image.png"
+    }
+  ]
 }

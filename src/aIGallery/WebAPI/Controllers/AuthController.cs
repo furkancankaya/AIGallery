@@ -50,6 +50,27 @@ public class AuthController : BaseController
         setRefreshTokenToCookie(result.RefreshToken);
         return Created(uri: "", result.AccessToken);
     }
+    [HttpPost("LoginWithGoogle")]
+    public async Task<IActionResult> LoginWithGoogle([FromBody] UserForLoginWithGoogleDto userForLoginWithGoogleDto)
+    {
+        LoginWithGoogleCommand loginWithGoogleCommand = new() { UserForLoginWithGoogleDto = userForLoginWithGoogleDto, IpAddress = getIpAddress() };
+        LoggedWithGoogleResponse result = await Mediator.Send(loginWithGoogleCommand);
+
+        if (result.RefreshToken is not null)
+            setRefreshTokenToCookie(result.RefreshToken);
+
+        return Ok(result.ToHttpResponse());
+    }
+
+    [HttpPost("RegisterWithGoogle")]
+    public async Task<IActionResult> RegisterWithGoogle([FromBody] UserForRegisterWithGoogleDto userForRegisterWithGoogleDto)
+    {
+        RegisterWithGoogleCommand registerWithGoogleCommand = new() { UserForRegisterWithGoogleDto = userForRegisterWithGoogleDto, IpAddress = getIpAddress() };
+        RegisteredWithGoogleResponse result = await Mediator.Send(registerWithGoogleCommand);
+        setRefreshTokenToCookie(result.RefreshToken);
+        return Created(uri: "", result.AccessToken);
+    }
+
     [HttpPost("RegisterTemp")]
     public async Task<IActionResult> RegisterTemp([FromBody] RegisterTempCommand registerTempCommand)
     {

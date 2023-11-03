@@ -12,6 +12,7 @@ public class GetByIdUserResponse : IResponse
     public string Nick { get; set; }
     public int Token { get; set; }
     public bool Pro { get; set; }
+    public string Photo { get; set; }
     public GetByIdUserResponse()
     {
         FirstName = string.Empty;
@@ -20,9 +21,11 @@ public class GetByIdUserResponse : IResponse
         Nick = string.Empty;
         Token = 0;
         Pro = false;
+        Photo = string.Empty;
+
     }
 
-    public GetByIdUserResponse(int id, string firstName, string lastName, string email, bool status,string nick, int token, bool pro)
+    public GetByIdUserResponse(int id, string firstName, string lastName, string email, bool status,string nick, int token, bool pro, string photo)
     {
         Id = id;
         FirstName = firstName;
@@ -32,5 +35,8 @@ public class GetByIdUserResponse : IResponse
         Nick = nick;
         Token = token;
         Pro = pro;
+        Photo = photo;
+
+
     }
 }

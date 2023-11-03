@@ -44,6 +44,7 @@ public class RegisterCommand : IRequest<RegisteredResponse>
         public async Task<RegisteredResponse> Handle(RegisterCommand request, CancellationToken cancellationToken)
         {
             await _authBusinessRules.UserEmailShouldBeNotExists(request.UserForRegisterDto.Email);
+            await _authBusinessRules.UserNickShouldBeNotExists(request.UserForRegisterDto.Nick);
 
             HashingHelper.CreatePasswordHash(
                 request.UserForRegisterDto.Password,
@@ -54,9 +55,9 @@ public class RegisterCommand : IRequest<RegisteredResponse>
                 new()
                 {
                     Email = request.UserForRegisterDto.Email,
-                    FirstName = request.UserForRegisterDto.FirstName,
-                    LastName = request.UserForRegisterDto.LastName,
-                    Nick = request.UserForRegisterDto.FirstName,
+                    FirstName = request.UserForRegisterDto.Nick,
+                    LastName = string.Empty,
+                    Nick = request.UserForRegisterDto.Nick,
                     PasswordHash = passwordHash,
                     PasswordSalt = passwordSalt,
                     Status = true,
