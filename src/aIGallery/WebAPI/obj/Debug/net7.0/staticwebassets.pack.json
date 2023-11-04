@@ -1,7 +1,11 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\aIGallery\\WebAPI\\wwwroot\\Images\\6_profile_image.png",
+      "Id": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\aIGallery\\WebAPI\\wwwroot\\Images\\1_profile_image.png",
+      "PackagePath": "staticwebassets\\Images\\1_profile_image.png"
+    },
+    {
+      "Id": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\aIGallery\\WebAPI\\wwwroot\\Images\\6_profile_image.png",
       "PackagePath": "staticwebassets\\Images\\6_profile_image.png"
     },
     {

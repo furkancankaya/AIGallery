@@ -48,7 +48,7 @@ public class UsersController : BaseController
     [HttpPut]
     public async Task<IActionResult> Update([FromBody] UpdateUserCommand updateUserCommand)
     {
-        updateUserCommand.Id = getUserIdFromRequest();
+        updateUserCommand.Id=getUserIdFromRequest();
         UpdatedUserResponse result = await Mediator.Send(updateUserCommand);
         return Ok(result);
     }

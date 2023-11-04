@@ -743,3 +743,4 @@ C:\Users\Radon\Desktop\AIGalleryy\src\aIGallery\WebAPI\obj\Debug\net7.0\WebAPI.p
 C:\Users\Radon\Desktop\AIGalleryy\src\aIGallery\WebAPI\obj\Debug\net7.0\WebAPI.genruntimeconfig.cache
 C:\Users\Radon\Desktop\AIGalleryy\src\aIGallery\WebAPI\obj\Debug\net7.0\ref\WebAPI.dll
 C:\Users\Radon\Desktop\AIGalleryy\src\aIGallery\WebAPI\bin\Debug\net7.0\WebAPI.staticwebassets.runtime.json
+C:\Users\halaga\Desktop\AIGallery\src\aIGallery\WebAPI\bin\Debug\net7.0\WebAPI.staticwebassets.runtime.json

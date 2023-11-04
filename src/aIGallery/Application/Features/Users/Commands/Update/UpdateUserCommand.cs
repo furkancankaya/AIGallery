@@ -20,7 +20,7 @@ public class UpdateUserCommand : IRequest<UpdatedUserResponse>
     public string Email { get; set; }
     public string Password { get; set; }
     public string Nick { get; set; }
-    public string Photo { get; set; }
+    public string? Photo { get; set; }
 
     // public string[] Roles => Array.Empty<string>();, ISecuredRequest
 
@@ -82,8 +82,7 @@ public class UpdateUserCommand : IRequest<UpdatedUserResponse>
         {
             User? user = await _userRepository.GetAsync(predicate: u => u.Id == request.Id, cancellationToken: cancellationToken);
             await _userBusinessRules.UserShouldBeExistsWhenSelected(user);
-
-
+ 
             if (!string.IsNullOrEmpty(request.Photo))
             {
                 string imageFolderPath = Path.Combine(Directory.GetCurrentDirectory() + "\\wwwroot", "Images");
@@ -97,16 +96,19 @@ public class UpdateUserCommand : IRequest<UpdatedUserResponse>
                 await _userBusinessRules.UserEmailShouldNotExistsWhenUpdate(user!.Id, request.Email);
                 user.Email = request.Email;
             }
-
             if (!string.IsNullOrEmpty(request.Nick))
             {
                 await _userBusinessRules.UserNickShouldNotExistsWhenUpdate(user!.Id, request.Nick);
                 user.Nick = request.Nick;
             }
-
-            user.FirstName = request.FirstName;
-            user.LastName = request.LastName;
-
+            if (!string.IsNullOrEmpty(request.FirstName))
+            {
+                user.FirstName = request.FirstName;
+            }
+            if (!string.IsNullOrEmpty(request.LastName))
+            {
+                user.LastName = request.LastName;
+            }
             if (!string.IsNullOrEmpty(request.Password))
             {
                 HashingHelper.CreatePasswordHash(

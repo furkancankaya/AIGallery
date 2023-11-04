@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9784QjgGu+z2l0hUxaQsvHdohPeCuEikFo1RCOqyl04=",
+  "Hash": "BnCzJMt2V20POxC0uqhBPxCZCp8uCumnTPdDFVl6U9M=",
   "Source": "WebAPI",
   "BasePath": "_content/WebAPI",
   "Mode": "Default",
@@ -10,17 +10,34 @@
     {
       "Name": "WebAPI\\wwwroot",
       "Source": "WebAPI",
-      "ContentRoot": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\aIGallery\\WebAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\aIGallery\\WebAPI\\wwwroot\\",
       "BasePath": "_content/WebAPI",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\aIGallery\\WebAPI\\wwwroot\\Images\\6_profile_image.png",
+      "Identity": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\aIGallery\\WebAPI\\wwwroot\\Images\\1_profile_image.png",
       "SourceId": "WebAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\aIGallery\\WebAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\aIGallery\\WebAPI\\wwwroot\\",
+      "BasePath": "_content/WebAPI",
+      "RelativePath": "Images/1_profile_image.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\1_profile_image.png"
+    },
+    {
+      "Identity": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\aIGallery\\WebAPI\\wwwroot\\Images\\6_profile_image.png",
+      "SourceId": "WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\aIGallery\\WebAPI\\wwwroot\\",
       "BasePath": "_content/WebAPI",
       "RelativePath": "Images/6_profile_image.png",
       "AssetKind": "All",

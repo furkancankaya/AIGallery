@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\aIGallery\\Application\\Application.csproj": {}
+    "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\aIGallery\\Application\\Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\aIGallery\\Application\\Application.csproj": {
+    "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\aIGallery\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\aIGallery\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\aIGallery\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\aIGallery\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\Radon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\aIGallery\\Application\\obj\\",
+        "projectPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\aIGallery\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\halaga\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\aIGallery\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Radon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\halaga\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,23 +28,23 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\aIGallery\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\aIGallery\\Domain\\Domain.csproj"
+              "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\aIGallery\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\aIGallery\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Application\\Core.Application.csproj": {
-                "projectPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Application\\Core.Application.csproj"
+              "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Application\\Core.Application.csproj": {
+                "projectPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Application\\Core.Application.csproj"
               },
-              "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.CrossCuttingConcerns\\Core.CrossCuttingConcerns.csproj": {
-                "projectPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.CrossCuttingConcerns\\Core.CrossCuttingConcerns.csproj"
+              "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.CrossCuttingConcerns\\Core.CrossCuttingConcerns.csproj": {
+                "projectPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.CrossCuttingConcerns\\Core.CrossCuttingConcerns.csproj"
               },
-              "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.ElasticSearch\\Core.ElasticSearch.csproj": {
-                "projectPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.ElasticSearch\\Core.ElasticSearch.csproj"
+              "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.ElasticSearch\\Core.ElasticSearch.csproj": {
+                "projectPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.ElasticSearch\\Core.ElasticSearch.csproj"
               },
-              "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Mailing\\Core.Mailing.csproj": {
-                "projectPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Mailing\\Core.Mailing.csproj"
+              "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Mailing\\Core.Mailing.csproj": {
+                "projectPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Mailing\\Core.Mailing.csproj"
               },
-              "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Security\\Core.Security.csproj": {
-                "projectPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Security\\Core.Security.csproj"
+              "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Security\\Core.Security.csproj": {
+                "projectPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Security\\Core.Security.csproj"
               }
             }
           }
@@ -88,21 +88,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\aIGallery\\Domain\\Domain.csproj": {
+    "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\aIGallery\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\aIGallery\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\aIGallery\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\aIGallery\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\Radon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\aIGallery\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\aIGallery\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\halaga\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\aIGallery\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Radon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\halaga\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -116,11 +116,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj": {
-                "projectPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj"
+              "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj": {
+                "projectPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj"
               },
-              "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Security\\Core.Security.csproj": {
-                "projectPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Security\\Core.Security.csproj"
+              "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Security\\Core.Security.csproj": {
+                "projectPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Security\\Core.Security.csproj"
               }
             }
           }
@@ -150,21 +150,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Application\\Core.Application.csproj": {
+    "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Application\\Core.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Application\\Core.Application.csproj",
+        "projectUniqueName": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Application\\Core.Application.csproj",
         "projectName": "Kodlamaio.NArchitecture.Core.Application",
-        "projectPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Application\\Core.Application.csproj",
-        "packagesPath": "C:\\Users\\Radon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Application\\obj\\",
+        "projectPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Application\\Core.Application.csproj",
+        "packagesPath": "C:\\Users\\halaga\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Radon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\halaga\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -178,11 +178,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.CrossCuttingConcerns\\Core.CrossCuttingConcerns.csproj": {
-                "projectPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.CrossCuttingConcerns\\Core.CrossCuttingConcerns.csproj"
+              "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.CrossCuttingConcerns\\Core.CrossCuttingConcerns.csproj": {
+                "projectPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.CrossCuttingConcerns\\Core.CrossCuttingConcerns.csproj"
               },
-              "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Security\\Core.Security.csproj": {
-                "projectPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Security\\Core.Security.csproj"
+              "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Security\\Core.Security.csproj": {
+                "projectPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Security\\Core.Security.csproj"
               }
             }
           }
@@ -234,21 +234,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.CrossCuttingConcerns\\Core.CrossCuttingConcerns.csproj": {
+    "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.CrossCuttingConcerns\\Core.CrossCuttingConcerns.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.CrossCuttingConcerns\\Core.CrossCuttingConcerns.csproj",
+        "projectUniqueName": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.CrossCuttingConcerns\\Core.CrossCuttingConcerns.csproj",
         "projectName": "Kodlamaio.NArchitecture.Core.CrossCuttingConcerns",
-        "projectPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.CrossCuttingConcerns\\Core.CrossCuttingConcerns.csproj",
-        "packagesPath": "C:\\Users\\Radon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.CrossCuttingConcerns\\obj\\",
+        "projectPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.CrossCuttingConcerns\\Core.CrossCuttingConcerns.csproj",
+        "packagesPath": "C:\\Users\\halaga\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.CrossCuttingConcerns\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Radon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\halaga\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -343,21 +343,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.ElasticSearch\\Core.ElasticSearch.csproj": {
+    "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.ElasticSearch\\Core.ElasticSearch.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.ElasticSearch\\Core.ElasticSearch.csproj",
+        "projectUniqueName": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.ElasticSearch\\Core.ElasticSearch.csproj",
         "projectName": "Kodlamaio.NArchitecture.Core.ElasticSearch",
-        "projectPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.ElasticSearch\\Core.ElasticSearch.csproj",
-        "packagesPath": "C:\\Users\\Radon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.ElasticSearch\\obj\\",
+        "projectPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.ElasticSearch\\Core.ElasticSearch.csproj",
+        "packagesPath": "C:\\Users\\halaga\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.ElasticSearch\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Radon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\halaga\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -420,21 +420,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Mailing\\Core.Mailing.csproj": {
+    "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Mailing\\Core.Mailing.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Mailing\\Core.Mailing.csproj",
+        "projectUniqueName": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Mailing\\Core.Mailing.csproj",
         "projectName": "Kodlamaio.NArchitecture.Core.Mailing",
-        "projectPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Mailing\\Core.Mailing.csproj",
-        "packagesPath": "C:\\Users\\Radon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Mailing\\obj\\",
+        "projectPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Mailing\\Core.Mailing.csproj",
+        "packagesPath": "C:\\Users\\halaga\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Mailing\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Radon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\halaga\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -493,21 +493,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj": {
+    "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj",
         "projectName": "Kodlamaio.NArchitecture.Core.Persistence",
-        "projectPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj",
-        "packagesPath": "C:\\Users\\Radon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Persistence\\obj\\",
+        "projectPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj",
+        "packagesPath": "C:\\Users\\halaga\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Radon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\halaga\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -558,21 +558,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Security\\Core.Security.csproj": {
+    "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Security\\Core.Security.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Security\\Core.Security.csproj",
+        "projectUniqueName": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Security\\Core.Security.csproj",
         "projectName": "Kodlamaio.NArchitecture.Core.Security",
-        "projectPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Security\\Core.Security.csproj",
-        "packagesPath": "C:\\Users\\Radon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Security\\obj\\",
+        "projectPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Security\\Core.Security.csproj",
+        "packagesPath": "C:\\Users\\halaga\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Security\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Radon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\halaga\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -586,8 +586,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj": {
-                "projectPath": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj"
+              "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj": {
+                "projectPath": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj"
               }
             }
           }
@@ -639,7 +639,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
