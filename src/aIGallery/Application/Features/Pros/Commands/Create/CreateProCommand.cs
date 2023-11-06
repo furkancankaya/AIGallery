@@ -4,6 +4,8 @@ using AutoMapper;
 using Domain.Entities;
 using Core.Application.Pipelines.Caching;
 using MediatR;
+using Core.Security.Entities;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Application.Features.Pros.Commands.Create;
 
@@ -21,18 +23,28 @@ public class CreateProCommand : IRequest<CreatedProResponse>, ICacheRemoverReque
         private readonly IMapper _mapper;
         private readonly IProRepository _proRepository;
         private readonly ProBusinessRules _proBusinessRules;
+        private readonly IUserRepository _userRepository;
+        
 
         public CreateProCommandHandler(IMapper mapper, IProRepository proRepository,
-                                         ProBusinessRules proBusinessRules)
+                                         ProBusinessRules proBusinessRules,
+                                         IUserRepository userRepository)
         {
+            _userRepository = userRepository;
             _mapper = mapper;
             _proRepository = proRepository;
             _proBusinessRules = proBusinessRules;
+            
         }
 
         public async Task<CreatedProResponse> Handle(CreateProCommand request, CancellationToken cancellationToken)
         {
             Pro pro = _mapper.Map<Pro>(request);
+            User? user = await _userRepository.GetAsync(predicate: b => b.Id == pro.UserId, cancellationToken: cancellationToken);
+
+            user.Token += 250;
+            
+
 
             await _proRepository.AddAsync(pro);
 

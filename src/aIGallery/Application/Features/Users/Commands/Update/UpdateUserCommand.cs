@@ -7,6 +7,7 @@ using Core.Application.Pipelines.Authorization;
 using Core.Security.Entities;
 using Core.Security.Hashing;
 using MediatR;
+using OtpNet;
 using System.Threading;
 using static Application.Features.Users.Constants.UsersOperationClaims;
 
@@ -72,6 +73,10 @@ public class UpdateUserCommand : IRequest<UpdatedUserResponse>
 
             string filePath = Path.Combine(imageFolderPath, fileName);
 
+            if (File.Exists(filePath))
+            {
+                File.Delete(filePath);
+            }
 
             File.WriteAllBytes(filePath, imageBytes);
 
@@ -82,15 +87,32 @@ public class UpdateUserCommand : IRequest<UpdatedUserResponse>
         {
             User? user = await _userRepository.GetAsync(predicate: u => u.Id == request.Id, cancellationToken: cancellationToken);
             await _userBusinessRules.UserShouldBeExistsWhenSelected(user);
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+            string imageFolderPath = Path.Combine(Directory.GetCurrentDirectory() + "\\wwwroot", "Images");
+            string fileName = $"{user.Id}_profile_image.png";
+=======
  
+>>>>>>> af648991afbc5f9b1e4e88110b5a888074c11ef1
+=======
+ 
+>>>>>>> af648991afbc5f9b1e4e88110b5a888074c11ef1
+=======
+ 
+>>>>>>> af648991afbc5f9b1e4e88110b5a888074c11ef1
             if (!string.IsNullOrEmpty(request.Photo))
             {
-                string imageFolderPath = Path.Combine(Directory.GetCurrentDirectory() + "\\wwwroot", "Images");
-                string fileName = $"{user.Id}_profile_image.png";
-
                 string imagePath = SaveBase64Image(request.Photo, imageFolderPath, fileName);
-                user.Photo = imagePath;
+                string[] parts = imagePath.Split(new string[] { "\\" }, StringSplitOptions.None);
+                string photo = "Images/" + parts.Last();
+                user.Photo = photo;
+                ;
             }
+            
+
             if (!string.IsNullOrEmpty(request.Email))
             {
                 await _userBusinessRules.UserEmailShouldNotExistsWhenUpdate(user!.Id, request.Email);

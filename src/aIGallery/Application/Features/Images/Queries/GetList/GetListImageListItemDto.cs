@@ -11,8 +11,6 @@ public class GetListImageListItemDto : IDto
     public string? Prompt { get; set; }
     public Guid? ArtStyleId { get; set; }
     public string ArtStyleName { get; set; }
-    public int UserId { get; set; }
-    public string UserEmail { get; set; }
     public GetListUserListUserDto User { get; set; }
     public Guid? CategoryId { get; set; }
     public string CategoryName { get; set; }

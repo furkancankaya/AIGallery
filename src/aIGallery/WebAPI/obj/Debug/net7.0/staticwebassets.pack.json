@@ -1,12 +1,44 @@
 {
   "Files": [
     {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "Id": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\aIGallery\\WebAPI\\wwwroot\\Images\\10_profile_image.png",
+      "PackagePath": "staticwebassets\\Images\\10_profile_image.png"
+    },
+    {
+      "Id": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\aIGallery\\WebAPI\\wwwroot\\Images\\6_profile_image.png",
+=======
+=======
+>>>>>>> af648991afbc5f9b1e4e88110b5a888074c11ef1
+=======
+>>>>>>> af648991afbc5f9b1e4e88110b5a888074c11ef1
       "Id": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\aIGallery\\WebAPI\\wwwroot\\Images\\1_profile_image.png",
       "PackagePath": "staticwebassets\\Images\\1_profile_image.png"
     },
     {
       "Id": "C:\\Users\\halaga\\Desktop\\AIGallery\\src\\aIGallery\\WebAPI\\wwwroot\\Images\\6_profile_image.png",
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> af648991afbc5f9b1e4e88110b5a888074c11ef1
+=======
+>>>>>>> af648991afbc5f9b1e4e88110b5a888074c11ef1
+=======
+>>>>>>> af648991afbc5f9b1e4e88110b5a888074c11ef1
       "PackagePath": "staticwebassets\\Images\\6_profile_image.png"
+    },
+    {
+      "Id": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\aIGallery\\WebAPI\\wwwroot\\Images\\7_profile_image.png",
+      "PackagePath": "staticwebassets\\Images\\7_profile_image.png"
+    },
+    {
+      "Id": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\aIGallery\\WebAPI\\wwwroot\\Images\\8_profile_image.png",
+      "PackagePath": "staticwebassets\\Images\\8_profile_image.png"
+    },
+    {
+      "Id": "C:\\Users\\Radon\\Desktop\\AIGalleryy\\src\\aIGallery\\WebAPI\\wwwroot\\Images\\Default.png",
+      "PackagePath": "staticwebassets\\Images\\Default.png"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.WebAPI.Microsoft.AspNetCore.StaticWebAssets.props",

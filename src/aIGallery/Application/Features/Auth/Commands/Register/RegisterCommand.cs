@@ -63,9 +63,10 @@ public class RegisterCommand : IRequest<RegisteredResponse>
                     Status = true,
                     Pro=false,
                     Token=10,
-                    Blocked=false
-                    
-                };
+                    Blocked=false,
+                    Photo = "Images/Default.png"
+
+        };
             User createdUser = await _userRepository.AddAsync(newUser);
 
             AccessToken createdAccessToken = await _authService.CreateAccessToken(createdUser);

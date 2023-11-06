@@ -88,8 +88,9 @@ public class RegisterWithGoogleCommand : IRequest<RegisteredWithGoogleResponse>
                     Status = true,
                     Pro=false,
                     Token=10,
-                    Blocked=false
-                    
+                    Blocked=false,
+                    Photo = "Images/Default.png"
+
                 };
             User createdUser = await _userRepository.AddAsync(newUser);
 
