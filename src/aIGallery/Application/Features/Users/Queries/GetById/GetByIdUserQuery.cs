@@ -33,6 +33,7 @@ public class GetByIdUserQuery : IRequest<GetByIdUserResponse>
             _configuration = configuration;
             _tokenHistoryRepository = tokenHistoryRepository;
         }
+        
 
         public async Task<GetByIdUserResponse> Handle(GetByIdUserQuery request, CancellationToken cancellationToken)
         {
@@ -45,6 +46,7 @@ public class GetByIdUserQuery : IRequest<GetByIdUserResponse>
             {
                 var proData2 = proData.Items.FirstOrDefault();
                 TimeSpan proDateTime = (DateTime.UtcNow.Date - proData2.CreatedDate);
+                
 
                 if (proData2.Type == 1)
                 {
@@ -53,11 +55,24 @@ public class GetByIdUserQuery : IRequest<GetByIdUserResponse>
                 else if (proData2.Type == 2)
                 {
                     response.Pro = proDateTime.Days > 360 ? false : true;
-                    if (proDateTime.Days > 30)
+                    TimeSpan? proUpdateDateTime = (DateTime.UtcNow.Date - proData2.UpdatedDate);
+                    if (proDateTime.Days > 30 && proData2.UpdatedDate == null)
                     {
-                        user.Token += 250;
+                        
+                        int mounthPro = (int)(proDateTime.Days / 30);
+                        user.Token += (mounthPro * 250);
                         await _userRepository.UpdateAsync(user);
-                        //proData2.UpdatedDate = ;
+                        proData2.UpdatedDate = proData2.CreatedDate.AddMonths(1);
+                        await _proRepository.UpdateAsync(proData2);
+
+                    }
+                    else if (proData2.UpdatedDate != null && proUpdateDateTime?.Days> 30 && proDateTime.Days < 360)
+                    {
+                        int mounthPro = (int)(proUpdateDateTime?.Days / 30);
+                        user.Token += (mounthPro * 250);
+                        await _userRepository.UpdateAsync(user);
+                        proData2.UpdatedDate = proData2.UpdatedDate?.AddMonths(mounthPro);
+                        await _proRepository.UpdateAsync(proData2);
                     }
                      
                     

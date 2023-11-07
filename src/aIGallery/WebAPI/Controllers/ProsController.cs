@@ -1,3 +1,4 @@
+using Application.Features.Images.Commands.Create;
 using Application.Features.Pros.Commands.Create;
 using Application.Features.Pros.Commands.Delete;
 using Application.Features.Pros.Commands.Update;
@@ -16,6 +17,7 @@ public class ProsController : BaseController
     [HttpPost]
     public async Task<IActionResult> Add([FromBody] CreateProCommand createProCommand)
     {
+        createProCommand.UserId = getUserIdFromRequest();
         CreatedProResponse response = await Mediator.Send(createProCommand);
 
         return Created(uri: "", response);
