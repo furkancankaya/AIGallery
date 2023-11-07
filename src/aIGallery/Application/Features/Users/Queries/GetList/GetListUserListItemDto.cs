@@ -10,6 +10,7 @@ public class GetListUserListItemDto : IDto
     public string Nick { get; set; }
     public string Email { get; set; }
     public bool Status { get; set; }
+    public string Photo { get; set; }
 
     public GetListUserListItemDto()
     {
@@ -17,9 +18,10 @@ public class GetListUserListItemDto : IDto
         LastName = string.Empty;
         Email = string.Empty;
         Nick = string.Empty;
+        Photo = string.Empty;
     }
 
-    public GetListUserListItemDto(int id, string firstName, string lastName, string email, bool status,string nick)
+    public GetListUserListItemDto(int id, string firstName, string lastName, string email, bool status,string nick,string photo)
     {
         Id = id;
         FirstName = firstName;
@@ -27,5 +29,6 @@ public class GetListUserListItemDto : IDto
         Email = email;
         Status = status;
         Nick = nick;
+        Photo = photo;
     }
 }
