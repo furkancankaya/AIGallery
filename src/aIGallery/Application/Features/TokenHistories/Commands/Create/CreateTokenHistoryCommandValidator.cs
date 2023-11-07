@@ -7,7 +7,6 @@ public class CreateTokenHistoryCommandValidator : AbstractValidator<CreateTokenH
     public CreateTokenHistoryCommandValidator()
     {
         RuleFor(c => c.Amount).NotEmpty();
-        RuleFor(c => c.Price).NotEmpty();
-        RuleFor(c => c.UserId).NotEmpty();
+
     }
 }

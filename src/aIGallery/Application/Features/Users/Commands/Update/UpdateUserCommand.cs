@@ -87,29 +87,17 @@ public class UpdateUserCommand : IRequest<UpdatedUserResponse>
         {
             User? user = await _userRepository.GetAsync(predicate: u => u.Id == request.Id, cancellationToken: cancellationToken);
             await _userBusinessRules.UserShouldBeExistsWhenSelected(user);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
+ 
             string imageFolderPath = Path.Combine(Directory.GetCurrentDirectory() + "\\wwwroot", "Images");
             string fileName = $"{user.Id}_profile_image.png";
-=======
  
->>>>>>> af648991afbc5f9b1e4e88110b5a888074c11ef1
-=======
- 
->>>>>>> af648991afbc5f9b1e4e88110b5a888074c11ef1
-=======
- 
->>>>>>> af648991afbc5f9b1e4e88110b5a888074c11ef1
             if (!string.IsNullOrEmpty(request.Photo))
             {
                 string imagePath = SaveBase64Image(request.Photo, imageFolderPath, fileName);
                 string[] parts = imagePath.Split(new string[] { "\\" }, StringSplitOptions.None);
                 string photo = "Images/" + parts.Last();
                 user.Photo = photo;
-                ;
+             
             }
             
 
