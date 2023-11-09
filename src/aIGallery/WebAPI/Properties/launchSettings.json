@@ -18,7 +18,7 @@
       }
     },
     "WebAPI": {
-      "applicationUrl": "http://localhost:5278",
+      "applicationUrl": "http://localhost:5278;http://gofreeplaygames.com;",
       "commandName": "Project",
       "dotnetRunMessages": true,
       "environmentVariables": {
