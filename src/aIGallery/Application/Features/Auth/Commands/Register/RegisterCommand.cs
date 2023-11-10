@@ -1,9 +1,11 @@
 ﻿using Application.Features.Auth.Commands.Login;
+using Application.Features.Auth.Constants;
 using Application.Features.Auth.Rules;
 using Application.Features.Users.Queries.GetById;
 using Application.Services.AuthService;
 using Application.Services.Repositories;
 using Core.Application.Dtos;
+using Core.CrossCuttingConcerns.Exceptions.Types;
 using Core.Security.Entities;
 using Core.Security.Hashing;
 using Core.Security.JWT;
@@ -45,6 +47,7 @@ public class RegisterCommand : IRequest<RegisteredResponse>
         {
             await _authBusinessRules.UserEmailShouldBeNotExists(request.UserForRegisterDto.Email);
             await _authBusinessRules.UserNickShouldBeNotExists(request.UserForRegisterDto.Nick);
+            
 
             HashingHelper.CreatePasswordHash(
                 request.UserForRegisterDto.Password,
@@ -68,7 +71,6 @@ public class RegisterCommand : IRequest<RegisteredResponse>
 
         };
             User createdUser = await _userRepository.AddAsync(newUser);
-
             AccessToken createdAccessToken = await _authService.CreateAccessToken(createdUser);
 
             Core.Security.Entities.RefreshToken createdRefreshToken = await _authService.CreateRefreshToken(createdUser, request.IpAddress);

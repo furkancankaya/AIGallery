@@ -66,7 +66,7 @@ public class RegisterWithGoogleCommand : IRequest<RegisteredWithGoogleResponse>
         public async Task<RegisteredWithGoogleResponse> Handle(RegisterWithGoogleCommand request, CancellationToken cancellationToken)
         {
             await _authBusinessRules.UserEmailShouldBeNotExists(request.UserForRegisterWithGoogleDto.Email);
-            await _authBusinessRules.UserNickShouldBeNotExists(request.UserForRegisterWithGoogleDto.Nick);
+            //await _authBusinessRules.UserNickShouldBeNotExists(request.UserForRegisterWithGoogleDto.Nick);
 
 
             string uniquePassword = GeneratePassword(12);
@@ -92,8 +92,11 @@ public class RegisterWithGoogleCommand : IRequest<RegisteredWithGoogleResponse>
                     Photo = "Images/Default.png"
 
                 };
+            bool doesExists = await _userRepository.AnyAsync(predicate: u => u.Nick == request.UserForRegisterWithGoogleDto.Nick, enableTracking: false);
             User createdUser = await _userRepository.AddAsync(newUser);
-
+            if (doesExists)
+                createdUser.Nick = createdUser.Nick + createdUser.Id.ToString(); await _userRepository.UpdateAsync(createdUser);
+            
             AccessToken createdAccessToken = await _authService.CreateAccessToken(createdUser);
 
             Core.Security.Entities.RefreshToken createdRefreshToken = await _authService.CreateRefreshToken(createdUser, request.IpAddress);
