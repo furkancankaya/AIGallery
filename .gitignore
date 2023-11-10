@@ -2,6 +2,9 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
+<<<<<<< HEAD
+/.vs/AIGallery/v17/.suo
+=======
 /.vs/AIGallery/FileContentIndex
 /build/
 *.suo
@@ -20,3 +23,4 @@ TestResult.xml
 Version.cs
 Version.h
 Version.cpp
+>>>>>>> 7194c84346fdd306de0e1067f0ee0ea959ab3be6
