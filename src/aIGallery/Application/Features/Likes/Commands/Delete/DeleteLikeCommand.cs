@@ -15,7 +15,7 @@ public class DeleteLikeCommand : IRequest<DeletedLikeResponse>, ICacheRemoverReq
 
     public bool BypassCache { get; }
     public string? CacheKey { get; }
-    public string CacheGroupKey => "GetLikes";
+    public string CacheGroupKey => "GetImages";
 
     public class DeleteLikeCommandHandler : IRequestHandler<DeleteLikeCommand, DeletedLikeResponse>
     {

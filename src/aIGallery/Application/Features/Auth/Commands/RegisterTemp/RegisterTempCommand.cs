@@ -30,14 +30,12 @@ public class RegisterTempCommand : IRequest<RegisterTempResponse>
     public class RegisterTempCommandHandler : IRequestHandler<RegisterTempCommand, RegisterTempResponse>
     {
         private readonly IUserTempRepository _userTempRepository;
-        private readonly IForgetPasswordRepository _forgetPasswordRepository;
-        private readonly AuthBusinessRules _authBusinessRules;
+         private readonly AuthBusinessRules _authBusinessRules;
         private readonly IAuthenticatorService _authenticatorService;
 
         public RegisterTempCommandHandler(IUserTempRepository userTempRepository,   AuthBusinessRules authBusinessRules, IAuthenticatorService authenticatorService)
         {
             _userTempRepository = userTempRepository;
-         
             _authBusinessRules = authBusinessRules;
             _authenticatorService = authenticatorService;
         }

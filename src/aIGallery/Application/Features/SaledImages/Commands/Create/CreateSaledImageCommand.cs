@@ -7,6 +7,8 @@ using MediatR;
 using Core.Security.Entities;
 using Org.BouncyCastle.Math;
 using Npgsql.PostgresTypes;
+using Application.Features.Images.Constants;
+using Core.CrossCuttingConcerns.Exceptions.Types;
 
 namespace Application.Features.SaledImages.Commands.Create;
 
@@ -42,7 +44,12 @@ public class CreateSaledImageCommand : IRequest<CreatedSaledImageResponse>, ICac
             Image image = await _imageRepository.GetAsync(x => x.Id == request.ImageId);
             User sellerUser=  await _userRepository.GetAsync(x => x.Id == image.UserId);
             User buyyerUser = await _userRepository.GetAsync(x => x.Id == request.UserId);
-            
+            if (buyyerUser.Token < image.SalePrice)
+            {
+                throw new BusinessException(ImagesBusinessMessages.HasNotEnoughToken);
+
+            }
+
             sellerUser.Token += (int)(image.SalePrice * 0.8);
             buyyerUser.Token -=image.SalePrice;
             await _userRepository.UpdateAsync(sellerUser);
