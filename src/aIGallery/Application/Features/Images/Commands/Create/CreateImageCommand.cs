@@ -54,6 +54,7 @@ public class CreateImageCommand : IRequest<CreatedImageResponse>, ICacheRemoverR
             request.SaleStatus = false;
             request.Discover = false;
             Image image = _mapper.Map<Image>(request);
+            image.Sort = 0;
             await _imageRepository.AddAsync(image);
 
             User user = await _userRepository.GetAsync(x => x.Id == request.UserId);

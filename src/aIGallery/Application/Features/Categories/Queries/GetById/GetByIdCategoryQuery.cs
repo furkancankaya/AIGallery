@@ -2,8 +2,10 @@ using Application.Features.Categories.Rules;
 using Application.Services.Repositories;
 using AutoMapper;
 using Domain.Entities;
+using MailKit.Search;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using SharpCompress.Compressors.Xz;
 
 namespace Application.Features.Categories.Queries.GetById;
 
@@ -30,9 +32,10 @@ public class GetByIdCategoryQuery : IRequest<GetByIdCategoryResponse>
         {
             Category? category = await _categoryRepository.GetAsync(
                 predicate: c => c.Id == request.Id, 
-                include: x => x.Include(x => x.Image.Skip(request.PageIndex* request.PageSize).Take(request.PageSize)).ThenInclude(x => x.User)
+                include: x => x.Include(x => x.Image.OrderBy(x=>x.Sort).ThenByDescending(x=>x.UpdatedDate).Skip(request.PageIndex* request.PageSize).Take(request.PageSize)).ThenInclude(x => x.User)
                 .Include(x=>x.Image).ThenInclude(x=>x.Like)
                 .Include(x=>x.Image).ThenInclude(x=>x.SaledImage),
+               
                 cancellationToken: cancellationToken);
             await _categoryBusinessRules.CategoryShouldExistWhenSelected(category);
 

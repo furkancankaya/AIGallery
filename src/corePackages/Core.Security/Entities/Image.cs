@@ -20,6 +20,7 @@ namespace Domain.Entities
         public bool SaleStatus { get; set; }
         public int SalePrice { get; set; }
         public bool Blocked { get; set; }
+        public int Sort { get; set; }
         public virtual User? User { get; set; }
         public virtual ArtStyle? ArtStyle { get; set; }
         public virtual Category? Category { get; set; }

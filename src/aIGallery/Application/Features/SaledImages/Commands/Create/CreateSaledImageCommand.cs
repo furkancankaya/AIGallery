@@ -47,7 +47,6 @@ public class CreateSaledImageCommand : IRequest<CreatedSaledImageResponse>, ICac
             if (buyyerUser.Token < image.SalePrice)
             {
                 throw new BusinessException(ImagesBusinessMessages.HasNotEnoughToken);
-
             }
 
             sellerUser.Token += (int)(image.SalePrice * 0.8);

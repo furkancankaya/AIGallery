@@ -33,7 +33,9 @@ public class GetListImageQuery : IRequest<GetListResponse<GetListImageListItemDt
         public async Task<GetListResponse<GetListImageListItemDto>> Handle(GetListImageQuery request, CancellationToken cancellationToken)
         {
             IPaginate<Image> images = await _imageRepository.GetListAsync(
+                predicate:x=>x.Discover,
                 include: x=>x.Include(x=>x.User).Include(x=>x.Like).Include(x=>x.ArtStyle).Include(x=>x.Category).Include(x=>x.SaledImage),
+                orderBy: x=>x.OrderBy(x => x.Sort).ThenByDescending(x => x.UpdatedDate),
                 index: request.PageRequest.PageIndex,
                 size: request.PageRequest.PageSize, 
                 cancellationToken: cancellationToken

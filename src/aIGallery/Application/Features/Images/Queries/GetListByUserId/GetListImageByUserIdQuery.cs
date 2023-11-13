@@ -36,7 +36,8 @@ public class GetListImageByUserIdQuery : IRequest<GetListResponse<GetListImageLi
                 predicate:x=>x.UserId == request.PageRequestWithUserId.UserId,
                 include: x=>x.Include(x=>x.User).Include(x=>x.Like).Include(x=>x.ArtStyle).Include(x=>x.Category).Include(x=>x.SaledImage).Include(x=>x.Like),
                 index: request.PageRequestWithUserId.PageIndex,
-                size: request.PageRequestWithUserId.PageSize, 
+                size: request.PageRequestWithUserId.PageSize,
+                orderBy: x => x.OrderByDescending(x => x.CreatedDate),
                 cancellationToken: cancellationToken
             );
 

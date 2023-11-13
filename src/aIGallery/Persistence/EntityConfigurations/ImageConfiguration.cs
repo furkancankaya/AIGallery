@@ -24,6 +24,7 @@ public class ImageConfiguration : IEntityTypeConfiguration<Image>
         builder.Property(i => i.CreatedDate).HasColumnName("CreatedDate").IsRequired();
         builder.Property(i => i.UpdatedDate).HasColumnName("UpdatedDate");
         builder.Property(i => i.DeletedDate).HasColumnName("DeletedDate");
+        builder.Property(i => i.Sort).HasColumnName("Sort");
         builder.HasOne(i => i.ArtStyle);
         builder.HasOne(i => i.Category);
         builder.HasOne(i => i.User);
